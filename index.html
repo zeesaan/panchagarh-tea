@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,6 +35,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 :root{
   --green:#123d20;
   --deep:#07190d;
@@ -45,9 +45,13 @@
   --muted:#68756b
 }
 
-*{box-sizing:border-box}
+*{
+  box-sizing:border-box
+}
 
-html{scroll-behavior:smooth}
+html{
+  scroll-behavior:smooth
+}
 
 body{
   margin:0;
@@ -269,7 +273,8 @@ section.content{
   align-items:center
 }
 
-.about h2,.garden h2{
+.about h2,
+.garden h2{
   font:600 48px/1.12 "Playfair Display",serif;
   margin:10px 0 18px
 }
@@ -374,7 +379,8 @@ footer{
   width:165px
 }
 
-.foot p,.foot a{
+.foot p,
+.foot a{
   color:#aebaae;
   font-size:13px
 }
@@ -390,21 +396,33 @@ footer{
 }
 
 @media(max-width:900px){
-  .nav,.order{
+
+  .nav,
+  .order{
     display:none
   }
 
-  .features,.cards,.stats{
+  .features,
+  .cards,
+  .stats{
     grid-template-columns:repeat(2,1fr)
   }
 
-  .about,.garden,.contact,.foot{
+  .about,
+  .garden,
+  .contact,
+  .foot{
     grid-template-columns:1fr
   }
+
 }
 
 @media(max-width:600px){
-  .features,.cards,.stats,.gallery{
+
+  .features,
+  .cards,
+  .stats,
+  .gallery{
     grid-template-columns:1fr
   }
 
@@ -420,21 +438,27 @@ footer{
     font-size:48px
   }
 
-  .about,.garden,.contact,section.content{
+  .about,
+  .garden,
+  .contact,
+  section.content{
     padding:65px 7%
   }
 
-  .about h2,.garden h2,.contact h2{
+  .about h2,
+  .garden h2,
+  .contact h2{
     font-size:38px
   }
 
   .copyright{
     display:block
   }
+
 }
 
 
-/* Floating Order Button */
+/* FLOATING ORDER BUTTON */
 
 .fab-order{
   position:fixed;
@@ -512,10 +536,7 @@ footer{
 }
 
 
-/* =========================================================
-   ORDER FORM
-   Same visual style as your original modal
-   ========================================================= */
+/* ORDER FORM */
 
 .order-form{
   text-align:left;
@@ -671,11 +692,13 @@ footer{
 }
 
 
-/* Existing button hover */
+/* EXISTING BUTTON HOVER */
 
 .product-order-btn{
   cursor:pointer;
-  transition:transform .2s ease,background-color .2s ease,box-shadow .2s ease
+  transition:transform .2s ease,
+             background-color .2s ease,
+             box-shadow .2s ease
 }
 
 .product-order-btn:hover{
@@ -708,7 +731,9 @@ footer{
   .order-modal-box{
     padding:25px 20px
   }
+
 }
+
 </style>
 
 <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -749,19 +774,35 @@ footer{
 <header class="header" role="banner">
 
 <a class="logo" href="#home">
-<img src="panchagarh-tea-green-logo.png" alt="Panchagarh Tea logo - authentic tea from Bangladesh">
+
+<img
+src="panchagarh-tea-green-logo.png"
+alt="Panchagarh Tea logo - authentic tea from Bangladesh">
+
 </a>
 
 <nav class="nav" aria-label="Main navigation">
+
 <a href="#home">Home</a>
+
 <a href="#about">About</a>
+
 <a href="#tea">Our Tea</a>
+
 <a href="#garden">Tea Garden</a>
+
 <a href="#contact">Contact</a>
+
 </nav>
 
-<a class="order" href="#" onclick="openOrder(event)" aria-label="Order Panchagarh Tea now">
+<a
+class="order"
+href="#"
+onclick="openOrder(event)"
+aria-label="Order Panchagarh Tea now">
+
 Order Now
+
 </a>
 
 </header>
@@ -776,12 +817,17 @@ Order Now
 </div>
 
 <h1 itemprop="name">
+
 Authentic Tea<br>
+
 <span>from Panchagarh</span>
+
 </h1>
 
 <p itemprop="description">
+
 Discover the authentic taste of tea from the northern gardens of Bangladesh — carefully selected, naturally grown and packed with care.
+
 </p>
 
 <div class="buttons">
@@ -804,23 +850,35 @@ Our Story
 <div class="features">
 
 <div class="feature">
+
 🌱 <b>100% Natural</b>
+
 <span>No artificial flavors</span>
+
 </div>
 
 <div class="feature">
+
 ✦ <b>Finest Quality</b>
+
 <span>Carefully selected leaves</span>
+
 </div>
 
 <div class="feature">
+
 ♨ <b>Freshly Packed</b>
+
 <span>Preserves aroma & flavor</span>
+
 </div>
 
 <div class="feature">
+
 ⌖ <b>From Panchagarh</b>
+
 <span>Pride of Bangladesh</span>
+
 </div>
 
 </div>
@@ -847,6 +905,8 @@ From traditional black tea to refreshing green tea, discover our selection.
 
 <div class="cards">
 
+
+<!-- BLACK TEA -->
 
 <div class="card">
 
@@ -898,6 +958,8 @@ Order Now
 </div>
 
 
+<!-- GREEN TEA -->
+
 <div class="card">
 
 <div
@@ -948,6 +1010,8 @@ Order Now
 </div>
 
 
+<!-- ORTHODOX TEA -->
+
 <div class="card">
 
 <div
@@ -997,6 +1061,8 @@ Order Now
 
 </div>
 
+
+<!-- HERBAL TEA -->
 
 <div class="card">
 
@@ -1078,11 +1144,17 @@ Panchagarh Tea is dedicated to bringing the authentic taste of this region to te
 
 <div class="gallery">
 
-<div style="background-image:url('https://images.unsplash.com/photo-1471943311424-646960669fbc?auto=format&fit=crop&w=800&q=85')"></div>
+<div
+style="background-image:url('https://images.unsplash.com/photo-1471943311424-646960669fbc?auto=format&fit=crop&w=800&q=85')">
+</div>
 
-<div style="background-image:url('https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=800&q=85')"></div>
+<div
+style="background-image:url('https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=800&q=85')">
+</div>
 
-<div style="background-image:url('https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=85')"></div>
+<div
+style="background-image:url('https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=85')">
+</div>
 
 </div>
 
@@ -1119,23 +1191,35 @@ From the green tea gardens of Panchagarh to your teacup, our focus is freshness,
 <div class="stats">
 
 <div>
+
 <b>500+</b>
+
 <span>Happy Customers</span>
+
 </div>
 
 <div>
+
 <b>100%</b>
+
 <span>Natural Tea</span>
+
 </div>
 
 <div>
+
 <b>50+</b>
+
 <span>Tea Gardens</span>
+
 </div>
 
 <div>
+
 <b>10+</b>
+
 <span>Years of Trust</span>
+
 </div>
 
 </div>
@@ -1169,8 +1253,13 @@ Have a question, want to order tea, or interested in wholesale? We'd love to hea
 ☎ +880 01601006767
 </a>
 
-<a href="https://wa.me/8801601006767" target="_blank" rel="noopener">
+<a
+href="https://wa.me/8801601006767"
+target="_blank"
+rel="noopener">
+
 WhatsApp →
+
 </a>
 
 </div>
@@ -1215,7 +1304,9 @@ aria-label="Close">
 
 
 <div style="font-size:34px;color:var(--green)">
+
 <i class="fa-solid fa-phone-volume"></i>
+
 </div>
 
 
@@ -1228,12 +1319,12 @@ Select your tea and enter your delivery information.
 </p>
 
 
-<!-- ORDER FORM -->
-
 <form
 id="orderForm"
 class="order-form">
 
+
+<!-- FRONTEND PRODUCTS -->
 
 <div class="order-field">
 
@@ -1247,7 +1338,39 @@ class="order-input"
 required>
 
 <option value="">
-Loading products...
+Select a tea
+</option>
+
+<option
+value="Premium Black Tea"
+data-price="350">
+
+Premium Black Tea — ৳350
+
+</option>
+
+<option
+value="Premium Green Tea"
+data-price="400">
+
+Premium Green Tea — ৳400
+
+</option>
+
+<option
+value="Orthodox Tea"
+data-price="450">
+
+Orthodox Tea — ৳450
+
+</option>
+
+<option
+value="Herbal Tea"
+data-price="380">
+
+Herbal Tea — ৳380
+
 </option>
 
 </select>
@@ -1404,7 +1527,9 @@ id="orderSuccess"
 class="order-success">
 
 <div class="order-success-icon">
+
 <i class="fa-solid fa-check"></i>
+
 </div>
 
 <h4>
@@ -1446,288 +1571,8 @@ Continue
 
 <script>
 
-/*
-=========================================================
-PAN C H A G A R H   T E A
-CLOUDFLARE WORKER API
-=========================================================
-*/
-
 const API_URL =
 "https://panchagarh-tea-api.zeesaaniqbal.workers.dev";
-
-
-let products = [];
-
-
-/*
-=========================================================
-LOAD PRODUCTS
-=========================================================
-*/
-
-async function loadProducts(){
-
-  const productSelect =
-    document.getElementById("orderProduct");
-
-  if(!productSelect){
-    return;
-  }
-
-  productSelect.innerHTML =
-    '<option value="">Loading products...</option>';
-
-
-  try{
-
-    const response =
-      await fetch(
-        API_URL + "/api/public/products",
-        {
-          method:"GET",
-          headers:{
-            "Accept":"application/json"
-          },
-          cache:"no-store"
-        }
-      );
-
-
-    /*
-     * Read text first so we can see exactly
-     * what Cloudflare Worker returned.
-     */
-
-    const responseText =
-      await response.text();
-
-
-    console.log(
-      "Products API status:",
-      response.status
-    );
-
-    console.log(
-      "Products API response:",
-      responseText
-    );
-
-
-    if(!response.ok){
-
-      throw new Error(
-        "Products API HTTP " +
-        response.status
-      );
-
-    }
-
-
-    let data;
-
-    try{
-
-      data =
-        JSON.parse(responseText);
-
-    }catch(error){
-
-      console.error(
-        "Products JSON error:",
-        error
-      );
-
-      throw new Error(
-        "Invalid products API response"
-      );
-
-    }
-
-
-    console.log(
-      "Products API data:",
-      data
-    );
-
-
-    /*
-     * Support these response formats:
-     *
-     * 1. [ ... ]
-     *
-     * 2. { products:[ ... ] }
-     *
-     * 3. { success:true, products:[ ... ] }
-     */
-
-    if(Array.isArray(data)){
-
-      products = data;
-
-    }else if(
-      data &&
-      Array.isArray(data.products)
-    ){
-
-      products = data.products;
-
-    }else if(
-      data &&
-      data.data &&
-      Array.isArray(data.data)
-    ){
-
-      products = data.data;
-
-    }else{
-
-      products = [];
-
-    }
-
-
-    console.log(
-      "Loaded products:",
-      products
-    );
-
-
-    if(!products.length){
-
-      productSelect.innerHTML =
-        '<option value="">No products available</option>';
-
-      updateOrderTotal();
-
-      return;
-
-    }
-
-
-    productSelect.innerHTML =
-      '<option value="">Select a tea</option>';
-
-
-    products.forEach(function(product){
-
-      /*
-       * MongoDB _id can be returned as:
-       *
-       * _id: "..."
-       *
-       * or occasionally:
-       *
-       * _id: { "$oid":"..." }
-       */
-
-      let productId = product._id;
-
-
-      if(
-        productId &&
-        typeof productId === "object" &&
-        productId.$oid
-      ){
-
-        productId =
-          productId.$oid;
-
-      }
-
-
-      if(!productId){
-
-        console.warn(
-          "Product has no _id:",
-          product
-        );
-
-        return;
-
-      }
-
-
-      const option =
-        document.createElement("option");
-
-
-      option.value =
-        String(productId);
-
-
-      option.textContent =
-        String(product.name || "Tea") +
-        " — ৳" +
-        Number(product.price || 0);
-
-
-      option.dataset.price =
-        Number(product.price || 0);
-
-
-      option.dataset.name =
-        String(product.name || "");
-
-
-      /*
-       * Your Worker may return stock.
-       * If stock is missing, don't block the order.
-       */
-
-      if(
-        product.stock !== undefined &&
-        product.stock !== null
-      ){
-
-        option.dataset.stock =
-          Number(product.stock);
-
-      }
-
-
-      productSelect.appendChild(option);
-
-    });
-
-
-    updateOrderTotal();
-
-
-  }catch(error){
-
-    console.error(
-      "Unable to load products:",
-      error
-    );
-
-
-    productSelect.innerHTML =
-      '<option value="">Unable to load products</option>';
-
-
-    /*
-     * Don't show a big error inside the modal
-     * before the user starts ordering.
-     */
-
-    const status =
-      document.getElementById("orderStatus");
-
-
-    if(status){
-
-      status.textContent =
-        "Products could not be loaded. Please refresh the page.";
-
-      status.className =
-        "order-status error";
-
-    }
-
-  }
-
-}
 
 
 /*
@@ -1753,9 +1598,7 @@ function updateOrderTotal(){
     !quantityInput ||
     !totalElement
   ){
-
     return;
-
   }
 
 
@@ -1767,10 +1610,7 @@ function updateOrderTotal(){
 
   const price =
     Number(
-      selectedOption &&
-      selectedOption.dataset
-        ? selectedOption.dataset.price || 0
-        : 0
+      selectedOption?.dataset?.price || 0
     );
 
 
@@ -1823,29 +1663,20 @@ function openOrder(
   const subtitle =
     document.getElementById("orderSubtitle");
 
+  const productSelect =
+    document.getElementById("orderProduct");
+
 
   modal.classList.add("show");
 
-
-  /*
-   * Show order form.
-   */
 
   form.style.display =
     "block";
 
 
-  /*
-   * Hide success message.
-   */
-
   success.style.display =
     "none";
 
-
-  /*
-   * Clear old status.
-   */
 
   status.textContent =
     "";
@@ -1855,57 +1686,21 @@ function openOrder(
 
 
   /*
-   * Product card was clicked.
-   *
-   * Match the visible product name
-   * with the MongoDB product.
+   * Select product automatically
    */
 
   if(productName){
 
-    const productSelect =
-      document.getElementById("orderProduct");
+    productSelect.value =
+      productName;
 
+    subtitle.textContent =
+      "Complete your delivery information.";
 
-    const matchingProduct =
-      products.find(function(product){
+  }else{
 
-        return String(
-          product.name || ""
-        ).trim().toLowerCase() ===
-        String(
-          productName || ""
-        ).trim().toLowerCase();
-
-      });
-
-
-    if(matchingProduct){
-
-      let productId =
-        matchingProduct._id;
-
-
-      if(
-        productId &&
-        typeof productId === "object" &&
-        productId.$oid
-      ){
-
-        productId =
-          productId.$oid;
-
-      }
-
-
-      productSelect.value =
-        String(productId);
-
-
-      subtitle.textContent =
-        "Complete your delivery information.";
-
-    }
+    subtitle.textContent =
+      "Select your tea and enter your delivery information.";
 
   }
 
@@ -1929,11 +1724,6 @@ function closeOrder(){
 
   modal.classList.remove("show");
 
-
-  /*
-   * Don't reset immediately.
-   * This keeps the modal animation smooth.
-   */
 
   setTimeout(function(){
 
@@ -2074,10 +1864,10 @@ document
 
 
       /*
-       * Get values.
+       * Get values
        */
 
-      const productId =
+      const productName =
         productSelect.value.trim();
 
       const quantity =
@@ -2100,7 +1890,7 @@ document
 
 
       /*
-       * Clear previous error.
+       * Clear old status
        */
 
       status.textContent =
@@ -2111,10 +1901,10 @@ document
 
 
       /*
-       * Validation.
+       * Validate product
        */
 
-      if(!productId){
+      if(!productName){
 
         status.textContent =
           "Please select a tea.";
@@ -2126,6 +1916,10 @@ document
 
       }
 
+
+      /*
+       * Validate quantity
+       */
 
       if(
         !Number.isInteger(quantity) ||
@@ -2144,6 +1938,10 @@ document
       }
 
 
+      /*
+       * Validate name
+       */
+
       if(!name){
 
         status.textContent =
@@ -2156,6 +1954,10 @@ document
 
       }
 
+
+      /*
+       * Validate phone
+       */
 
       if(!phone){
 
@@ -2170,6 +1972,10 @@ document
       }
 
 
+      /*
+       * Validate city
+       */
+
       if(!city){
 
         status.textContent =
@@ -2182,6 +1988,10 @@ document
 
       }
 
+
+      /*
+       * Validate address
+       */
 
       if(!address){
 
@@ -2197,50 +2007,7 @@ document
 
 
       /*
-       * Check stock if Worker provided it.
-       */
-
-      const selectedOption =
-        productSelect.options[
-          productSelect.selectedIndex
-        ];
-
-
-      const stockValue =
-        selectedOption &&
-        selectedOption.dataset
-          ? selectedOption.dataset.stock
-          : "";
-
-
-      if(stockValue !== ""){
-
-        const stock =
-          Number(stockValue);
-
-
-        if(
-          Number.isFinite(stock) &&
-          quantity > stock
-        ){
-
-          status.textContent =
-            "Only " +
-            stock +
-            " item(s) are currently available.";
-
-          status.className =
-            "order-status error";
-
-          return;
-
-        }
-
-      }
-
-
-      /*
-       * Disable submit button.
+       * Disable submit button
        */
 
       submitButton.disabled =
@@ -2253,23 +2020,10 @@ document
       try{
 
         /*
+         * Send order
+         *
          * IMPORTANT:
-         *
-         * This matches your Worker:
-         *
-         * POST /api/public/orders
-         *
-         * Body:
-         *
-         * {
-         *   name,
-         *   phone,
-         *   address,
-         *   city,
-         *   payment,
-         *   productId,
-         *   quantity
-         * }
+         * productName is sent instead of productId.
          */
 
         const response =
@@ -2298,7 +2052,7 @@ document
 
                 payment:payment,
 
-                productId:productId,
+                productName:productName,
 
                 quantity:quantity
 
@@ -2309,7 +2063,7 @@ document
 
 
         /*
-         * Read response as text first.
+         * Read response
          */
 
         const responseText =
@@ -2348,7 +2102,7 @@ document
 
 
         /*
-         * Worker returned an HTTP error.
+         * HTTP error
          */
 
         if(!response.ok){
@@ -2363,7 +2117,7 @@ document
 
 
         /*
-         * Worker explicitly returned success:false.
+         * API returned success:false
          */
 
         if(data.success === false){
@@ -2378,21 +2132,17 @@ document
 
 
         /*
-         * Get order number.
+         * Get order number
          */
 
         const orderNumber =
-          data.order &&
-          data.order.orderNumber
-            ? data.order.orderNumber
-            : (
-                data.orderNumber ||
-                "Submitted"
-              );
+          data.order?.orderNumber ||
+          data.orderNumber ||
+          "Submitted";
 
 
         /*
-         * Hide form.
+         * Hide form
          */
 
         document
@@ -2402,7 +2152,7 @@ document
 
 
         /*
-         * Show success.
+         * Show success
          */
 
         const success =
@@ -2414,27 +2164,13 @@ document
 
 
         /*
-         * Display order number.
+         * Show order number
          */
 
         document
           .getElementById("successOrderNumber")
           .textContent =
           orderNumber;
-
-
-        /*
-         * Refresh products after successful order.
-         *
-         * This is optional and must not turn a successful
-         * order into a failed order.
-         */
-
-        setTimeout(function(){
-
-          loadProducts();
-
-        },500);
 
 
       }catch(error){
@@ -2469,7 +2205,7 @@ document
 
 /*
 =========================================================
-CLOSE MODAL WHEN CLICKING OUTSIDE
+CLICK OUTSIDE MODAL
 =========================================================
 */
 
@@ -2511,11 +2247,11 @@ document.addEventListener(
 
 /*
 =========================================================
-LOAD PRODUCTS IMMEDIATELY
+INITIAL TOTAL
 =========================================================
 */
 
-loadProducts();
+updateOrderTotal();
 
 </script>
 
@@ -2557,16 +2293,19 @@ Quick Links
 <a href="#home">
 Home
 </a>
+
 <br>
 
 <a href="#about">
 About
 </a>
+
 <br>
 
 <a href="#tea">
 Our Tea
 </a>
+
 <br>
 
 </div>
@@ -2581,11 +2320,13 @@ Customer Service
 <a href="#contact">
 Contact Us
 </a>
+
 <br>
 
 <a href="#">
 Shipping Policy
 </a>
+
 <br>
 
 <a href="#">
@@ -2614,4 +2355,4 @@ Made with ♥ in Bangladesh
 
 </body>
 </html>
-```
+
