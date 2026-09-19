@@ -1,2358 +1,2184 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-
-<title>Panchagarh Tea | Authentic Bangladeshi Tea from Panchagarh</title>
-
-<meta name="description" content="Buy authentic Panchagarh Tea from Bangladesh. Explore premium black tea, green tea, orthodox tea and herbal tea, sourced from the tea gardens of Panchagarh.">
-<meta name="keywords" content="Panchagarh Tea, Panchagarh tea Bangladesh, Bangladeshi tea, buy Panchagarh tea, premium black tea, green tea, orthodox tea, herbal tea, tea garden Bangladesh">
-<meta name="author" content="Panchagarh Tea">
-<meta name="robots" content="index, follow, max-image-preview:large">
-<meta name="googlebot" content="index, follow">
-
-<link rel="canonical" href="https://panchagarhtea.com/">
-
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://panchagarhtea.com/">
-<meta property="og:title" content="Panchagarh Tea | Authentic Bangladeshi Tea">
-<meta property="og:description" content="Discover authentic tea from the gardens of Panchagarh, Bangladesh. Premium black, green, orthodox and herbal teas.">
-<meta property="og:image" content="https://panchagarhtea.com/panchagarh-tea-green-logo.png">
-<meta property="og:image:alt" content="Panchagarh Tea logo">
-<meta property="og:site_name" content="Panchagarh Tea">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Panchagarh Tea | Authentic Bangladeshi Tea">
-<meta name="twitter:description" content="Authentic tea from Panchagarh, Bangladesh. Explore our premium tea collection.">
-<meta name="twitter:image" content="https://panchagarhtea.com/panchagarh-tea-green-logo.png">
-
-<meta name="theme-color" content="#123d20">
-<meta name="format-detection" content="telephone=yes">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-:root{
-  --green:#123d20;
-  --deep:#07190d;
-  --cream:#fbfaf3;
-  --gold:#c9a646;
-  --text:#17301d;
-  --muted:#68756b
-}
-
-*{
-  box-sizing:border-box
-}
-
-html{
-  scroll-behavior:smooth
-}
-
-body{
-  margin:0;
-  font-family:"DM Sans",sans-serif;
-  color:var(--text);
-  background:var(--cream)
-}
-
-a{
-  text-decoration:none;
-  color:inherit
-}
-
-.header{
-  height:88px;
-  background:#fffdf7;
-  border-bottom:1px solid #e7e0ce;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:0 6%;
-  position:sticky;
-  top:0;
-  z-index:10
-}
-
-.logo img{
-  width:175px;
-  display:block
-}
-
-.nav{
-  display:flex;
-  gap:28px;
-  font-size:12px;
-  font-weight:700;
-  text-transform:uppercase
-}
-
-.nav a:hover{
-  color:var(--gold)
-}
-
-.order{
-  background:var(--green);
-  color:#fff;
-  padding:13px 20px;
-  font-size:11px;
-  font-weight:700;
-  text-transform:uppercase
-}
-
-.hero{
-  min-height:640px;
-  display:flex;
-  align-items:center;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(7,25,13,.70),
-      rgba(7,25,13,.30),
-      rgba(7,25,13,.04)
-    ),
-    url('panchagarh-tea-garden-kanchenjunga.webp') center/cover
-}
-
-.hero-content{
-  margin-left:9%;
-  max-width:700px;
-  color:white
-}
-
-.eyebrow{
-  color:var(--gold);
-  font-size:11px;
-  font-weight:800;
-  letter-spacing:2px;
-  text-transform:uppercase
-}
-
-.hero h1{
-  font:600 clamp(50px,6vw,78px)/1.03 "Playfair Display",serif;
-  margin:18px 0
-}
-
-.hero h1 span{
-  color:#e0cb78
-}
-
-.hero p{
-  font-size:17px;
-  color:#e1e9e2;
-  max-width:570px
-}
-
-.buttons{
-  display:flex;
-  gap:14px;
-  margin-top:30px
-}
-
-.btn{
-  padding:14px 22px;
-  font-size:11px;
-  font-weight:800;
-  text-transform:uppercase
-}
-
-.gold{
-  background:var(--gold);
-  color:var(--deep)
-}
-
-.outline{
-  border:1px solid white;
-  color:white
-}
-
-.features{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  padding:25px 7%;
-  background:#fffdf7;
-  border-bottom:1px solid #e7e0ce
-}
-
-.feature{
-  padding:6px 20px;
-  border-right:1px solid #ddd8c9
-}
-
-.feature:last-child{
-  border:0
-}
-
-.feature b{
-  display:block;
-  font-size:13px
-}
-
-.feature span{
-  font-size:11px;
-  color:var(--muted)
-}
-
-section.content{
-  padding:90px 7%
-}
-
-.heading{
-  text-align:center;
-  max-width:680px;
-  margin:auto
-}
-
-.heading h2{
-  font:600 46px/1.15 "Playfair Display",serif;
-  margin:10px 0
-}
-
-.heading p{
-  color:var(--muted)
-}
-
-.cards{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:20px;
-  margin-top:45px
-}
-
-.card{
-  background:#fff;
-  border:1px solid #e5dfcf
-}
-
-.card-img{
-  height:220px;
-  background:center/cover
-}
-
-.card-body{
-  padding:20px
-}
-
-.card h3{
-  font:600 21px "Playfair Display",serif;
-  margin:0
-}
-
-.card p{
-  color:var(--muted);
-  font-size:13px;
-  min-height:42px
-}
-
-.price{
-  font-weight:800;
-  font-size:19px;
-  color:var(--green)
-}
-
-.card button{
-  width:100%;
-  padding:11px;
-  margin-top:14px;
-  background:none;
-  border:1px solid var(--gold);
-  font-weight:800
-}
-
-.about{
-  background:var(--green);
-  color:#fff;
-  padding:95px 8%;
-  display:grid;
-  grid-template-columns:1fr 1.2fr;
-  gap:65px;
-  align-items:center
-}
-
-.about h2,
-.garden h2{
-  font:600 48px/1.12 "Playfair Display",serif;
-  margin:10px 0 18px
-}
-
-.about p{
-  color:#d6e0d5
-}
-
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:12px
-}
-
-.gallery div{
-  height:280px;
-  background:center/cover
-}
-
-.garden{
-  display:grid;
-  grid-template-columns:1.15fr 1fr;
-  gap:65px;
-  align-items:center;
-  padding:95px 8%
-}
-
-.garden-img{
-  height:420px;
-  background:url('https://images.unsplash.com/photo-1471943311424-646960669fbc?auto=format&fit=crop&w=1400&q=90') center/cover
-}
-
-.garden p{
-  color:var(--muted)
-}
-
-.stats{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  text-align:center;
-  padding:38px 8%;
-  background:#f0efe4
-}
-
-.stats b{
-  display:block;
-  font:600 38px "Playfair Display",serif;
-  color:var(--green)
-}
-
-.stats span{
-  font-size:12px;
-  color:var(--muted)
-}
-
-.contact{
-  background:var(--deep);
-  color:#fff;
-  padding:80px 9%;
-  display:grid;
-  grid-template-columns:1.5fr 1fr;
-  gap:50px
-}
-
-.contact h2{
-  font:600 48px "Playfair Display",serif;
-  margin:10px 0
-}
-
-.contact p{
-  color:#cbd6cb
-}
-
-.contact-box{
-  border:1px solid rgba(201,166,70,.35);
-  padding:25px
-}
-
-.contact-box a{
-  display:block;
-  padding:12px 0;
-  border-bottom:1px solid #ffffff1c
-}
-
-.contact-box a:last-child{
-  border:0
-}
-
-footer{
-  background:#041109;
-  color:#fff;
-  padding:50px 8% 18px
-}
-
-.foot{
-  display:grid;
-  grid-template-columns:2fr 1fr 1fr;
-  gap:50px
-}
-
-.foot img{
-  width:165px
-}
-
-.foot p,
-.foot a{
-  color:#aebaae;
-  font-size:13px
-}
-
-.copyright{
-  border-top:1px solid #233628;
-  margin-top:40px;
-  padding-top:17px;
-  color:#89998c;
-  font-size:11px;
-  display:flex;
-  justify-content:space-between
-}
-
-@media(max-width:900px){
-
-  .nav,
-  .order{
-    display:none
-  }
-
-  .features,
-  .cards,
-  .stats{
-    grid-template-columns:repeat(2,1fr)
-  }
-
-  .about,
-  .garden,
-  .contact,
-  .foot{
-    grid-template-columns:1fr
-  }
-
-}
-
-@media(max-width:600px){
-
-  .features,
-  .cards,
-  .stats,
-  .gallery{
-    grid-template-columns:1fr
-  }
-
-  .header{
-    padding:0 5%
-  }
-
-  .hero-content{
-    margin:0 7%
-  }
-
-  .hero h1{
-    font-size:48px
-  }
-
-  .about,
-  .garden,
-  .contact,
-  section.content{
-    padding:65px 7%
-  }
-
-  .about h2,
-  .garden h2,
-  .contact h2{
-    font-size:38px
-  }
-
-  .copyright{
-    display:block
-  }
-
-}
-
-
-/* FLOATING ORDER BUTTON */
-
-.fab-order{
-  position:fixed;
-  right:24px;
-  bottom:24px;
-  width:58px;
-  height:58px;
-  border-radius:50%;
-  background:var(--green);
-  color:#fff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:22px;
-  box-shadow:0 8px 25px rgba(7,25,13,.25);
-  z-index:1000;
-  border:2px solid #fff;
-  cursor:pointer;
-  transition:.25s
-}
-
-.fab-order:hover{
-  transform:translateY(-3px);
-  background:var(--gold);
-  color:var(--deep)
-}
-
-.order-modal{
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.55);
-  display:none;
-  align-items:center;
-  justify-content:center;
-  padding:20px;
-  z-index:2000
-}
-
-.order-modal.show{
-  display:flex
-}
-
-.order-modal-box{
-  width:min(460px,100%);
-  max-height:92vh;
-  overflow-y:auto;
-  background:#fffdf7;
-  border-radius:14px;
-  padding:30px;
-  text-align:center;
-  box-shadow:0 20px 60px rgba(0,0,0,.25);
-  position:relative
-}
-
-.close-order{
-  position:absolute;
-  right:14px;
-  top:10px;
-  border:0;
-  background:none;
-  font-size:28px;
-  color:#526055;
-  cursor:pointer
-}
-
-.order-modal-box h3{
-  font:600 30px "Playfair Display",serif;
-  color:var(--green);
-  margin:8px 0
-}
-
-.order-modal-box p{
-  color:var(--muted);
-  margin:8px 0 20px
-}
-
-
-/* ORDER FORM */
-
-.order-form{
-  text-align:left;
-  margin-top:10px
-}
-
-.order-field{
-  margin-bottom:14px
-}
-
-.order-field label{
-  display:block;
-  color:var(--green);
-  font-size:11px;
-  font-weight:800;
-  text-transform:uppercase;
-  margin-bottom:6px
-}
-
-.order-input{
-  width:100%;
-  border:1px solid #ddd8c9;
-  background:#fff;
-  color:var(--text);
-  border-radius:7px;
-  padding:12px;
-  outline:none;
-  font-family:"DM Sans",sans-serif;
-  font-size:14px
-}
-
-.order-input:focus{
-  border-color:var(--gold);
-  box-shadow:0 0 0 2px rgba(201,166,70,.12)
-}
-
-.order-input:disabled{
-  background:#f2f1ea;
-  cursor:not-allowed
-}
-
-.order-row{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px
-}
-
-.order-total{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  margin:18px 0 12px;
-  padding:14px;
-  background:#f0efe4;
-  color:var(--green);
-  font-weight:800
-}
-
-.order-total-value{
-  font-size:20px;
-  color:var(--green)
-}
-
-.order-submit{
-  width:100%;
-  border:0;
-  cursor:pointer;
-  background:var(--green);
-  color:#fff;
-  padding:14px;
-  border-radius:7px;
-  font-size:12px;
-  font-weight:800;
-  text-transform:uppercase;
-  transition:.2s
-}
-
-.order-submit:hover{
-  background:var(--deep)
-}
-
-.order-submit:disabled{
-  opacity:.6;
-  cursor:not-allowed
-}
-
-.order-status{
-  display:none;
-  margin-top:12px;
-  padding:10px;
-  border-radius:7px;
-  font-size:12px;
-  text-align:center
-}
-
-.order-status.error{
-  display:block;
-  background:#fff0f0;
-  color:#a32626
-}
-
-.order-status.success{
-  display:block;
-  background:#edf7ee;
-  color:#216b31
-}
-
-.order-success{
-  display:none;
-  padding:10px 0 5px
-}
-
-.order-success-icon{
-  width:55px;
-  height:55px;
-  margin:0 auto 12px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:#e8f5ea;
-  color:var(--green);
-  font-size:24px
-}
-
-.order-success h4{
-  font:600 26px "Playfair Display",serif;
-  color:var(--green);
-  margin:5px 0 8px
-}
-
-.order-number{
-  display:inline-block;
-  margin:8px 0 15px;
-  padding:9px 15px;
-  background:#f0efe4;
-  color:var(--green);
-  font-weight:800;
-  font-size:14px
-}
-
-.order-continue{
-  width:100%;
-  border:0;
-  cursor:pointer;
-  background:var(--green);
-  color:#fff;
-  padding:13px;
-  border-radius:7px;
-  font-size:11px;
-  font-weight:800;
-  text-transform:uppercase
-}
-
-
-/* EXISTING BUTTON HOVER */
-
-.product-order-btn{
-  cursor:pointer;
-  transition:transform .2s ease,
-             background-color .2s ease,
-             box-shadow .2s ease
-}
-
-.product-order-btn:hover{
-  transform:translateY(-2px);
-  box-shadow:0 6px 16px rgba(18,61,32,.14)
-}
-
-.product-order-btn:active{
-  transform:translateY(0)
-}
-
-.product-order-btn span{
-  margin-left:6px;
-  font-size:16px
-}
-
-@media(max-width:600px){
-
-  .fab-order{
-    right:18px;
-    bottom:18px;
-    width:54px;
-    height:54px
-  }
-
-  .order-row{
-    grid-template-columns:1fr
-  }
-
-  .order-modal-box{
-    padding:25px 20px
-  }
-
-}
-
-</style>
-
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"Organization",
-  "name":"Panchagarh Tea",
-  "url":"https://panchagarhtea.com/",
-  "logo":"https://panchagarhtea.com/panchagarh-tea-green-logo.png",
-  "sameAs":["https://www.facebook.com/panchagarhteas"],
-  "contactPoint":{
-    "@type":"ContactPoint",
-    "telephone":"+8801601006767",
-    "contactType":"customer service",
-    "areaServed":"BD",
-    "availableLanguage":["English","Bengali"]
-  }
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"WebSite",
-  "name":"Panchagarh Tea",
-  "url":"https://panchagarhtea.com/"
-}
-</script>
-
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Panchagarh Tea | Authentic Bangladeshi Tea from Panchagarh</title>
+
+  <meta
+    name="description"
+    content="Buy authentic premium tea from Panchagarh, Bangladesh. Discover Premium Black Tea, Green Tea, Orthodox Tea and Herbal Tea."
+  />
+
+  <meta
+    name="keywords"
+    content="Panchagarh Tea, Bangladesh Tea, Premium Black Tea, Green Tea, Orthodox Tea, Herbal Tea, Organic Tea"
+  />
+
+  <link rel="canonical" href="https://panchagarhtea.com/" />
+
+  <meta property="og:title" content="Panchagarh Tea | Authentic Bangladeshi Tea" />
+  <meta
+    property="og:description"
+    content="Authentic premium tea from Panchagarh, Bangladesh."
+  />
+  <meta property="og:url" content="https://panchagarhtea.com/" />
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta
+    name="twitter:title"
+    content="Panchagarh Tea | Authentic Bangladeshi Tea"
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --green: #123d20;
+      --deep: #07190d;
+      --cream: #fbfaf3;
+      --gold: #c9a646;
+      --text: #17301d;
+      --muted: #68756b;
+      --white: #ffffff;
+      --border: #e5e5dc;
+      --shadow: 0 15px 45px rgba(7, 25, 13, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    .container {
+      width: min(1160px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    /* HEADER */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(251, 250, 243, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(18, 61, 32, 0.08);
+    }
+
+    .nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: "Playfair Display", serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--green);
+    }
+
+    .logo img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 600;
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .nav-order {
+      padding: 11px 18px;
+      border-radius: 30px;
+      color: var(--white) !important;
+      background: var(--green);
+    }
+
+    .nav-order:hover {
+      background: var(--deep);
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 680px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(7, 25, 13, 0.88) 0%,
+          rgba(7, 25, 13, 0.7) 45%,
+          rgba(7, 25, 13, 0.25) 100%
+        ),
+        url("panchagarh-tea-garden-kanchenjunga.webp") center/cover no-repeat;
+      color: var(--white);
+    }
+
+    .hero-content {
+      max-width: 720px;
+      padding: 90px 0;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--gold);
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 13px;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(44px, 7vw, 78px);
+      line-height: 1.05;
+      margin-bottom: 24px;
+    }
+
+    .hero p {
+      max-width: 620px;
+      color: rgba(255, 255, 255, 0.86);
+      font-size: 18px;
+      margin-bottom: 32px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      border: 0;
+      padding: 14px 23px;
+      border-radius: 30px;
+      font-weight: 700;
+      transition: 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--deep);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 1px solid rgba(255, 255, 255, 0.55);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    /* FEATURES */
+
+    .features {
+      background: var(--green);
+      color: var(--white);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .feature {
+      padding: 27px 25px;
+      text-align: center;
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .feature:last-child {
+      border-right: 0;
+    }
+
+    .feature strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--gold);
+      font-size: 17px;
+    }
+
+    .feature span {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    /* GENERAL SECTION */
+
+    section {
+      padding: 90px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 50px;
+    }
+
+    .section-heading h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(34px, 5vw, 48px);
+      color: var(--green);
+      margin-bottom: 14px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+    }
+
+    /* PRODUCTS */
+
+    .products {
+      background: var(--cream);
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .product-card {
+      background: var(--white);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(18, 61, 32, 0.06);
+      transition: transform 0.25s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .product-image {
+      height: 240px;
+      overflow: hidden;
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.35s ease;
+    }
+
+    .product-card:hover .product-image img {
+      transform: scale(1.05);
+    }
+
+    .product-info {
+      padding: 22px;
+    }
+
+    .product-info h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 22px;
+      color: var(--green);
+      margin-bottom: 7px;
+    }
+
+    .product-info p {
+      color: var(--muted);
+      font-size: 14px;
+      min-height: 45px;
+      margin-bottom: 17px;
+    }
+
+    .product-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .price {
+      font-weight: 800;
+      font-size: 20px;
+      color: var(--green);
+    }
+
+    .order-small {
+      border: 0;
+      background: var(--green);
+      color: var(--white);
+      padding: 10px 15px;
+      border-radius: 24px;
+      font-weight: 700;
+    }
+
+    .order-small:hover {
+      background: var(--deep);
+    }
+
+    /* ABOUT */
+
+    .about {
+      background: var(--white);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .about-image {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .about-image img {
+      width: 100%;
+      min-height: 450px;
+      object-fit: cover;
+    }
+
+    .about-content .eyebrow {
+      color: var(--gold);
+    }
+
+    .about-content h2 {
+      font-family: "Playfair Display", serif;
+      color: var(--green);
+      font-size: clamp(35px, 5vw, 52px);
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .about-content p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .about-list {
+      list-style: none;
+      margin-top: 25px;
+    }
+
+    .about-list li {
+      margin-bottom: 13px;
+      font-weight: 600;
+    }
+
+    .about-list li::before {
+      content: "✓";
+      color: var(--gold);
+      font-weight: 800;
+      margin-right: 10px;
+    }
+
+    /* TEA GARDEN */
+
+    .garden {
+      background: var(--green);
+      color: var(--white);
+    }
+
+    .garden-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .garden-image {
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .garden-image img {
+      width: 100%;
+      min-height: 440px;
+      object-fit: cover;
+    }
+
+    .garden-content h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(35px, 5vw, 52px);
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .garden-content p {
+      color: rgba(255, 255, 255, 0.78);
+      margin-bottom: 18px;
+    }
+
+    /* STATS */
+
+    .stats {
+      background: var(--cream);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      text-align: center;
+    }
+
+    .stat {
+      padding: 20px;
+    }
+
+    .stat strong {
+      display: block;
+      font-family: "Playfair Display", serif;
+      font-size: 42px;
+      color: var(--green);
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      background: var(--white);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .contact-card {
+      padding: 35px;
+      background: var(--cream);
+      border-radius: 18px;
+    }
+
+    .contact-card h3 {
+      font-family: "Playfair Display", serif;
+      color: var(--green);
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .contact-card p {
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .contact-link {
+      display: inline-block;
+      color: var(--green);
+      font-weight: 700;
+      margin-top: 5px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: var(--deep);
+      color: var(--white);
+      padding: 45px 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 40px;
+    }
+
+    .footer-brand h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .footer-brand p {
+      color: rgba(255, 255, 255, 0.65);
+      max-width: 420px;
+    }
+
+    footer h4 {
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    footer a {
+      color: rgba(255, 255, 255, 0.7);
+      display: block;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    footer a:hover {
+      color: var(--white);
+    }
+
+    .copyright {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: 35px;
+      padding-top: 22px;
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    /* FLOATING ORDER BUTTON */
+
+    .floating-order {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 900;
+      background: var(--gold);
+      color: var(--deep);
+      padding: 14px 20px;
+      border-radius: 40px;
+      font-weight: 800;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      border: 0;
+    }
+
+    /* MODAL */
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.65);
+    }
+
+    .modal.active {
+      display: flex;
+    }
+
+    .modal-box {
+      width: min(540px, 100%);
+      max-height: 92vh;
+      overflow-y: auto;
+      background: var(--white);
+      border-radius: 20px;
+      padding: 30px;
+      position: relative;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
+    }
+
+    .modal-box h2 {
+      font-family: "Playfair Display", serif;
+      color: var(--green);
+      font-size: 32px;
+      margin-bottom: 6px;
+    }
+
+    .modal-subtitle {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 15px;
+      right: 17px;
+      width: 38px;
+      height: 38px;
+      border: 0;
+      border-radius: 50%;
+      background: #f0f0e9;
+      color: var(--green);
+      font-size: 22px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 7px;
+    }
+
+    .order-input {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 13px;
+      background: var(--white);
+      color: var(--text);
+      outline: none;
+    }
+
+    .order-input:focus {
+      border-color: var(--green);
+      box-shadow: 0 0 0 3px rgba(18, 61, 32, 0.08);
+    }
+
+    textarea.order-input {
+      resize: vertical;
+      min-height: 90px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .order-total {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px;
+      margin: 8px 0 18px;
+      background: var(--cream);
+      border-radius: 10px;
+      font-weight: 700;
+    }
+
+    .order-total strong {
+      color: var(--green);
+      font-size: 20px;
+    }
+
+    .submit-order {
+      width: 100%;
+      border: 0;
+      border-radius: 30px;
+      padding: 14px;
+      background: var(--green);
+      color: var(--white);
+      font-weight: 800;
+      font-size: 16px;
+    }
+
+    .submit-order:hover {
+      background: var(--deep);
+    }
+
+    .submit-order:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .success-message {
+      display: none;
+      padding: 20px;
+      background: #edf7ee;
+      border: 1px solid #c7e4cb;
+      border-radius: 12px;
+      color: #185b25;
+      margin-bottom: 18px;
+    }
+
+    .success-message.active {
+      display: block;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 980px) {
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-grid,
+      .garden-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav {
+        min-height: 68px;
+      }
+
+      .logo {
+        font-size: 18px;
+      }
+
+      .logo img {
+        width: 40px;
+        height: 40px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        min-height: 600px;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .feature {
+        border-right: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .feature:last-child {
+        border-bottom: 0;
+      }
+
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .floating-order {
+        right: 15px;
+        bottom: 15px;
+      }
+    }
+  </style>
 </head>
 
-<body itemscope itemtype="https://schema.org/WebSite">
+<body>
 
-<header class="header" role="banner">
+  <!-- HEADER -->
+  <header>
+    <div class="container nav">
 
-<a class="logo" href="#home">
+      <a href="#home" class="logo">
+        <img
+          src="panchagarh-tea-green-logo.png"
+          alt="Panchagarh Tea Logo"
+        />
+        <span>Panchagarh Tea</span>
+      </a>
 
-<img
-src="panchagarh-tea-green-logo.png"
-alt="Panchagarh Tea logo - authentic tea from Bangladesh">
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#products">Tea</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#garden">Our Garden</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <a
+              href="#"
+              class="nav-order"
+              onclick="openOrder(event)"
+            >
+              Order Tea
+            </a>
+          </li>
+        </ul>
+      </nav>
 
-</a>
+    </div>
+  </header>
 
-<nav class="nav" aria-label="Main navigation">
 
-<a href="#home">Home</a>
+  <!-- HERO -->
+  <main id="home">
 
-<a href="#about">About</a>
+    <section class="hero">
 
-<a href="#tea">Our Tea</a>
+      <div class="container">
 
-<a href="#garden">Tea Garden</a>
+        <div class="hero-content">
 
-<a href="#contact">Contact</a>
+          <span class="eyebrow">
+            From Panchagarh, Bangladesh
+          </span>
 
-</nav>
+          <h1>
+            Tea from the land where the Himalayas meet Bangladesh.
+          </h1>
 
-<a
-class="order"
-href="#"
-onclick="openOrder(event)"
-aria-label="Order Panchagarh Tea now">
+          <p>
+            Discover authentic tea grown in the beautiful tea gardens
+            of Panchagarh. Carefully selected, naturally processed and
+            delivered fresh to your home.
+          </p>
 
-Order Now
+          <div class="hero-buttons">
 
-</a>
+            <a href="#products" class="btn btn-primary">
+              Explore Our Tea
+            </a>
 
-</header>
+            <a href="#about" class="btn btn-outline">
+              Our Story
+            </a>
 
+          </div>
 
-<section id="home" class="hero">
+        </div>
 
-<div class="hero-content">
+      </div>
 
-<div class="eyebrow">
-✦ From Panchagarh, Bangladesh
-</div>
+    </section>
 
-<h1 itemprop="name">
 
-Authentic Tea<br>
+    <!-- FEATURES -->
+    <section class="features">
 
-<span>from Panchagarh</span>
+      <div class="container features-grid">
 
-</h1>
+        <div class="feature">
+          <strong>100% Authentic</strong>
+          <span>Tea from Panchagarh</span>
+        </div>
 
-<p itemprop="description">
+        <div class="feature">
+          <strong>Fresh & Carefully Selected</strong>
+          <span>Quality you can taste</span>
+        </div>
 
-Discover the authentic taste of tea from the northern gardens of Bangladesh — carefully selected, naturally grown and packed with care.
+        <div class="feature">
+          <strong>Direct to Your Door</strong>
+          <span>Order online easily</span>
+        </div>
 
-</p>
+      </div>
 
-<div class="buttons">
+    </section>
 
-<a class="btn gold" href="#tea">
-Explore Our Tea
-</a>
 
-<a class="btn outline" href="#about">
-Our Story
-</a>
+    <!-- PRODUCTS -->
+    <section id="products" class="products">
 
-</div>
+      <div class="container">
 
-</div>
+        <div class="section-heading">
 
-</section>
+          <span class="eyebrow">
+            Our Collection
+          </span>
 
+          <h2>Premium Tea from Panchagarh</h2>
 
-<div class="features">
+          <p>
+            Explore our carefully selected collection of
+            premium Bangladeshi tea.
+          </p>
 
-<div class="feature">
+        </div>
 
-🌱 <b>100% Natural</b>
 
-<span>No artificial flavors</span>
+        <div class="product-grid">
 
-</div>
+          <!-- BLACK TEA -->
+          <article class="product-card">
 
-<div class="feature">
+            <div class="product-image">
 
-✦ <b>Finest Quality</b>
+              <img
+                src="https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format&fit=crop&w=900&q=90"
+                alt="Premium Black Tea"
+              />
 
-<span>Carefully selected leaves</span>
+            </div>
 
-</div>
+            <div class="product-info">
 
-<div class="feature">
+              <h3>Premium Black Tea</h3>
 
-♨ <b>Freshly Packed</b>
+              <p>
+                Rich aroma and smooth traditional black tea
+                from Panchagarh.
+              </p>
 
-<span>Preserves aroma & flavor</span>
+              <div class="product-bottom">
 
-</div>
+                <span class="price">
+                  ৳350
+                </span>
 
-<div class="feature">
+                <button
+                  class="order-small"
+                  onclick="openOrder(event, 'Premium Black Tea')"
+                >
+                  Order Now
+                </button>
 
-⌖ <b>From Panchagarh</b>
+              </div>
 
-<span>Pride of Bangladesh</span>
+            </div>
 
-</div>
+          </article>
 
-</div>
 
+          <!-- GREEN TEA -->
+          <article class="product-card">
 
-<section id="tea" class="content">
+            <div class="product-image">
 
-<div class="heading">
+              <img
+                src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=900&q=90"
+                alt="Premium Green Tea"
+              />
 
-<div class="eyebrow">
-✦ Our Tea Collection
-</div>
+            </div>
 
-<h2>
-Finest Tea for Every Mood
-</h2>
+            <div class="product-info">
 
-<p>
-From traditional black tea to refreshing green tea, discover our selection.
-</p>
+              <h3>Premium Green Tea</h3>
 
-</div>
+              <p>
+                Light, fresh and naturally refreshing green tea.
+              </p>
 
+              <div class="product-bottom">
 
-<div class="cards">
+                <span class="price">
+                  ৳400
+                </span>
 
+                <button
+                  class="order-small"
+                  onclick="openOrder(event, 'Premium Green Tea')"
+                >
+                  Order Now
+                </button>
 
-<!-- BLACK TEA -->
+              </div>
 
-<div class="card">
+            </div>
 
-<div
-class="card-img"
-style="background-image:url('https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format&fit=crop&w=900&q=90')">
-</div>
+          </article>
 
-<div class="card-body">
 
-<div itemscope itemtype="https://schema.org/Product">
+          <!-- ORTHODOX -->
+          <article class="product-card">
 
-<h3 itemprop="name">
-Premium Black Tea
-</h3>
+            <div class="product-image">
 
-<p itemprop="description">
-Rich aroma, deep color and a refreshing traditional taste.
-</p>
+              <img
+                src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=900&q=90"
+                alt="Orthodox Tea"
+              />
 
-<div
-class="price"
-itemprop="offers"
-itemscope
-itemtype="https://schema.org/Offer">
+            </div>
 
-<meta itemprop="priceCurrency" content="BDT">
-<meta itemprop="price" content="350">
+            <div class="product-info">
 
-৳ 350
+              <h3>Orthodox Tea</h3>
 
-</div>
+              <p>
+                Carefully crafted tea with a distinctive
+                traditional character.
+              </p>
 
-</div>
+              <div class="product-bottom">
 
-<button
-type="button"
-class="product-order-btn"
-onclick="openOrder(event,'Premium Black Tea')"
-aria-label="Order Premium Black Tea">
+                <span class="price">
+                  ৳450
+                </span>
 
-Order Now
-<span aria-hidden="true">→</span>
+                <button
+                  class="order-small"
+                  onclick="openOrder(event, 'Orthodox Tea')"
+                >
+                  Order Now
+                </button>
 
-</button>
+              </div>
 
-</div>
+            </div>
 
-</div>
+          </article>
 
 
-<!-- GREEN TEA -->
+          <!-- HERBAL -->
+          <article class="product-card">
 
-<div class="card">
+            <div class="product-image">
 
-<div
-class="card-img"
-style="background-image:url('https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=900&q=90')">
-</div>
+              <img
+                src="https://images.unsplash.com/photo-1597318181409-cf64d0b5d8a2?auto=format&fit=crop&w=900&q=90"
+                alt="Herbal Tea"
+              />
 
-<div class="card-body">
+            </div>
 
-<div itemscope itemtype="https://schema.org/Product">
+            <div class="product-info">
 
-<h3 itemprop="name">
-Premium Green Tea
-</h3>
+              <h3>Herbal Tea</h3>
 
-<p itemprop="description">
-Light, smooth and refreshing with a naturally clean finish.
-</p>
+              <p>
+                A refreshing herbal blend for a relaxing cup.
+              </p>
 
-<div
-class="price"
-itemprop="offers"
-itemscope
-itemtype="https://schema.org/Offer">
+              <div class="product-bottom">
 
-<meta itemprop="priceCurrency" content="BDT">
-<meta itemprop="price" content="400">
+                <span class="price">
+                  ৳380
+                </span>
 
-৳ 400
+                <button
+                  class="order-small"
+                  onclick="openOrder(event, 'Herbal Tea')"
+                >
+                  Order Now
+                </button>
 
-</div>
+              </div>
 
-</div>
+            </div>
 
-<button
-type="button"
-class="product-order-btn"
-onclick="openOrder(event,'Premium Green Tea')"
-aria-label="Order Premium Green Tea">
+          </article>
 
-Order Now
-<span aria-hidden="true">→</span>
+        </div>
 
-</button>
+      </div>
 
-</div>
+    </section>
 
-</div>
 
+    <!-- ABOUT -->
+    <section id="about" class="about">
 
-<!-- ORTHODOX TEA -->
+      <div class="container about-grid">
 
-<div class="card">
+        <div class="about-image">
 
-<div
-class="card-img"
-style="background-image:url('https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=900&q=90')">
-</div>
+          <img
+            src="panchagarh-tea-garden-kanchenjunga.webp"
+            alt="Panchagarh Tea Garden"
+          />
 
-<div class="card-body">
+        </div>
 
-<div itemscope itemtype="https://schema.org/Product">
+        <div class="about-content">
 
-<h3 itemprop="name">
-Orthodox Tea
-</h3>
+          <span class="eyebrow">
+            Our Story
+          </span>
 
-<p itemprop="description">
-Traditional whole-leaf tea for tea lovers.
-</p>
+          <h2>
+            A taste of Panchagarh in every cup.
+          </h2>
 
-<div
-class="price"
-itemprop="offers"
-itemscope
-itemtype="https://schema.org/Offer">
+          <p>
+            Panchagarh is one of Bangladesh's most beautiful
+            tea-growing regions. Located in the northern part
+            of the country, the region is known for its unique
+            climate, fertile soil and beautiful tea gardens.
+          </p>
 
-<meta itemprop="priceCurrency" content="BDT">
-<meta itemprop="price" content="450">
+          <p>
+            Panchagarh Tea brings this authentic taste directly
+            from the tea-growing region to tea lovers.
+          </p>
 
-৳ 450
+          <ul class="about-list">
 
-</div>
+            <li>
+              Authentic tea from Panchagarh
+            </li>
 
-</div>
+            <li>
+              Carefully selected leaves
+            </li>
 
-<button
-type="button"
-class="product-order-btn"
-onclick="openOrder(event,'Orthodox Tea')"
-aria-label="Order Orthodox Tea">
+            <li>
+              Quality-focused processing
+            </li>
 
-Order Now
-<span aria-hidden="true">→</span>
+            <li>
+              Fresh delivery across Bangladesh
+            </li>
 
-</button>
+          </ul>
 
-</div>
+        </div>
 
-</div>
+      </div>
 
+    </section>
 
-<!-- HERBAL TEA -->
 
-<div class="card">
+    <!-- GARDEN -->
+    <section id="garden" class="garden">
 
-<div
-class="card-img"
-style="background-image:url('https://images.unsplash.com/photo-1597318181409-cf64d0b5d8a2?auto=format&fit=crop&w=900&q=90')">
-</div>
+      <div class="container garden-grid">
 
-<div class="card-body">
+        <div class="garden-content">
 
-<div itemscope itemtype="https://schema.org/Product">
+          <span class="eyebrow">
+            From Our Garden
+          </span>
 
-<h3 itemprop="name">
-Herbal Tea
-</h3>
+          <h2>
+            Where great tea begins.
+          </h2>
 
-<p itemprop="description">
-A gentle herbal blend for a relaxing moment.
-</p>
+          <p>
+            Surrounded by the natural beauty of Panchagarh,
+            our tea comes from a region where agriculture,
+            nature and tradition come together.
+          </p>
 
-<div
-class="price"
-itemprop="offers"
-itemscope
-itemtype="https://schema.org/Offer">
+          <p>
+            We believe good tea starts with good leaves,
+            careful processing and respect for the land.
+          </p>
 
-<meta itemprop="priceCurrency" content="BDT">
-<meta itemprop="price" content="380">
+        </div>
 
-৳ 380
+        <div class="garden-image">
 
-</div>
+          <img
+            src="panchagarh-tea-garden-kanchenjunga.webp"
+            alt="Tea Garden in Panchagarh"
+          />
 
-</div>
+        </div>
 
-<button
-type="button"
-class="product-order-btn"
-onclick="openOrder(event,'Herbal Tea')"
-aria-label="Order Herbal Tea">
+      </div>
 
-Order Now
-<span aria-hidden="true">→</span>
+    </section>
 
-</button>
 
-</div>
+    <!-- STATS -->
+    <section class="stats">
 
-</div>
+      <div class="container">
 
+        <div class="section-heading">
 
-</div>
+          <span class="eyebrow">
+            Panchagarh Tea
+          </span>
 
-</section>
+          <h2>
+            From our region to your cup
+          </h2>
 
+        </div>
 
-<section id="about" class="about">
+        <div class="stats-grid">
 
-<div>
+          <div class="stat">
+            <strong>4</strong>
+            <span>Tea Collections</span>
+          </div>
 
-<div class="eyebrow">
-✦ About Panchagarh Tea
-</div>
+          <div class="stat">
+            <strong>100%</strong>
+            <span>Authentic Tea</span>
+          </div>
 
-<h2>
-A Cup of Tea,<br>
-A Story of Nature
-</h2>
+          <div class="stat">
+            <strong>24/7</strong>
+            <span>Online Orders</span>
+          </div>
 
-<p>
-Panchagarh, in northern Bangladesh, is becoming known for its unique tea-growing environment.
-</p>
+          <div class="stat">
+            <strong>BD</strong>
+            <span>From Bangladesh</span>
+          </div>
 
-<p>
-Panchagarh Tea is dedicated to bringing the authentic taste of this region to tea lovers across Bangladesh.
-</p>
+        </div>
 
-</div>
+      </div>
 
-<div class="gallery">
+    </section>
 
-<div
-style="background-image:url('https://images.unsplash.com/photo-1471943311424-646960669fbc?auto=format&fit=crop&w=800&q=85')">
-</div>
 
-<div
-style="background-image:url('https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=800&q=85')">
-</div>
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
 
-<div
-style="background-image:url('https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=85')">
-</div>
+      <div class="container">
 
-</div>
+        <div class="section-heading">
 
-</section>
+          <span class="eyebrow">
+            Contact Us
+          </span>
 
+          <h2>
+            We'd love to hear from you.
+          </h2>
 
-<section id="garden" class="garden">
+          <p>
+            Have a question about our tea or your order?
+            Get in touch with us.
+          </p>
 
-<div class="garden-img"></div>
+        </div>
 
-<div>
 
-<div class="eyebrow">
-✦ From Our Land
-</div>
+        <div class="contact-grid">
 
-<h2>
-Where every leaf begins
-</h2>
+          <div class="contact-card">
 
-<p>
-From the green tea gardens of Panchagarh to your teacup, our focus is freshness, quality and authenticity.
-</p>
+            <h3>
+              Get in Touch
+            </h3>
 
-<a href="#contact">
-<b>Discover Panchagarh Tea →</b>
-</a>
+            <p>
+              Email us for product information,
+              wholesale inquiries or general questions.
+            </p>
 
-</div>
+            <a
+              class="contact-link"
+              href="mailto:hello@panchagarhtea.com"
+            >
+              hello@panchagarhtea.com
+            </a>
 
-</section>
+          </div>
 
 
-<div class="stats">
+          <div class="contact-card">
 
-<div>
+            <h3>
+              Order by Phone
+            </h3>
 
-<b>500+</b>
+            <p>
+              You can also contact us directly for
+              tea orders and assistance.
+            </p>
 
-<span>Happy Customers</span>
+            <a
+              class="contact-link"
+              href="tel:+8801601006767"
+            >
+              +880 1601-006767
+            </a>
 
-</div>
+            <br />
 
-<div>
+            <a
+              class="contact-link"
+              href="https://wa.me/8801601006767"
+              target="_blank"
+              rel="noopener"
+            >
+              WhatsApp
+            </a>
 
-<b>100%</b>
+          </div>
 
-<span>Natural Tea</span>
+        </div>
 
-</div>
+      </div>
 
-<div>
+    </section>
 
-<b>50+</b>
+  </main>
 
-<span>Tea Gardens</span>
 
-</div>
+  <!-- FOOTER -->
+  <footer>
 
-<div>
+    <div class="container">
 
-<b>10+</b>
+      <div class="footer-grid">
 
-<span>Years of Trust</span>
+        <div class="footer-brand">
 
-</div>
+          <h3>
+            Panchagarh Tea
+          </h3>
 
-</div>
+          <p>
+            Authentic Bangladeshi tea from the beautiful
+            tea-growing region of Panchagarh.
+          </p>
 
+        </div>
 
-<section id="contact" class="contact">
 
-<div>
+        <div>
 
-<div class="eyebrow">
-✦ Get In Touch
-</div>
+          <h4>
+            Quick Links
+          </h4>
 
-<h2>
-Let's share a better cup.
-</h2>
+          <a href="#home">Home</a>
+          <a href="#products">Tea</a>
+          <a href="#about">About</a>
+          <a href="#garden">Our Garden</a>
+          <a href="#contact">Contact</a>
 
-<p>
-Have a question, want to order tea, or interested in wholesale? We'd love to hear from you.
-</p>
+        </div>
 
-</div>
 
-<div class="contact-box">
+        <div>
 
-<a href="mailto:hello@panchagarhtea.com">
-✉ hello@panchagarhtea.com
-</a>
+          <h4>
+            Follow Us
+          </h4>
 
-<a href="tel:+8801601006767">
-☎ +880 01601006767
-</a>
+          <a
+            href="https://www.facebook.com/panchagarhteas"
+            target="_blank"
+            rel="noopener"
+          >
+            Facebook
+          </a>
 
-<a
-href="https://wa.me/8801601006767"
-target="_blank"
-rel="noopener">
+          <a href="mailto:hello@panchagarhtea.com">
+            Email
+          </a>
 
-WhatsApp →
+          <a href="tel:+8801601006767">
+            Phone
+          </a>
 
-</a>
+        </div>
 
-</div>
+      </div>
 
-</section>
 
+      <div class="copyright">
+        © <span id="year"></span> Panchagarh Tea. All rights reserved.
+      </div>
 
-<!-- FLOATING ORDER BUTTON -->
+    </div>
 
-<button
-class="fab-order"
-type="button"
-onclick="openOrder(event)"
-aria-label="Order Now"
-title="Order Now">
+  </footer>
 
-<i class="fa-solid fa-phone"></i>
 
-</button>
+  <!-- FLOATING ORDER -->
+  <button
+    class="floating-order"
+    onclick="openOrder(event)"
+  >
+    Order Tea
+  </button>
 
 
-<!-- ORDER MODAL -->
+  <!-- ORDER MODAL -->
+  <div
+    id="orderModal"
+    class="modal"
+    onclick="closeModalOutside(event)"
+  >
 
-<div
-class="order-modal"
-id="orderModal"
-role="dialog"
-aria-modal="true"
-aria-labelledby="orderTitle">
+    <div class="modal-box">
 
-<div class="order-modal-box">
+      <button
+        class="close-modal"
+        onclick="closeOrder()"
+        aria-label="Close"
+      >
+        ×
+      </button>
 
-<button
-class="close-order"
-type="button"
-onclick="closeOrder()"
-aria-label="Close">
 
-&times;
+      <h2>
+        Order Your Tea
+      </h2>
 
-</button>
+      <p class="modal-subtitle">
+        Fill in your details and submit your order.
+      </p>
 
 
-<div style="font-size:34px;color:var(--green)">
+      <div
+        id="successMessage"
+        class="success-message"
+      >
+        <strong>Order submitted successfully!</strong>
+        <br />
+        We will contact you shortly to confirm your order.
+      </div>
 
-<i class="fa-solid fa-phone-volume"></i>
 
-</div>
+      <form
+        id="orderForm"
+        onsubmit="submitOrder(event)"
+      >
 
+        <!-- NAME -->
+        <div class="form-group">
 
-<h3 id="orderTitle">
-Place Your Order
-</h3>
+          <label for="orderName">
+            Full Name
+          </label>
 
-<p id="orderSubtitle">
-Select your tea and enter your delivery information.
-</p>
+          <input
+            type="text"
+            id="orderName"
+            class="order-input"
+            placeholder="Enter your name"
+            required
+          />
 
+        </div>
 
-<form
-id="orderForm"
-class="order-form">
 
+        <!-- PHONE -->
+        <div class="form-group">
 
-<!-- FRONTEND PRODUCTS -->
+          <label for="orderPhone">
+            Phone Number
+          </label>
 
-<div class="order-field">
+          <input
+            type="tel"
+            id="orderPhone"
+            class="order-input"
+            placeholder="01XXXXXXXXX"
+            required
+          />
 
-<label for="orderProduct">
-Tea
-</label>
+        </div>
 
-<select
-id="orderProduct"
-class="order-input"
-required>
 
-<option value="">
-Select a tea
-</option>
+        <!-- PRODUCT -->
+        <div class="form-group">
 
-<option
-value="Premium Black Tea"
-data-price="350">
+          <label for="orderProduct">
+            Product
+          </label>
 
-Premium Black Tea — ৳350
+          <select
+            id="orderProduct"
+            class="order-input"
+            required
+            onchange="updateOrderTotal()"
+          >
 
-</option>
+            <option value="">
+              Select a tea
+            </option>
 
-<option
-value="Premium Green Tea"
-data-price="400">
+            <option
+              value="Premium Black Tea"
+              data-price="350"
+            >
+              Premium Black Tea — ৳350
+            </option>
 
-Premium Green Tea — ৳400
+            <option
+              value="Premium Green Tea"
+              data-price="400"
+            >
+              Premium Green Tea — ৳400
+            </option>
 
-</option>
+            <option
+              value="Orthodox Tea"
+              data-price="450"
+            >
+              Orthodox Tea — ৳450
+            </option>
 
-<option
-value="Orthodox Tea"
-data-price="450">
+            <option
+              value="Herbal Tea"
+              data-price="380"
+            >
+              Herbal Tea — ৳380
+            </option>
 
-Orthodox Tea — ৳450
+          </select>
 
-</option>
+        </div>
 
-<option
-value="Herbal Tea"
-data-price="380">
 
-Herbal Tea — ৳380
+        <!-- QUANTITY -->
+        <div class="form-group">
 
-</option>
+          <label for="orderQty">
+            Quantity
+          </label>
 
-</select>
+          <input
+            type="number"
+            id="orderQty"
+            class="order-input"
+            value="1"
+            min="1"
+            max="100"
+            required
+            onchange="updateOrderTotal()"
+            oninput="updateOrderTotal()"
+          />
 
-</div>
+        </div>
 
 
-<div class="order-row">
+        <!-- ADDRESS -->
+        <div class="form-group">
 
-<div class="order-field">
+          <label for="orderAddress">
+            Delivery Address
+          </label>
 
-<label for="orderQuantity">
-Quantity
-</label>
+          <textarea
+            id="orderAddress"
+            class="order-input"
+            placeholder="Enter your full delivery address"
+            required
+          ></textarea>
 
-<input
-id="orderQuantity"
-class="order-input"
-type="number"
-min="1"
-max="20"
-value="1"
-required>
+        </div>
 
-</div>
 
+        <!-- CITY -->
+        <div class="form-group">
 
-<div class="order-field">
+          <label for="orderCity">
+            City
+          </label>
 
-<label for="paymentMethod">
-Payment
-</label>
+          <input
+            type="text"
+            id="orderCity"
+            class="order-input"
+            placeholder="Enter your city"
+            required
+          />
 
-<select
-id="paymentMethod"
-class="order-input"
-required>
+        </div>
 
-<option value="Cash on Delivery">
-Cash on Delivery
-</option>
 
-</select>
+        <!-- PAYMENT -->
+        <div class="form-group">
 
-</div>
+          <label for="orderPayment">
+            Payment Method
+          </label>
 
-</div>
+          <select
+            id="orderPayment"
+            class="order-input"
+            required
+          >
 
+            <option value="">
+              Select payment method
+            </option>
 
-<div class="order-field">
+            <option value="Cash on Delivery">
+              Cash on Delivery
+            </option>
 
-<label for="customerName">
-Full Name
-</label>
+            <option value="bKash">
+              bKash
+            </option>
 
-<input
-id="customerName"
-class="order-input"
-type="text"
-placeholder="Your full name"
-required>
+            <option value="Nagad">
+              Nagad
+            </option>
 
-</div>
+          </select>
 
+        </div>
 
-<div class="order-field">
 
-<label for="customerPhone">
-Phone Number
-</label>
+        <!-- TOTAL -->
+        <div class="order-total">
 
-<input
-id="customerPhone"
-class="order-input"
-type="tel"
-placeholder="01XXXXXXXXX"
-required>
+          <span>
+            Estimated Total
+          </span>
 
-</div>
+          <strong id="orderTotal">
+            ৳0
+          </strong>
 
+        </div>
 
-<div class="order-field">
 
-<label for="customerCity">
-City / District
-</label>
+        <button
+          type="submit"
+          class="submit-order"
+          id="submitOrderBtn"
+        >
+          Submit Order
+        </button>
 
-<input
-id="customerCity"
-class="order-input"
-type="text"
-placeholder="Dhaka"
-required>
+      </form>
 
-</div>
+    </div>
 
+  </div>
 
-<div class="order-field">
 
-<label for="customerAddress">
-Delivery Address
-</label>
+  <script>
 
-<textarea
-id="customerAddress"
-class="order-input"
-rows="3"
-placeholder="House, road, area..."
-required></textarea>
+    /*
+      ============================================
+      PANCHAGARH TEA API
+      ============================================
+    */
 
-</div>
+    const API_URL =
+      "https://panchagarh-tea-api.zeesaaniqbal.workers.dev";
 
 
-<div class="order-total">
+    /*
+      ============================================
+      PRODUCT DATA
+      ============================================
+      Products are already available in the frontend.
+      We do NOT load products from the API.
+    */
 
-<span>
-Total
-</span>
+    const PRODUCTS = {
+      "Premium Black Tea": {
+        price: 350
+      },
 
-<span
-id="orderTotal"
-class="order-total-value">
+      "Premium Green Tea": {
+        price: 400
+      },
 
-৳0
+      "Orthodox Tea": {
+        price: 450
+      },
 
-</span>
+      "Herbal Tea": {
+        price: 380
+      }
+    };
 
-</div>
 
+    /*
+      ============================================
+      OPEN ORDER MODAL
+      ============================================
+    */
 
-<button
-id="submitOrder"
-class="order-submit"
-type="submit">
+    function openOrder(event, productName = "") {
 
-Place Order
+      if (event) {
+        event.preventDefault();
+      }
 
-</button>
-
-
-<div
-id="orderStatus"
-class="order-status">
-</div>
-
-
-</form>
-
-
-<!-- SUCCESS -->
-
-<div
-id="orderSuccess"
-class="order-success">
-
-<div class="order-success-icon">
-
-<i class="fa-solid fa-check"></i>
-
-</div>
-
-<h4>
-Order Received!
-</h4>
-
-<p>
-Thank you. Your order has been successfully submitted.
-</p>
-
-<p>
-Your order number:
-</p>
-
-<div
-id="successOrderNumber"
-class="order-number">
-
--
-
-</div>
-
-<button
-type="button"
-class="order-continue"
-onclick="closeOrder()">
-
-Continue
-
-</button>
-
-</div>
-
-
-</div>
-
-</div>
-
-
-<script>
-
-const API_URL =
-"https://panchagarh-tea-api.zeesaaniqbal.workers.dev";
-
-
-/*
-=========================================================
-UPDATE TOTAL
-=========================================================
-*/
-
-function updateOrderTotal(){
-
-  const productSelect =
-    document.getElementById("orderProduct");
-
-  const quantityInput =
-    document.getElementById("orderQuantity");
-
-  const totalElement =
-    document.getElementById("orderTotal");
-
-
-  if(
-    !productSelect ||
-    !quantityInput ||
-    !totalElement
-  ){
-    return;
-  }
-
-
-  const selectedOption =
-    productSelect.options[
-      productSelect.selectedIndex
-    ];
-
-
-  const price =
-    Number(
-      selectedOption?.dataset?.price || 0
-    );
-
-
-  const quantity =
-    Math.max(
-      1,
-      Number(quantityInput.value || 1)
-    );
-
-
-  const total =
-    price * quantity;
-
-
-  totalElement.textContent =
-    "৳" +
-    total.toLocaleString("en-BD");
-
-}
-
-
-/*
-=========================================================
-OPEN ORDER
-=========================================================
-*/
-
-function openOrder(
-  e,
-  productName = ""
-){
-
-  if(e){
-    e.preventDefault();
-  }
-
-
-  const modal =
-    document.getElementById("orderModal");
-
-  const form =
-    document.getElementById("orderForm");
-
-  const success =
-    document.getElementById("orderSuccess");
-
-  const status =
-    document.getElementById("orderStatus");
-
-  const subtitle =
-    document.getElementById("orderSubtitle");
-
-  const productSelect =
-    document.getElementById("orderProduct");
-
-
-  modal.classList.add("show");
-
-
-  form.style.display =
-    "block";
-
-
-  success.style.display =
-    "none";
-
-
-  status.textContent =
-    "";
-
-  status.className =
-    "order-status";
-
-
-  /*
-   * Select product automatically
-   */
-
-  if(productName){
-
-    productSelect.value =
-      productName;
-
-    subtitle.textContent =
-      "Complete your delivery information.";
-
-  }else{
-
-    subtitle.textContent =
-      "Select your tea and enter your delivery information.";
-
-  }
-
-
-  updateOrderTotal();
-
-}
-
-
-/*
-=========================================================
-CLOSE ORDER
-=========================================================
-*/
-
-function closeOrder(){
-
-  const modal =
-    document.getElementById("orderModal");
-
-
-  modal.classList.remove("show");
-
-
-  setTimeout(function(){
-
-    const form =
-      document.getElementById("orderForm");
-
-    const success =
-      document.getElementById("orderSuccess");
-
-    const status =
-      document.getElementById("orderStatus");
-
-    const subtitle =
-      document.getElementById("orderSubtitle");
-
-
-    if(form){
-
-      form.reset();
-
-      form.style.display =
-        "block";
-
-    }
-
-
-    if(success){
-
-      success.style.display =
-        "none";
-
-    }
-
-
-    if(status){
-
-      status.textContent =
-        "";
-
-      status.className =
-        "order-status";
-
-    }
-
-
-    if(subtitle){
-
-      subtitle.textContent =
-        "Select your tea and enter your delivery information.";
-
-    }
-
-
-    updateOrderTotal();
-
-  },200);
-
-}
-
-
-/*
-=========================================================
-PRODUCT CHANGE
-=========================================================
-*/
-
-document
-  .getElementById("orderProduct")
-  .addEventListener(
-    "change",
-    function(){
-
-      updateOrderTotal();
-
-    }
-  );
-
-
-/*
-=========================================================
-QUANTITY CHANGE
-=========================================================
-*/
-
-document
-  .getElementById("orderQuantity")
-  .addEventListener(
-    "input",
-    function(){
-
-      updateOrderTotal();
-
-    }
-  );
-
-
-/*
-=========================================================
-SUBMIT ORDER
-=========================================================
-*/
-
-document
-  .getElementById("orderForm")
-  .addEventListener(
-    "submit",
-    async function(e){
-
-      e.preventDefault();
-
+      const modal =
+        document.getElementById("orderModal");
 
       const productSelect =
         document.getElementById("orderProduct");
 
-      const quantityInput =
-        document.getElementById("orderQuantity");
+      const successMessage =
+        document.getElementById("successMessage");
 
-      const nameInput =
-        document.getElementById("customerName");
-
-      const phoneInput =
-        document.getElementById("customerPhone");
-
-      const cityInput =
-        document.getElementById("customerCity");
-
-      const addressInput =
-        document.getElementById("customerAddress");
-
-      const paymentInput =
-        document.getElementById("paymentMethod");
-
-      const submitButton =
-        document.getElementById("submitOrder");
-
-      const status =
-        document.getElementById("orderStatus");
-
+      successMessage.classList.remove("active");
 
       /*
-       * Get values
-       */
+        If user clicked "Order Now" on a product,
+        automatically select that product.
+      */
 
-      const productName =
-        productSelect.value.trim();
+      if (
+        productName &&
+        PRODUCTS[productName]
+      ) {
 
-      const quantity =
-        Number(quantityInput.value);
-
-      const name =
-        nameInput.value.trim();
-
-      const phone =
-        phoneInput.value.trim();
-
-      const city =
-        cityInput.value.trim();
-
-      const address =
-        addressInput.value.trim();
-
-      const payment =
-        paymentInput.value;
-
-
-      /*
-       * Clear old status
-       */
-
-      status.textContent =
-        "";
-
-      status.className =
-        "order-status";
-
-
-      /*
-       * Validate product
-       */
-
-      if(!productName){
-
-        status.textContent =
-          "Please select a tea.";
-
-        status.className =
-          "order-status error";
-
-        return;
+        productSelect.value = productName;
 
       }
 
+      updateOrderTotal();
 
-      /*
-       * Validate quantity
-       */
+      modal.classList.add("active");
 
-      if(
-        !Number.isInteger(quantity) ||
-        quantity < 1 ||
-        quantity > 20
-      ){
+      document.body.style.overflow = "hidden";
+    }
 
-        status.textContent =
-          "Please enter a quantity between 1 and 20.";
 
-        status.className =
-          "order-status error";
+    /*
+      ============================================
+      CLOSE ORDER MODAL
+      ============================================
+    */
 
-        return;
+    function closeOrder() {
 
-      }
+      const modal =
+        document.getElementById("orderModal");
 
+      modal.classList.remove("active");
 
-      /*
-       * Validate name
-       */
-
-      if(!name){
-
-        status.textContent =
-          "Please enter your name.";
-
-        status.className =
-          "order-status error";
-
-        return;
-
-      }
-
-
-      /*
-       * Validate phone
-       */
-
-      if(!phone){
-
-        status.textContent =
-          "Please enter your phone number.";
-
-        status.className =
-          "order-status error";
-
-        return;
-
-      }
-
-
-      /*
-       * Validate city
-       */
-
-      if(!city){
-
-        status.textContent =
-          "Please enter your city or district.";
-
-        status.className =
-          "order-status error";
-
-        return;
-
-      }
-
-
-      /*
-       * Validate address
-       */
-
-      if(!address){
-
-        status.textContent =
-          "Please enter your delivery address.";
-
-        status.className =
-          "order-status error";
-
-        return;
-
-      }
-
-
-      /*
-       * Disable submit button
-       */
-
-      submitButton.disabled =
-        true;
-
-      submitButton.textContent =
-        "Submitting...";
-
-
-      try{
-
-        /*
-         * Send order
-         *
-         * IMPORTANT:
-         * productName is sent instead of productId.
-         */
-
-        const response =
-          await fetch(
-            API_URL + "/api/public/orders",
-            {
-              method:"POST",
-
-              headers:{
-                "Content-Type":
-                  "application/json",
-
-                "Accept":
-                  "application/json"
-              },
-
-              body:JSON.stringify({
-
-                name:name,
-
-                phone:phone,
-
-                address:address,
-
-                city:city,
-
-                payment:payment,
-
-                productName:productName,
-
-                quantity:quantity
-
-              })
-
-            }
-          );
-
-
-        /*
-         * Read response
-         */
-
-        const responseText =
-          await response.text();
-
-
-        console.log(
-          "Order API status:",
-          response.status
-        );
-
-        console.log(
-          "Order API response:",
-          responseText
-        );
-
-
-        let data = {};
-
-
-        try{
-
-          data =
-            responseText
-              ? JSON.parse(responseText)
-              : {};
-
-        }catch(error){
-
-          console.error(
-            "Order response JSON error:",
-            error
-          );
-
-        }
-
-
-        /*
-         * HTTP error
-         */
-
-        if(!response.ok){
-
-          throw new Error(
-            data.message ||
-            data.error ||
-            "Order submission failed."
-          );
-
-        }
-
-
-        /*
-         * API returned success:false
-         */
-
-        if(data.success === false){
-
-          throw new Error(
-            data.message ||
-            data.error ||
-            "Order submission failed."
-          );
-
-        }
-
-
-        /*
-         * Get order number
-         */
-
-        const orderNumber =
-          data.order?.orderNumber ||
-          data.orderNumber ||
-          "Submitted";
-
-
-        /*
-         * Hide form
-         */
-
-        document
-          .getElementById("orderForm")
-          .style.display =
-          "none";
-
-
-        /*
-         * Show success
-         */
-
-        const success =
-          document.getElementById("orderSuccess");
-
-
-        success.style.display =
-          "block";
-
-
-        /*
-         * Show order number
-         */
-
-        document
-          .getElementById("successOrderNumber")
-          .textContent =
-          orderNumber;
-
-
-      }catch(error){
-
-        console.error(
-          "Order submission error:",
-          error
-        );
-
-
-        status.textContent =
-          error.message ||
-          "Unable to submit order. Please try again.";
-
-        status.className =
-          "order-status error";
-
-
-      }finally{
-
-        submitButton.disabled =
-          false;
-
-        submitButton.textContent =
-          "Place Order";
-
-      }
+      document.body.style.overflow = "";
 
     }
-  );
 
 
-/*
-=========================================================
-CLICK OUTSIDE MODAL
-=========================================================
-*/
+    /*
+      ============================================
+      CLOSE WHEN CLICKING OUTSIDE
+      ============================================
+    */
 
-document
-  .getElementById("orderModal")
-  .addEventListener(
-    "click",
-    function(e){
+    function closeModalOutside(event) {
 
-      if(e.target === this){
+      if (
+        event.target ===
+        document.getElementById("orderModal")
+      ) {
 
         closeOrder();
 
       }
 
     }
-  );
 
 
-/*
-=========================================================
-ESC KEY
-=========================================================
-*/
+    /*
+      ============================================
+      UPDATE TOTAL
+      ============================================
+    */
 
-document.addEventListener(
-  "keydown",
-  function(e){
+    function updateOrderTotal() {
 
-    if(e.key === "Escape"){
+      const productSelect =
+        document.getElementById("orderProduct");
 
-      closeOrder();
+      const quantityInput =
+        document.getElementById("orderQty");
+
+      const totalElement =
+        document.getElementById("orderTotal");
+
+
+      const selectedOption =
+        productSelect.options[
+          productSelect.selectedIndex
+        ];
+
+
+      if (
+        !selectedOption ||
+        !selectedOption.value
+      ) {
+
+        totalElement.textContent = "৳0";
+
+        return;
+
+      }
+
+
+      const price =
+        Number(
+          selectedOption.getAttribute("data-price")
+        ) || 0;
+
+
+      const quantity =
+        Number(quantityInput.value) || 1;
+
+
+      const total =
+        price * quantity;
+
+
+      totalElement.textContent =
+        "৳" + total.toLocaleString("en-BD");
 
     }
 
-  }
-);
+
+    /*
+      ============================================
+      SUBMIT ORDER
+      ============================================
+    */
+
+    async function submitOrder(event) {
+
+      event.preventDefault();
 
 
-/*
-=========================================================
-INITIAL TOTAL
-=========================================================
-*/
-
-updateOrderTotal();
-
-</script>
+      const productSelect =
+        document.getElementById("orderProduct");
 
 
-<footer>
+      /*
+        IMPORTANT:
+        Product is required.
+      */
 
-<div class="foot">
-
-<div>
-
-<img
-src="panchagarh-tea-green-logo.png"
-alt="Panchagarh Tea logo - authentic tea from Bangladesh">
-
-<p>
-Authentic tea from Panchagarh, Bangladesh.
-</p>
-
-<a
-href="https://www.facebook.com/panchagarhteas"
-target="_blank"
-rel="noopener"
-aria-label="Panchagarh Tea on Facebook"
-style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;margin-top:10px;background:#1f4d2b;color:#fff;border-radius:6px;font-size:18px;">
-
-<i class="fa-brands fa-facebook-f"></i>
-
-</a>
-
-</div>
+      const productName =
+        productSelect.value;
 
 
-<div>
+      if (!productName) {
 
-<h4>
-Quick Links
-</h4>
+        alert("Please select a product.");
 
-<a href="#home">
-Home
-</a>
+        productSelect.focus();
 
-<br>
+        return;
 
-<a href="#about">
-About
-</a>
-
-<br>
-
-<a href="#tea">
-Our Tea
-</a>
-
-<br>
-
-</div>
+      }
 
 
-<div>
-
-<h4>
-Customer Service
-</h4>
-
-<a href="#contact">
-Contact Us
-</a>
-
-<br>
-
-<a href="#">
-Shipping Policy
-</a>
-
-<br>
-
-<a href="#">
-Privacy Policy
-</a>
-
-</div>
-
-</div>
+      const name =
+        document
+          .getElementById("orderName")
+          .value
+          .trim();
 
 
-<div class="copyright">
+      const phone =
+        document
+          .getElementById("orderPhone")
+          .value
+          .trim();
 
-<span>
-© 2026 Panchagarh Tea. All Rights Reserved.
-</span>
 
-<span>
-Made with ♥ in Bangladesh
-</span>
+      const address =
+        document
+          .getElementById("orderAddress")
+          .value
+          .trim();
 
-</div>
 
-</footer>
+      const city =
+        document
+          .getElementById("orderCity")
+          .value
+          .trim();
 
+
+      const payment =
+        document
+          .getElementById("orderPayment")
+          .value;
+
+
+      const quantity =
+        Number(
+          document
+            .getElementById("orderQty")
+            .value
+        );
+
+
+      /*
+        Basic validation
+      */
+
+      if (!name) {
+
+        alert("Please enter your name.");
+
+        return;
+
+      }
+
+
+      if (!phone) {
+
+        alert("Please enter your phone number.");
+
+        return;
+
+      }
+
+
+      if (!address) {
+
+        alert("Please enter your delivery address.");
+
+        return;
+
+      }
+
+
+      if (!city) {
+
+        alert("Please enter your city.");
+
+        return;
+
+      }
+
+
+      if (!payment) {
+
+        alert("Please select a payment method.");
+
+        return;
+
+      }
+
+
+      if (!quantity || quantity < 1) {
+
+        alert("Please enter a valid quantity.");
+
+        return;
+
+      }
+
+
+      /*
+        API payload
+      */
+
+      const orderData = {
+
+        name: name,
+
+        phone: phone,
+
+        address: address,
+
+        city: city,
+
+        payment: payment,
+
+        productName: productName,
+
+        quantity: quantity
+
+      };
+
+
+      const submitButton =
+        document.getElementById("submitOrderBtn");
+
+
+      submitButton.disabled = true;
+
+      submitButton.textContent =
+        "Submitting Order...";
+
+
+      try {
+
+        const response =
+          await fetch(
+            API_URL + "/api/public/orders",
+            {
+              method: "POST",
+
+              headers: {
+                "Content-Type": "application/json"
+              },
+
+              body: JSON.stringify(orderData)
+            }
+          );
+
+
+        const result =
+          await response.json();
+
+
+        console.log(
+          "Order API response:",
+          result
+        );
+
+
+        if (!response.ok) {
+
+          throw new Error(
+            result.message ||
+            "Unable to submit order."
+          );
+
+        }
+
+
+        /*
+          Successful order
+        */
+
+        document
+          .getElementById("successMessage")
+          .classList.add("active");
+
+
+        document
+          .getElementById("orderForm")
+          .reset();
+
+
+        document
+          .getElementById("orderTotal")
+          .textContent = "৳0";
+
+
+        /*
+          Close modal after a short delay
+        */
+
+        setTimeout(
+          function () {
+
+            closeOrder();
+
+          },
+          2500
+        );
+
+
+      } catch (error) {
+
+        console.error(
+          "Order error:",
+          error
+        );
+
+
+        alert(
+          error.message ||
+          "Something went wrong. Please try again."
+        );
+
+      } finally {
+
+        submitButton.disabled = false;
+
+        submitButton.textContent =
+          "Submit Order";
+
+      }
+
+    }
+
+
+    /*
+      ============================================
+      ESC KEY CLOSE
+      ============================================
+    */
+
+    document.addEventListener(
+      "keydown",
+      function (event) {
+
+        if (event.key === "Escape") {
+
+          closeOrder();
+
+        }
+
+      }
+    );
+
+
+    /*
+      ============================================
+      CURRENT YEAR
+      ============================================
+    */
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+
+    /*
+      ============================================
+      INITIAL TOTAL
+      ============================================
+    */
+
+    updateOrderTotal();
+
+  </script>
 
 </body>
 </html>
-
