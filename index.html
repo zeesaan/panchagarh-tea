@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,6 +38,13 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<!-- CLOUDFLARE TURNSTILE CAPTCHA -->
+<script
+src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+async
+defer>
+</script>
 
 <style>
 
@@ -262,7 +270,6 @@ border:1px solid var(--gold);
 font-weight:800
 }
 
-/* Available Product Button */
 .product-order-btn{
 cursor:pointer;
 transition:transform .2s ease,background-color .2s ease,box-shadow .2s ease
@@ -282,7 +289,6 @@ margin-left:6px;
 font-size:16px
 }
 
-/* Out Of Stock Button */
 .out-of-stock-btn{
 cursor:pointer !important;
 background:#f3f3ef !important;
@@ -303,7 +309,6 @@ margin-left:6px;
 font-size:14px
 }
 
-/* Out Of Stock Modal */
 .stock-modal{
 position:fixed;
 inset:0;
@@ -505,7 +510,6 @@ display:flex;
 justify-content:space-between
 }
 
-/* Floating Order Button */
 .fab-order{
 position:fixed;
 right:24px;
@@ -887,8 +891,6 @@ From traditional black tea to refreshing green tea, discover our selection.
 
 <div class="cards">
 
-
-<!-- PRODUCT 1 -->
 <div class="card">
 
 <div
@@ -938,7 +940,6 @@ Order Now <span aria-hidden="true">→</span>
 </div>
 
 
-<!-- PRODUCT 2 -->
 <div class="card">
 
 <div
@@ -988,7 +989,6 @@ Out of Stock <span aria-hidden="true">×</span>
 </div>
 
 
-<!-- PRODUCT 3 -->
 <div class="card">
 
 <div
@@ -1038,7 +1038,6 @@ Out of Stock <span aria-hidden="true">×</span>
 </div>
 
 
-<!-- PRODUCT 4 -->
 <div class="card">
 
 <div
@@ -1219,8 +1218,6 @@ WhatsApp →
 </section>
 
 
-<!-- FLOATING ORDER BUTTON -->
-
 <button
 class="fab-order"
 type="button"
@@ -1232,8 +1229,6 @@ title="Order Now">
 
 </button>
 
-
-<!-- OUT OF STOCK MODAL -->
 
 <div
 class="stock-modal"
@@ -1317,8 +1312,6 @@ Fill in your details and submit your order.
 </p>
 
 
-<!-- SUCCESS MESSAGE -->
-
 <div
 id="orderSuccess"
 class="order-success">
@@ -1328,8 +1321,6 @@ We will contact you shortly to confirm your order.
 
 </div>
 
-
-<!-- ERROR MESSAGE -->
 
 <div
 id="orderError"
@@ -1343,8 +1334,6 @@ id="orderForm"
 onsubmit="submitOrder(event)"
 novalidate>
 
-
-<!-- NAME -->
 
 <div class="order-form-group">
 
@@ -1362,8 +1351,6 @@ required>
 </div>
 
 
-<!-- PHONE -->
-
 <div class="order-form-group">
 
 <label for="orderPhone">
@@ -1379,8 +1366,6 @@ required>
 
 </div>
 
-
-<!-- PRODUCT -->
 
 <div class="order-form-group">
 
@@ -1418,8 +1403,6 @@ Herbal Tea — Out of Stock
 </div>
 
 
-<!-- QUANTITY -->
-
 <div class="order-form-group">
 
 <label for="orderQuantity">
@@ -1437,8 +1420,6 @@ required>
 </div>
 
 
-<!-- ADDRESS -->
-
 <div class="order-form-group">
 
 <label for="orderAddress">
@@ -1455,93 +1436,21 @@ required></textarea>
 </div>
 
 
-<!-- CITY -->
-
 <div class="order-form-group">
 
 <label for="orderCity">
 City
 </label>
 
-<select
+<input
 id="orderCity"
 class="order-input"
+type="text"
+placeholder="Enter your city"
 required>
-
-<option value="">
-Select your city
-</option>
-
-<option value="Bagerhat">Bagerhat</option>
-<option value="Bandarban">Bandarban</option>
-<option value="Barguna">Barguna</option>
-<option value="Barishal">Barishal</option>
-<option value="Bhola">Bhola</option>
-<option value="Bogura">Bogura</option>
-<option value="Brahmanbaria">Brahmanbaria</option>
-<option value="Chandpur">Chandpur</option>
-<option value="Chattogram">Chattogram</option>
-<option value="Chuadanga">Chuadanga</option>
-<option value="Cox's Bazar">Cox's Bazar</option>
-<option value="Cumilla">Cumilla</option>
-<option value="Dhaka">Dhaka</option>
-<option value="Dinajpur">Dinajpur</option>
-<option value="Faridpur">Faridpur</option>
-<option value="Feni">Feni</option>
-<option value="Gaibandha">Gaibandha</option>
-<option value="Gazipur">Gazipur</option>
-<option value="Gopalganj">Gopalganj</option>
-<option value="Habiganj">Habiganj</option>
-<option value="Jamalpur">Jamalpur</option>
-<option value="Jashore">Jashore</option>
-<option value="Jhalokati">Jhalokati</option>
-<option value="Jhenaidah">Jhenaidah</option>
-<option value="Joypurhat">Joypurhat</option>
-<option value="Khagrachhari">Khagrachhari</option>
-<option value="Khulna">Khulna</option>
-<option value="Kishoreganj">Kishoreganj</option>
-<option value="Kurigram">Kurigram</option>
-<option value="Kushtia">Kushtia</option>
-<option value="Lakshmipur">Lakshmipur</option>
-<option value="Lalmonirhat">Lalmonirhat</option>
-<option value="Madaripur">Madaripur</option>
-<option value="Magura">Magura</option>
-<option value="Manikganj">Manikganj</option>
-<option value="Meherpur">Meherpur</option>
-<option value="Moulvibazar">Moulvibazar</option>
-<option value="Munshiganj">Munshiganj</option>
-<option value="Mymensingh">Mymensingh</option>
-<option value="Naogaon">Naogaon</option>
-<option value="Narail">Narail</option>
-<option value="Narayanganj">Narayanganj</option>
-<option value="Narsingdi">Narsingdi</option>
-<option value="Natore">Natore</option>
-<option value="Netrokona">Netrokona</option>
-<option value="Nilphamari">Nilphamari</option>
-<option value="Noakhali">Noakhali</option>
-<option value="Pabna">Pabna</option>
-<option value="Panchagarh">Panchagarh</option>
-<option value="Patuakhali">Patuakhali</option>
-<option value="Pirojpur">Pirojpur</option>
-<option value="Rajbari">Rajbari</option>
-<option value="Rajshahi">Rajshahi</option>
-<option value="Rangamati">Rangamati</option>
-<option value="Rangpur">Rangpur</option>
-<option value="Satkhira">Satkhira</option>
-<option value="Shariatpur">Shariatpur</option>
-<option value="Sherpur">Sherpur</option>
-<option value="Sirajganj">Sirajganj</option>
-<option value="Sunamganj">Sunamganj</option>
-<option value="Sylhet">Sylhet</option>
-<option value="Tangail">Tangail</option>
-<option value="Thakurgaon">Thakurgaon</option>
-
-</select>
 
 </div>
 
-
-<!-- PAYMENT -->
 
 <div class="order-form-group">
 
@@ -1575,8 +1484,6 @@ Nagad
 </div>
 
 
-<!-- TOTAL -->
-
 <div class="order-total">
 
 <span>
@@ -1590,7 +1497,13 @@ Total
 </div>
 
 
-<!-- SUBMIT -->
+<!-- CLOUDFLARE TURNSTILE CAPTCHA -->
+
+<div
+class="cf-turnstile"
+data-sitekey="0x4AAAAAAE-Hrz7RxNQoF2Ho">
+</div>
+
 
 <button
 type="submit"
@@ -1610,31 +1523,9 @@ Submit Order
 
 <script>
 
-/*
-====================================================
-PANCHAGARH TEA
-ORDER SYSTEM
-====================================================
-*/
-
-
-/*
-====================================================
-API URL
-====================================================
-*/
-
 const API_URL =
 "https://panchagarh-tea-api.zeesaaniqbal.workers.dev";
 
-
-/*
-====================================================
-FRONTEND PRODUCTS
-
-Only Premium Black Tea is currently available.
-====================================================
-*/
 
 const PRODUCTS = {
 
@@ -1661,12 +1552,6 @@ available:false
 };
 
 
-/*
-====================================================
-OUT OF STOCK MODAL
-====================================================
-*/
-
 function showOutOfStock(e, productName = "") {
 
 if(e){
@@ -1690,12 +1575,6 @@ document.body.style.overflow =
 }
 
 
-/*
-====================================================
-CLOSE OUT OF STOCK MODAL
-====================================================
-*/
-
 function closeStockModal(){
 
 const modal =
@@ -1708,13 +1587,6 @@ document.body.style.overflow =
 
 }
 
-
-/*
-====================================================
-CLOSE OUT OF STOCK MODAL
-WHEN CLICKING OUTSIDE
-====================================================
-*/
 
 document
 .getElementById("stockModal")
@@ -1731,12 +1603,6 @@ closeStockModal();
 }
 );
 
-
-/*
-====================================================
-OPEN ORDER MODAL
-====================================================
-*/
 
 function openOrder(e, productName = ""){
 
@@ -1756,22 +1622,11 @@ document.getElementById("orderSuccess");
 const error =
 document.getElementById("orderError");
 
-
-/*
-Clear previous messages
-*/
-
 success.classList.remove("show");
 
 error.classList.remove("show");
 
 error.textContent = "";
-
-
-/*
-If product button was clicked,
-automatically select that product.
-*/
 
 if(
 productName &&
@@ -1783,12 +1638,6 @@ productSelect.value =
 productName;
 
 }
-
-
-/*
-Always make sure unavailable
-products cannot be selected.
-*/
 
 if(
 productName &&
@@ -1802,36 +1651,15 @@ return;
 
 }
 
-
-/*
-Update total
-*/
-
 updateOrderTotal();
 
-
-/*
-Show modal
-*/
-
 modal.classList.add("show");
-
-
-/*
-Prevent page scrolling
-*/
 
 document.body.style.overflow =
 "hidden";
 
 }
 
-
-/*
-====================================================
-CLOSE ORDER MODAL
-====================================================
-*/
 
 function closeOrder(){
 
@@ -1845,13 +1673,6 @@ document.body.style.overflow =
 
 }
 
-
-/*
-====================================================
-CLOSE ORDER MODAL
-WHEN CLICKING OUTSIDE
-====================================================
-*/
 
 document
 .getElementById("orderModal")
@@ -1869,12 +1690,6 @@ closeOrder();
 );
 
 
-/*
-====================================================
-ESC KEY
-====================================================
-*/
-
 document.addEventListener(
 "keydown",
 function(e){
@@ -1889,12 +1704,6 @@ closeStockModal();
 }
 );
 
-
-/*
-====================================================
-UPDATE TOTAL
-====================================================
-*/
 
 function updateOrderTotal(){
 
@@ -1928,11 +1737,6 @@ return;
 
 const productName =
 selectedOption.value;
-
-
-/*
-Check availability
-*/
 
 if(
 !PRODUCTS[productName] ||
@@ -1972,12 +1776,6 @@ total.toLocaleString("en-BD");
 }
 
 
-/*
-====================================================
-PRODUCT CHANGE
-====================================================
-*/
-
 document
 .getElementById("orderProduct")
 .addEventListener(
@@ -1986,11 +1784,6 @@ function(){
 
 const productName =
 this.value;
-
-
-/*
-Only available products can be ordered.
-*/
 
 if(
 productName &&
@@ -2019,12 +1812,6 @@ updateOrderTotal();
 );
 
 
-/*
-====================================================
-QUANTITY CHANGE
-====================================================
-*/
-
 document
 .getElementById("orderQuantity")
 .addEventListener(
@@ -2032,12 +1819,6 @@ document
 updateOrderTotal
 );
 
-
-/*
-====================================================
-SHOW ERROR
-====================================================
-*/
 
 function showOrderError(message){
 
@@ -2085,10 +1866,6 @@ document.getElementById(
 );
 
 
-/*
-Clear old messages
-*/
-
 success.classList.remove("show");
 
 error.classList.remove("show");
@@ -2097,7 +1874,32 @@ error.textContent = "";
 
 
 /*
-Get values
+====================================================
+CLOUDFLARE TURNSTILE TOKEN
+====================================================
+*/
+
+const turnstileToken =
+typeof turnstile !== "undefined"
+? turnstile.getResponse()
+: "";
+
+
+if(!turnstileToken){
+
+showOrderError(
+"Please complete the security check."
+);
+
+return;
+
+}
+
+
+/*
+====================================================
+GET VALUES
+====================================================
 */
 
 const name =
@@ -2148,12 +1950,6 @@ document
 .value;
 
 
-/*
-====================================================
-VALIDATE PRODUCT
-====================================================
-*/
-
 if(!productName){
 
 showOrderError(
@@ -2168,12 +1964,6 @@ return;
 
 }
 
-
-/*
-IMPORTANT:
-Double-check product availability
-before sending the order.
-*/
 
 if(
 !PRODUCTS[productName] ||
@@ -2190,12 +1980,6 @@ return;
 }
 
 
-/*
-====================================================
-VALIDATE NAME
-====================================================
-*/
-
 if(!name){
 
 showOrderError(
@@ -2207,12 +1991,6 @@ return;
 }
 
 
-/*
-====================================================
-VALIDATE PHONE
-====================================================
-*/
-
 if(!phone){
 
 showOrderError(
@@ -2223,12 +2001,6 @@ return;
 
 }
 
-
-/*
-====================================================
-VALIDATE QUANTITY
-====================================================
-*/
 
 if(
 !quantity ||
@@ -2244,12 +2016,6 @@ return;
 }
 
 
-/*
-====================================================
-VALIDATE ADDRESS
-====================================================
-*/
-
 if(!address){
 
 showOrderError(
@@ -2261,12 +2027,6 @@ return;
 }
 
 
-/*
-====================================================
-VALIDATE CITY
-====================================================
-*/
-
 if(!city){
 
 showOrderError(
@@ -2277,12 +2037,6 @@ return;
 
 }
 
-
-/*
-====================================================
-VALIDATE PAYMENT
-====================================================
-*/
 
 if(!payment){
 
@@ -2301,35 +2055,6 @@ API PAYLOAD
 ====================================================
 */
 
-/*
-====================================================
-SECURITY / ORDER CAPTURE
-
-These values are captured when the customer places
-the order. IP address must be captured server-side
-in the Cloudflare Worker.
-====================================================
-*/
-
-const securityData = {
-
-orderTimestamp: new Date().toISOString(),
-
-timezone: Intl.DateTimeFormat().resolvedOptions().timeZone || "unknown",
-
-userAgent: navigator.userAgent || "unknown",
-
-referrer: document.referrer || "direct",
-
-pageUrl: window.location.href,
-
-screen: `${window.screen.width}x${window.screen.height}`,
-
-language: navigator.language || "unknown"
-
-};
-
-
 const orderData = {
 
 name:name,
@@ -2346,7 +2071,7 @@ productName:productName,
 
 quantity:quantity,
 
-security: securityData
+turnstileToken:turnstileToken
 
 };
 
@@ -2357,10 +2082,6 @@ orderData
 );
 
 
-/*
-Disable submit button
-*/
-
 submitButton.disabled = true;
 
 submitButton.textContent =
@@ -2368,10 +2089,6 @@ submitButton.textContent =
 
 
 try{
-
-/*
-Send order to Cloudflare Worker
-*/
 
 const response =
 await fetch(
@@ -2395,10 +2112,6 @@ orderData
 );
 
 
-/*
-Read API response
-*/
-
 const result =
 await response.json();
 
@@ -2408,10 +2121,6 @@ console.log(
 result
 );
 
-
-/*
-API error
-*/
 
 if(!response.ok){
 
@@ -2423,23 +2132,9 @@ result.message ||
 }
 
 
-/*
-SUCCESS
-*/
-
 success.classList.add("show");
 
-
-/*
-Reset form
-*/
-
 form.reset();
-
-
-/*
-Reset total
-*/
 
 document
 .getElementById(
@@ -2450,8 +2145,17 @@ document
 
 
 /*
-Close modal after 2.5 seconds
+Reset Turnstile after successful order
 */
+
+if(
+typeof turnstile !== "undefined"
+){
+
+turnstile.reset();
+
+}
+
 
 setTimeout(
 function(){
@@ -2478,6 +2182,19 @@ err.message ||
 );
 
 
+/*
+Reset Turnstile after failed request
+*/
+
+if(
+typeof turnstile !== "undefined"
+){
+
+turnstile.reset();
+
+}
+
+
 }
 finally{
 
@@ -2491,12 +2208,6 @@ submitButton.textContent =
 
 }
 
-
-/*
-====================================================
-INITIAL TOTAL
-====================================================
-*/
 
 updateOrderTotal();
 
