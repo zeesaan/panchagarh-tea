@@ -38,6 +38,13 @@
 
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
+<!-- CLOUDFLARE TURNSTILE -->
+<script
+src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+async
+defer>
+</script>
+
 <style>
 
 :root{
@@ -262,7 +269,6 @@ border:1px solid var(--gold);
 font-weight:800
 }
 
-/* Available Product Button */
 .product-order-btn{
 cursor:pointer;
 transition:transform .2s ease,background-color .2s ease,box-shadow .2s ease
@@ -282,7 +288,6 @@ margin-left:6px;
 font-size:16px
 }
 
-/* Out Of Stock Button */
 .out-of-stock-btn{
 cursor:pointer !important;
 background:#f3f3ef !important;
@@ -303,7 +308,6 @@ margin-left:6px;
 font-size:14px
 }
 
-/* Out Of Stock Modal */
 .stock-modal{
 position:fixed;
 inset:0;
@@ -505,7 +509,6 @@ display:flex;
 justify-content:space-between
 }
 
-/* Floating Order Button */
 .fab-order{
 position:fixed;
 right:24px;
@@ -694,6 +697,14 @@ font-size:13px
 display:block
 }
 
+/* CLOUDFLARE TURNSTILE */
+
+.cf-turnstile{
+margin:12px 0 14px;
+display:flex;
+justify-content:center
+}
+
 @media(max-width:900px){
 
 .nav,.order{
@@ -808,7 +819,6 @@ Order Now
 
 </header>
 
-
 <section id="home" class="hero">
 
 <div class="hero-content">
@@ -840,7 +850,6 @@ Our Story
 
 </section>
 
-
 <div class="features">
 
 <div class="feature">
@@ -865,7 +874,6 @@ Our Story
 
 </div>
 
-
 <section id="tea" class="content">
 
 <div class="heading">
@@ -884,11 +892,8 @@ From traditional black tea to refreshing green tea, discover our selection.
 
 </div>
 
-
 <div class="cards">
 
-
-<!-- PRODUCT 1 -->
 <div class="card">
 
 <div
@@ -937,8 +942,6 @@ Order Now <span aria-hidden="true">→</span>
 
 </div>
 
-
-<!-- PRODUCT 2 -->
 <div class="card">
 
 <div
@@ -987,8 +990,6 @@ Out of Stock <span aria-hidden="true">×</span>
 
 </div>
 
-
-<!-- PRODUCT 3 -->
 <div class="card">
 
 <div
@@ -1037,8 +1038,6 @@ Out of Stock <span aria-hidden="true">×</span>
 
 </div>
 
-
-<!-- PRODUCT 4 -->
 <div class="card">
 
 <div
@@ -1091,7 +1090,6 @@ Out of Stock <span aria-hidden="true">×</span>
 
 </section>
 
-
 <section id="about" class="about">
 
 <div>
@@ -1115,7 +1113,6 @@ Panchagarh Tea is dedicated to bringing the authentic taste of this region to te
 
 </div>
 
-
 <div class="gallery">
 
 <div style="background-image:url('https://images.unsplash.com/photo-1471943311424-646960669fbc?auto=format&fit=crop&w=800&q=85')"></div>
@@ -1127,7 +1124,6 @@ Panchagarh Tea is dedicated to bringing the authentic taste of this region to te
 </div>
 
 </section>
-
 
 <section id="garden" class="garden">
 
@@ -1155,7 +1151,6 @@ From the green tea gardens of Panchagarh to your teacup, our focus is freshness,
 
 </section>
 
-
 <div class="stats">
 
 <div>
@@ -1180,7 +1175,6 @@ From the green tea gardens of Panchagarh to your teacup, our focus is freshness,
 
 </div>
 
-
 <section id="contact" class="contact">
 
 <div>
@@ -1198,7 +1192,6 @@ Have a question, want to order tea, or interested in wholesale? We'd love to hea
 </p>
 
 </div>
-
 
 <div class="contact-box">
 
@@ -1218,9 +1211,6 @@ WhatsApp →
 
 </section>
 
-
-<!-- FLOATING ORDER BUTTON -->
-
 <button
 class="fab-order"
 type="button"
@@ -1231,9 +1221,6 @@ title="Order Now">
 <i class="fa-solid fa-phone"></i>
 
 </button>
-
-
-<!-- OUT OF STOCK MODAL -->
 
 <div
 class="stock-modal"
@@ -1278,9 +1265,6 @@ Continue Shopping
 
 </div>
 
-
-<!-- ORDER MODAL -->
-
 <div
 class="order-modal"
 id="orderModal"
@@ -1300,13 +1284,11 @@ aria-label="Close">
 
 </button>
 
-
 <div style="font-size:34px;color:var(--green);text-align:center">
 
 <i class="fa-solid fa-phone-volume"></i>
 
 </div>
-
 
 <h3 id="orderTitle" style="text-align:center">
 Place Your Order
@@ -1315,9 +1297,6 @@ Place Your Order
 <p style="text-align:center">
 Fill in your details and submit your order.
 </p>
-
-
-<!-- SUCCESS MESSAGE -->
 
 <div
 id="orderSuccess"
@@ -1328,23 +1307,16 @@ We will contact you shortly to confirm your order.
 
 </div>
 
-
-<!-- ERROR MESSAGE -->
-
 <div
 id="orderError"
 class="order-error">
 
 </div>
 
-
 <form
 id="orderForm"
 onsubmit="submitOrder(event)"
 novalidate>
-
-
-<!-- NAME -->
 
 <div class="order-form-group">
 
@@ -1361,9 +1333,6 @@ required>
 
 </div>
 
-
-<!-- PHONE -->
-
 <div class="order-form-group">
 
 <label for="orderPhone">
@@ -1378,9 +1347,6 @@ placeholder="01601006767"
 required>
 
 </div>
-
-
-<!-- PRODUCT -->
 
 <div class="order-form-group">
 
@@ -1417,9 +1383,6 @@ Herbal Tea — Out of Stock
 
 </div>
 
-
-<!-- QUANTITY -->
-
 <div class="order-form-group">
 
 <label for="orderQuantity">
@@ -1436,9 +1399,6 @@ required>
 
 </div>
 
-
-<!-- ADDRESS -->
-
 <div class="order-form-group">
 
 <label for="orderAddress">
@@ -1454,9 +1414,6 @@ required></textarea>
 
 </div>
 
-
-<!-- CITY -->
-
 <div class="order-form-group">
 
 <label for="orderCity">
@@ -1471,9 +1428,6 @@ placeholder="Enter your city"
 required>
 
 </div>
-
-
-<!-- PAYMENT -->
 
 <div class="order-form-group">
 
@@ -1506,9 +1460,6 @@ Nagad
 
 </div>
 
-
-<!-- TOTAL -->
-
 <div class="order-total">
 
 <span>
@@ -1521,8 +1472,12 @@ Total
 
 </div>
 
+<!-- CLOUDFLARE TURNSTILE SECURITY -->
 
-<!-- SUBMIT -->
+<div
+class="cf-turnstile"
+data-sitekey="0x4AAAAAAE-Hrz7RxNQoF2Ho">
+</div>
 
 <button
 type="submit"
@@ -1539,7 +1494,6 @@ Submit Order
 
 </div>
 
-
 <script>
 
 /*
@@ -1549,22 +1503,79 @@ ORDER SYSTEM
 ====================================================
 */
 
-
-/*
-====================================================
-API URL
-====================================================
-*/
-
 const API_URL =
 "https://panchagarh-tea-api.zeesaaniqbal.workers.dev";
 
 
 /*
 ====================================================
-FRONTEND PRODUCTS
+CLOUDFLARE TURNSTILE
+====================================================
+*/
 
-Only Premium Black Tea is currently available.
+const TURNSTILE_SITE_KEY =
+"0x4AAAAAAE-Hrz7RxNQoF2Ho";
+
+
+function getTurnstileToken(){
+
+if(
+typeof turnstile === "undefined"
+){
+
+return "";
+
+}
+
+try{
+
+return turnstile.getResponse() || "";
+
+}
+catch(error){
+
+console.error(
+"Turnstile token error:",
+error
+);
+
+return "";
+
+}
+
+}
+
+
+function resetTurnstile(){
+
+if(
+typeof turnstile === "undefined"
+){
+
+return;
+
+}
+
+try{
+
+turnstile.reset();
+
+}
+catch(error){
+
+console.error(
+"Turnstile reset error:",
+error
+);
+
+}
+
+}
+
+
+/*
+====================================================
+FRONTEND PRODUCTS
 ====================================================
 */
 
@@ -1688,22 +1699,11 @@ document.getElementById("orderSuccess");
 const error =
 document.getElementById("orderError");
 
-
-/*
-Clear previous messages
-*/
-
 success.classList.remove("show");
 
 error.classList.remove("show");
 
 error.textContent = "";
-
-
-/*
-If product button was clicked,
-automatically select that product.
-*/
 
 if(
 productName &&
@@ -1715,12 +1715,6 @@ productSelect.value =
 productName;
 
 }
-
-
-/*
-Always make sure unavailable
-products cannot be selected.
-*/
 
 if(
 productName &&
@@ -1734,24 +1728,9 @@ return;
 
 }
 
-
-/*
-Update total
-*/
-
 updateOrderTotal();
 
-
-/*
-Show modal
-*/
-
 modal.classList.add("show");
-
-
-/*
-Prevent page scrolling
-*/
 
 document.body.style.overflow =
 "hidden";
@@ -1844,7 +1823,6 @@ productSelect.options[
 productSelect.selectedIndex
 ];
 
-
 if(
 !selectedOption ||
 !selectedOption.value
@@ -1857,14 +1835,8 @@ return;
 
 }
 
-
 const productName =
 selectedOption.value;
-
-
-/*
-Check availability
-*/
 
 if(
 !PRODUCTS[productName] ||
@@ -1878,7 +1850,6 @@ return;
 
 }
 
-
 const price =
 Number(
 selectedOption.getAttribute(
@@ -1886,16 +1857,13 @@ selectedOption.getAttribute(
 )
 ) || 0;
 
-
 const quantity =
 Number(
 quantityInput.value
 ) || 1;
 
-
 const total =
 price * quantity;
-
 
 totalElement.textContent =
 "৳" +
@@ -1918,11 +1886,6 @@ function(){
 
 const productName =
 this.value;
-
-
-/*
-Only available products can be ordered.
-*/
 
 if(
 productName &&
@@ -1994,32 +1957,23 @@ async function submitOrder(e){
 
 e.preventDefault();
 
-
 const form =
 document.getElementById("orderForm");
-
 
 const submitButton =
 document.getElementById(
 "submitOrderButton"
 );
 
-
 const success =
 document.getElementById(
 "orderSuccess"
 );
 
-
 const error =
 document.getElementById(
 "orderError"
 );
-
-
-/*
-Clear old messages
-*/
 
 success.classList.remove("show");
 
@@ -2029,7 +1983,9 @@ error.textContent = "";
 
 
 /*
-Get values
+====================================================
+GET VALUES
+====================================================
 */
 
 const name =
@@ -2038,19 +1994,16 @@ document
 .value
 .trim();
 
-
 const phone =
 document
 .getElementById("orderPhone")
 .value
 .trim();
 
-
 const productName =
 document
 .getElementById("orderProduct")
 .value;
-
 
 const quantity =
 Number(
@@ -2059,20 +2012,17 @@ document
 .value
 );
 
-
 const address =
 document
 .getElementById("orderAddress")
 .value
 .trim();
 
-
 const city =
 document
 .getElementById("orderCity")
 .value
 .trim();
-
 
 const payment =
 document
@@ -2102,9 +2052,9 @@ return;
 
 
 /*
-IMPORTANT:
-Double-check product availability
-before sending the order.
+====================================================
+CHECK PRODUCT AVAILABILITY
+====================================================
 */
 
 if(
@@ -2229,6 +2179,26 @@ return;
 
 /*
 ====================================================
+TURNSTILE SECURITY CHECK
+====================================================
+*/
+
+const turnstileToken =
+getTurnstileToken();
+
+if(!turnstileToken){
+
+showOrderError(
+"Please complete the security check."
+);
+
+return;
+
+}
+
+
+/*
+====================================================
 API PAYLOAD
 ====================================================
 */
@@ -2247,7 +2217,9 @@ payment:payment,
 
 productName:productName,
 
-quantity:quantity
+quantity:quantity,
+
+turnstileToken:turnstileToken
 
 };
 
@@ -2259,7 +2231,9 @@ orderData
 
 
 /*
-Disable submit button
+====================================================
+DISABLE SUBMIT BUTTON
+====================================================
 */
 
 submitButton.disabled = true;
@@ -2271,7 +2245,9 @@ submitButton.textContent =
 try{
 
 /*
-Send order to Cloudflare Worker
+====================================================
+SEND ORDER TO CLOUDFLARE WORKER
+====================================================
 */
 
 const response =
@@ -2297,12 +2273,13 @@ orderData
 
 
 /*
-Read API response
+====================================================
+READ API RESPONSE
+====================================================
 */
 
 const result =
 await response.json();
-
 
 console.log(
 "API response:",
@@ -2311,7 +2288,9 @@ result
 
 
 /*
-API error
+====================================================
+API ERROR
+====================================================
 */
 
 if(!response.ok){
@@ -2325,21 +2304,27 @@ result.message ||
 
 
 /*
+====================================================
 SUCCESS
+====================================================
 */
 
 success.classList.add("show");
 
 
 /*
-Reset form
+====================================================
+RESET FORM
+====================================================
 */
 
 form.reset();
 
 
 /*
-Reset total
+====================================================
+RESET TOTAL
+====================================================
 */
 
 document
@@ -2351,7 +2336,18 @@ document
 
 
 /*
-Close modal after 2.5 seconds
+====================================================
+RESET TURNSTILE
+====================================================
+*/
+
+resetTurnstile();
+
+
+/*
+====================================================
+CLOSE MODAL
+====================================================
 */
 
 setTimeout(
@@ -2379,6 +2375,13 @@ err.message ||
 );
 
 
+/*
+Turnstile tokens are single-use.
+Reset it after a failed request.
+*/
+
+resetTurnstile();
+
 }
 finally{
 
@@ -2402,7 +2405,6 @@ INITIAL TOTAL
 updateOrderTotal();
 
 </script>
-
 
 <footer>
 
@@ -2431,7 +2433,6 @@ style="display:inline-flex;align-items:center;justify-content:center;width:40px;
 
 </div>
 
-
 <div>
 
 <h4>
@@ -2454,7 +2455,6 @@ Our Tea
 <br>
 
 </div>
-
 
 <div>
 
@@ -2479,7 +2479,6 @@ Privacy Policy
 </div>
 
 </div>
-
 
 <div class="copyright">
 
