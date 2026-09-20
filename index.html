@@ -2368,9 +2368,6 @@ const cream =
 const gray =
 [104,117,107];
 
-const lightGray =
-[238,238,232];
-
 doc.setFillColor(
 255,
 255,
@@ -2385,6 +2382,8 @@ doc.rect(
 "F"
 );
 
+/* HEADER */
+
 doc.setFillColor(
 green[0],
 green[1],
@@ -2398,6 +2397,8 @@ doc.rect(
 45,
 "F"
 );
+
+/* LOGO */
 
 try{
 
@@ -2425,6 +2426,8 @@ logoError
 
 }
 
+/* BRAND NAME */
+
 doc.setTextColor(
 255,
 255,
@@ -2446,20 +2449,7 @@ doc.text(
 17
 );
 
-doc.setFont(
-"helvetica",
-"normal"
-);
-
-doc.setFontSize(
-9
-);
-
-doc.text(
-"Authentic Tea from Panchagarh, Bangladesh",
-72,
-24
-);
+/* ORDER INVOICE */
 
 doc.setTextColor(
 gold[0],
@@ -2479,8 +2469,10 @@ doc.setFontSize(
 doc.text(
 "ORDER INVOICE",
 72,
-31
+27
 );
+
+/* INVOICE TITLE */
 
 doc.setTextColor(
 green[0],
@@ -2597,41 +2589,7 @@ orderDate,
 78
 );
 
-doc.setFillColor(
-233,
-246,
-235
-);
-
-doc.roundedRect(
-140,
-84,
-50,
-9,
-3,
-3,
-"F"
-);
-
-doc.setTextColor(
-24,
-91,
-37
-);
-
-doc.setFontSize(
-8
-);
-
-doc.text(
-"Status: " +
-String(
-lastOrder.status ||
-"Pending"
-),
-145,
-90
-);
+/* CUSTOMER INFORMATION */
 
 doc.setFillColor(
 cream[0],
@@ -2641,7 +2599,7 @@ cream[2]
 
 doc.roundedRect(
 18,
-102,
+90,
 174,
 43,
 4,
@@ -2667,7 +2625,7 @@ doc.setFontSize(
 doc.text(
 "Customer Information",
 25,
-112
+100
 );
 
 doc.setFont(
@@ -2688,7 +2646,7 @@ gray[2]
 doc.text(
 "Name:",
 25,
-121
+109
 );
 
 doc.setTextColor(
@@ -2708,7 +2666,7 @@ lastOrder.customer?.name ||
 "-"
 ),
 50,
-121
+109
 );
 
 doc.setFont(
@@ -2725,7 +2683,7 @@ gray[2]
 doc.text(
 "Phone:",
 25,
-129
+117
 );
 
 doc.setTextColor(
@@ -2745,7 +2703,7 @@ lastOrder.customer?.phone ||
 "-"
 ),
 50,
-129
+117
 );
 
 doc.setFont(
@@ -2762,7 +2720,7 @@ gray[2]
 doc.text(
 "City:",
 25,
-137
+125
 );
 
 doc.setTextColor(
@@ -2782,7 +2740,7 @@ lastOrder.customer?.city ||
 "-"
 ),
 50,
-137
+125
 );
 
 doc.setFont(
@@ -2799,7 +2757,7 @@ gray[2]
 doc.text(
 "Address:",
 100,
-121
+109
 );
 
 doc.setTextColor(
@@ -2825,11 +2783,13 @@ lastOrder.customer?.address ||
 doc.text(
 addressLines,
 100,
-128
+116
 );
 
+/* PRODUCT TABLE */
+
 const tableY =
-158;
+146;
 
 doc.setFillColor(
 green[0],
@@ -2974,6 +2934,8 @@ subtotal.toLocaleString(
 tableY + 23
 );
 
+/* PAYMENT */
+
 doc.setDrawColor(
 220,
 220,
@@ -2982,9 +2944,9 @@ doc.setDrawColor(
 
 doc.line(
 18,
-193,
+181,
 192,
-193
+181
 );
 
 doc.setFont(
@@ -3005,7 +2967,7 @@ gray[2]
 doc.text(
 "Payment Method",
 25,
-205
+193
 );
 
 doc.setFont(
@@ -3025,8 +2987,10 @@ lastOrder.payment ||
 "-"
 ),
 25,
-212
+200
 );
+
+/* TOTAL */
 
 doc.setFillColor(
 green[0],
@@ -3036,7 +3000,7 @@ green[2]
 
 doc.roundedRect(
 125,
-200,
+188,
 67,
 25,
 4,
@@ -3062,7 +3026,7 @@ doc.setFontSize(
 doc.text(
 "TOTAL",
 132,
-209
+197
 );
 
 doc.setFont(
@@ -3080,8 +3044,10 @@ subtotal.toLocaleString(
 "en-BD"
 ),
 132,
-219
+207
 );
+
+/* THANK YOU */
 
 doc.setTextColor(
 green[0],
@@ -3101,7 +3067,7 @@ doc.setFontSize(
 doc.text(
 "Thank you for choosing Panchagarh Tea!",
 18,
-245
+235
 );
 
 doc.setFont(
@@ -3122,14 +3088,10 @@ gray[2]
 doc.text(
 "We appreciate your order and hope you enjoy every cup.",
 18,
-253
+243
 );
 
-doc.text(
-"Authentic tea from Panchagarh, Bangladesh.",
-18,
-260
-);
+/* FOOTER */
 
 doc.setFillColor(
 darkGreen[0],
