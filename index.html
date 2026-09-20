@@ -2301,6 +2301,35 @@ API PAYLOAD
 ====================================================
 */
 
+/*
+====================================================
+SECURITY / ORDER CAPTURE
+
+These values are captured when the customer places
+the order. IP address must be captured server-side
+in the Cloudflare Worker.
+====================================================
+*/
+
+const securityData = {
+
+orderTimestamp: new Date().toISOString(),
+
+timezone: Intl.DateTimeFormat().resolvedOptions().timeZone || "unknown",
+
+userAgent: navigator.userAgent || "unknown",
+
+referrer: document.referrer || "direct",
+
+pageUrl: window.location.href,
+
+screen: `${window.screen.width}x${window.screen.height}`,
+
+language: navigator.language || "unknown"
+
+};
+
+
 const orderData = {
 
 name:name,
@@ -2315,7 +2344,9 @@ payment:payment,
 
 productName:productName,
 
-quantity:quantity
+quantity:quantity,
+
+security: securityData
 
 };
 
