@@ -2304,13 +2304,6 @@ url;
 
 }
 
-/* =========================================================
-   UPDATED INVOICE
-   White page + logo only
-   No PANCHAGARH TEA text
-   No ORDER INVOICE text
-   ========================================================= */
-
 async function downloadInvoice(){
 
 if(!lastOrder){
@@ -2375,10 +2368,6 @@ const cream =
 const gray =
 [104,117,107];
 
-/* =========================================================
-   WHITE A4 PAGE
-   ========================================================= */
-
 doc.setFillColor(
 255,
 255,
@@ -2393,9 +2382,23 @@ doc.rect(
 "F"
 );
 
-/* =========================================================
-   LOGO
-   ========================================================= */
+/* HEADER */
+
+doc.setFillColor(
+green[0],
+green[1],
+green[2]
+);
+
+doc.rect(
+0,
+0,
+210,
+45,
+"F"
+);
+
+/* LOGO */
 
 try{
 
@@ -2404,20 +2407,13 @@ await loadImageAsDataURL(
 "https://panchagarhtea.com/panchagarh-tea-green-logo.png"
 );
 
-/*
-   Logo is placed on the white page.
-   No green header.
-   No brand text.
-   No ORDER INVOICE text.
-*/
-
 doc.addImage(
 logoData,
 "PNG",
 18,
-12,
-58,
-27
+8,
+48,
+22
 );
 
 }
@@ -2430,9 +2426,53 @@ logoError
 
 }
 
-/* =========================================================
-   INVOICE TITLE
-   ========================================================= */
+/* BRAND NAME */
+
+doc.setTextColor(
+255,
+255,
+255
+);
+
+doc.setFont(
+"helvetica",
+"bold"
+);
+
+doc.setFontSize(
+18
+);
+
+doc.text(
+"PANCHAGARH TEA",
+72,
+17
+);
+
+/* ORDER INVOICE */
+
+doc.setTextColor(
+gold[0],
+gold[1],
+gold[2]
+);
+
+doc.setFont(
+"helvetica",
+"bold"
+);
+
+doc.setFontSize(
+8
+);
+
+doc.text(
+"ORDER INVOICE",
+72,
+27
+);
+
+/* INVOICE TITLE */
 
 doc.setTextColor(
 green[0],
@@ -2452,12 +2492,8 @@ doc.setFontSize(
 doc.text(
 "Invoice",
 18,
-57
+62
 );
-
-/* =========================================================
-   ORDER INFORMATION
-   ========================================================= */
 
 const orderNumber =
 lastOrder.orderNumber ||
@@ -2499,7 +2535,7 @@ gray[2]
 doc.text(
 "Order Number",
 140,
-50
+57
 );
 
 doc.setFont(
@@ -2516,7 +2552,7 @@ green[2]
 doc.text(
 String(orderNumber),
 140,
-56
+63
 );
 
 doc.setFont(
@@ -2533,7 +2569,7 @@ gray[2]
 doc.text(
 "Order Date",
 140,
-65
+72
 );
 
 doc.setTextColor(
@@ -2550,33 +2586,10 @@ doc.setFont(
 doc.text(
 orderDate,
 140,
-71
+78
 );
 
-/* =========================================================
-   GOLD DIVIDER
-   ========================================================= */
-
-doc.setDrawColor(
-gold[0],
-gold[1],
-gold[2]
-);
-
-doc.setLineWidth(
-0.6
-);
-
-doc.line(
-18,
-79,
-192,
-79
-);
-
-/* =========================================================
-   CUSTOMER INFORMATION
-   ========================================================= */
+/* CUSTOMER INFORMATION */
 
 doc.setFillColor(
 cream[0],
@@ -2586,7 +2599,7 @@ cream[2]
 
 doc.roundedRect(
 18,
-88,
+90,
 174,
 43,
 4,
@@ -2612,7 +2625,7 @@ doc.setFontSize(
 doc.text(
 "Customer Information",
 25,
-98
+100
 );
 
 doc.setFont(
@@ -2626,3 +2639,641 @@ doc.setFontSize(
 
 doc.setTextColor(
 gray[0],
+gray[1],
+gray[2]
+);
+
+doc.text(
+"Name:",
+25,
+109
+);
+
+doc.setTextColor(
+green[0],
+green[1],
+green[2]
+);
+
+doc.setFont(
+"helvetica",
+"bold"
+);
+
+doc.text(
+String(
+lastOrder.customer?.name ||
+"-"
+),
+50,
+109
+);
+
+doc.setFont(
+"helvetica",
+"normal"
+);
+
+doc.setTextColor(
+gray[0],
+gray[1],
+gray[2]
+);
+
+doc.text(
+"Phone:",
+25,
+117
+);
+
+doc.setTextColor(
+green[0],
+green[1],
+green[2]
+);
+
+doc.setFont(
+"helvetica",
+"bold"
+);
+
+doc.text(
+String(
+lastOrder.customer?.phone ||
+"-"
+),
+50,
+117
+);
+
+doc.setFont(
+"helvetica",
+"normal"
+);
+
+doc.setTextColor(
+gray[0],
+gray[1],
+gray[2]
+);
+
+doc.text(
+"City:",
+25,
+125
+);
+
+doc.setTextColor(
+green[0],
+green[1],
+green[2]
+);
+
+doc.setFont(
+"helvetica",
+"bold"
+);
+
+doc.text(
+String(
+lastOrder.customer?.city ||
+"-"
+),
+50,
+125
+);
+
+doc.setFont(
+"helvetica",
+"normal"
+);
+
+doc.setTextColor(
+gray[0],
+gray[1],
+gray[2]
+);
+
+doc.text(
+"Address:",
+100,
+109
+);
+
+doc.setTextColor(
+green[0],
+green[1],
+green[2]
+);
+
+doc.setFont(
+"helvetica",
+"bold"
+);
+
+const addressLines =
+doc.splitTextToSize(
+String(
+lastOrder.customer?.address ||
+"-"
+),
+75
+);
+
+doc.text(
+addressLines,
+100,
+116
+);
+
+/* PRODUCT TABLE */
+
+const tableY =
+146;
+
+doc.setFillColor(
+green[0],
+green[1],
+green[2]
+);
+
+doc.roundedRect(
+18,
+tableY,
+174,
+12,
+2,
+2,
+"F"
+);
+
+doc.setTextColor(
+255,
+255,
+255
+);
+
+doc.setFont(
+"helvetica",
+"bold"
+);
+
+doc.setFontSize(
+8
+);
+
+doc.text(
+"PRODUCT",
+25,
+tableY + 8
+);
+
+doc.text(
+"PRICE",
+110,
+tableY + 8
+);
+
+doc.text(
+"QTY",
+140,
+tableY + 8
+);
+
+doc.text(
+"TOTAL",
+163,
+tableY + 8
+);
+
+const productName =
+String(
+lastOrder.product?.name ||
+"-"
+);
+
+const price =
+Number(
+lastOrder.product?.price ||
+0
+);
+
+const quantity =
+Number(
+lastOrder.quantity ||
+1
+);
+
+const subtotal =
+Number(
+lastOrder.subtotal ||
+price * quantity
+);
+
+doc.setFillColor(
+250,
+250,
+247
+);
+
+doc.rect(
+18,
+tableY + 12,
+174,
+18,
+"F"
+);
+
+doc.setTextColor(
+green[0],
+green[1],
+green[2]
+);
+
+doc.setFont(
+"helvetica",
+"normal"
+);
+
+doc.setFontSize(
+9
+);
+
+doc.text(
+productName,
+25,
+tableY + 23
+);
+
+doc.text(
+"BDT " +
+price.toLocaleString(
+"en-BD"
+),
+110,
+tableY + 23
+);
+
+doc.text(
+String(quantity),
+142,
+tableY + 23
+);
+
+doc.setFont(
+"helvetica",
+"bold"
+);
+
+doc.text(
+"BDT " +
+subtotal.toLocaleString(
+"en-BD"
+),
+163,
+tableY + 23
+);
+
+/* PAYMENT */
+
+doc.setDrawColor(
+220,
+220,
+210
+);
+
+doc.line(
+18,
+181,
+192,
+181
+);
+
+doc.setFont(
+"helvetica",
+"normal"
+);
+
+doc.setFontSize(
+9
+);
+
+doc.setTextColor(
+gray[0],
+gray[1],
+gray[2]
+);
+
+doc.text(
+"Payment Method",
+25,
+193
+);
+
+doc.setFont(
+"helvetica",
+"bold"
+);
+
+doc.setTextColor(
+green[0],
+green[1],
+green[2]
+);
+
+doc.text(
+String(
+lastOrder.payment ||
+"-"
+),
+25,
+200
+);
+
+/* TOTAL */
+
+doc.setFillColor(
+green[0],
+green[1],
+green[2]
+);
+
+doc.roundedRect(
+125,
+188,
+67,
+25,
+4,
+4,
+"F"
+);
+
+doc.setTextColor(
+255,
+255,
+255
+);
+
+doc.setFont(
+"helvetica",
+"normal"
+);
+
+doc.setFontSize(
+9
+);
+
+doc.text(
+"TOTAL",
+132,
+197
+);
+
+doc.setFont(
+"helvetica",
+"bold"
+);
+
+doc.setFontSize(
+15
+);
+
+doc.text(
+"BDT " +
+subtotal.toLocaleString(
+"en-BD"
+),
+132,
+207
+);
+
+/* THANK YOU */
+
+doc.setTextColor(
+green[0],
+green[1],
+green[2]
+);
+
+doc.setFont(
+"helvetica",
+"bold"
+);
+
+doc.setFontSize(
+13
+);
+
+doc.text(
+"Thank you for choosing Panchagarh Tea!",
+18,
+235
+);
+
+doc.setFont(
+"helvetica",
+"normal"
+);
+
+doc.setFontSize(
+9
+);
+
+doc.setTextColor(
+gray[0],
+gray[1],
+gray[2]
+);
+
+doc.text(
+"We appreciate your order and hope you enjoy every cup.",
+18,
+243
+);
+
+/* FOOTER */
+
+doc.setFillColor(
+darkGreen[0],
+darkGreen[1],
+darkGreen[2]
+);
+
+doc.rect(
+0,
+277,
+210,
+20,
+"F"
+);
+
+doc.setTextColor(
+255,
+255,
+255
+);
+
+doc.setFont(
+"helvetica",
+"normal"
+);
+
+doc.setFontSize(
+8
+);
+
+doc.text(
+"www.panchagarhtea.com",
+18,
+288
+);
+
+doc.text(
+"hello@panchagarhtea.com",
+82,
+288
+);
+
+doc.text(
+"+880 1601006767",
+158,
+288
+);
+
+const safeOrderNumber =
+String(
+orderNumber
+)
+.replace(
+/[^a-zA-Z0-9-_]/g,
+"-"
+);
+
+const fileName =
+"Panchagarh-Tea-Invoice-" +
+safeOrderNumber +
+".pdf";
+
+doc.save(
+fileName
+);
+
+}
+catch(error){
+
+console.error(
+"Invoice generation error:",
+error
+);
+
+alert(
+"Unable to create the invoice. Please try again."
+);
+
+}
+finally{
+
+button.disabled =
+false;
+
+button.innerHTML =
+'<i class="fa-solid fa-file-pdf"></i> Download Invoice';
+
+}
+
+}
+
+updateOrderTotal();
+
+</script>
+
+<footer>
+
+<div class="foot">
+
+<div>
+
+<img
+src="panchagarh-tea-green-logo.png"
+alt="Panchagarh Tea logo - authentic tea from Bangladesh">
+
+<p>
+Authentic tea from Panchagarh, Bangladesh.
+</p>
+
+<a
+href="https://www.facebook.com/panchagarhteas"
+target="_blank"
+rel="noopener"
+aria-label="Panchagarh Tea on Facebook"
+style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;margin-top:10px;background:#1f4d2b;color:#fff;border-radius:6px;font-size:18px;">
+
+<i class="fa-brands fa-facebook-f"></i>
+
+</a>
+
+</div>
+
+<div>
+
+<h4>
+Quick Links
+</h4>
+
+<a href="#home">
+Home
+</a>
+<br>
+
+<a href="#about">
+About
+</a>
+<br>
+
+<a href="#tea">
+Our Tea
+</a>
+<br>
+
+</div>
+
+<div>
+
+<h4>
+Customer Service
+</h4>
+
+<a href="#contact">
+Contact Us
+</a>
+<br>
+
+<a href="#">
+Shipping Policy
+</a>
+<br>
+
+<a href="#">
+Privacy Policy
+</a>
+
+</div>
+
+</div>
+
+<div class="copyright">
+
+<span>
+© 2026 Panchagarh Tea. All Rights Reserved.
+</span>
+
+<span>
+Made with ♥ in Bangladesh
+</span>
+
+</div>
+
+</footer>
+
+</body>
+</html>
