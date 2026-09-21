@@ -946,7 +946,7 @@ itemtype="https://schema.org/Offer">
 <meta itemprop="priceCurrency" content="BDT">
 <meta itemprop="price" content="400">
 
-1 KG — ৳ 400
+500 GM — ৳ 200 | 1 KG — ৳ 400
 
 </div>
 
@@ -994,7 +994,7 @@ itemtype="https://schema.org/Offer">
 <meta itemprop="priceCurrency" content="BDT">
 <meta itemprop="price" content="400">
 
-1 KG — ৳ 400
+500 GM — ৳ 200 | 1 KG — ৳ 400
 
 </div>
 
@@ -1403,6 +1403,10 @@ required>
 Select a tea
 </option>
 
+<option value="Premium Black Tea 500 GM" data-price="200">
+Premium Black Tea — 500 GM — ৳200
+</option>
+
 <option value="Premium Black Tea" data-price="400">
 Premium Black Tea — 1 KG — ৳400
 </option>
@@ -1618,6 +1622,11 @@ const API_URL =
 let lastOrder = null;
 
 const PRODUCTS = {
+
+"Premium Black Tea 500 GM": {
+price:200,
+available:true
+},
 
 "Premium Black Tea": {
 price:400,
