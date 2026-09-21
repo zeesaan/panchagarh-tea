@@ -685,6 +685,60 @@ font-size:13px
 display:block
 }
 
+.mobile-order-toast{
+display:none;
+position:fixed;
+left:12px;
+right:12px;
+bottom:14px;
+z-index:99999;
+background:#fff;
+color:#173d25;
+border:1px solid #b9dfbf;
+border-radius:10px;
+padding:12px;
+box-shadow:0 6px 24px rgba(0,0,0,.16);
+}
+
+.mobile-order-toast.show{
+display:block;
+}
+
+.mobile-order-toast-title{
+font-weight:800;
+font-size:14px;
+}
+
+.mobile-order-toast-text{
+font-size:12px;
+margin-top:3px;
+}
+
+.mobile-invoice-btn{
+width:100%;
+padding:11px 12px;
+border:0;
+border-radius:7px;
+background:var(--green);
+color:#fff;
+font-weight:800;
+cursor:pointer;
+margin-top:9px;
+font-family:"DM Sans",sans-serif;
+}
+
+.mobile-invoice-btn i{
+margin-right:6px;
+}
+
+@media (min-width:768px){
+.mobile-order-toast{
+left:auto;
+right:24px;
+width:320px;
+}
+}
+
 .invoice-download-btn{
 width:100%;
 padding:13px 14px;
@@ -1318,6 +1372,17 @@ Place Your Order
 Fill in your details and submit your order.
 </p>
 
+<div id="mobileOrderToast" class="mobile-order-toast" role="status" aria-live="polite">
+
+<div class="mobile-order-toast-title">Order submitted successfully!</div>
+<div class="mobile-order-toast-text">Your order has been received.</div>
+
+<button type="button" class="mobile-invoice-btn" id="mobileDownloadInvoiceButton" onclick="downloadInvoice()">
+<i class="fa-solid fa-file-pdf"></i> Download Invoice
+</button>
+
+</div>
+
 <div
 id="orderSuccess"
 class="order-success">
@@ -1714,7 +1779,12 @@ document.getElementById(
 "downloadInvoiceButton"
 );
 
+const mobileOrderToast =
+document.getElementById("mobileOrderToast");
+
 success.classList.remove("show");
+
+mobileOrderToast.classList.remove("show");
 
 error.classList.remove("show");
 
@@ -1947,7 +2017,12 @@ document.getElementById(
 "downloadInvoiceButton"
 );
 
+const mobileOrderToast =
+document.getElementById("mobileOrderToast");
+
 success.classList.remove("show");
+
+mobileOrderToast.classList.remove("show");
 
 error.classList.remove("show");
 
@@ -2193,6 +2268,8 @@ result.order
 
 invoiceButton.style.display =
 "block";
+
+mobileOrderToast.classList.add("show");
 
 }
 
