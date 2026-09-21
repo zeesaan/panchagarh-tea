@@ -2384,10 +2384,15 @@ doc.rect(
 
 /* HEADER */
 
+/*
+ * Keep the invoice header white so the green logo remains visible.
+ * The existing invoice layout/design is otherwise unchanged.
+ */
+
 doc.setFillColor(
-green[0],
-green[1],
-green[2]
+255,
+255,
+255
 );
 
 doc.rect(
@@ -2426,51 +2431,9 @@ logoError
 
 }
 
-/* BRAND NAME */
-
-doc.setTextColor(
-255,
-255,
-255
-);
-
-doc.setFont(
-"helvetica",
-"bold"
-);
-
-doc.setFontSize(
-18
-);
-
-doc.text(
-"PANCHAGARH TEA",
-72,
-17
-);
-
-/* ORDER INVOICE */
-
-doc.setTextColor(
-gold[0],
-gold[1],
-gold[2]
-);
-
-doc.setFont(
-"helvetica",
-"bold"
-);
-
-doc.setFontSize(
-8
-);
-
-doc.text(
-"ORDER INVOICE",
-72,
-27
-);
+/*
+ * Brand name and "ORDER INVOICE" text intentionally removed.
+ */
 
 /* INVOICE TITLE */
 
