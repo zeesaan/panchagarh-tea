@@ -946,7 +946,7 @@ itemtype="https://schema.org/Offer">
 <meta itemprop="priceCurrency" content="BDT">
 <meta itemprop="price" content="400">
 
-500 GM — ৳ 200
+1 KG — ৳ 400
 
 </div>
 
@@ -994,7 +994,7 @@ itemtype="https://schema.org/Offer">
 <meta itemprop="priceCurrency" content="BDT">
 <meta itemprop="price" content="400">
 
-500 GM — ৳ 200
+1 KG — ৳ 400
 
 </div>
 
@@ -1042,7 +1042,7 @@ itemtype="https://schema.org/Offer">
 <meta itemprop="priceCurrency" content="BDT">
 <meta itemprop="price" content="450">
 
-500 GM — ৳ 225
+1 KG — ৳ 450
 
 </div>
 
@@ -1090,7 +1090,7 @@ itemtype="https://schema.org/Offer">
 <meta itemprop="priceCurrency" content="BDT">
 <meta itemprop="price" content="380">
 
-500 GM — ৳ 190
+1 KG — ৳ 380
 
 </div>
 
@@ -1403,20 +1403,20 @@ required>
 Select a tea
 </option>
 
-<option value="Premium Black Tea" data-price="200">
-Premium Black Tea — 500 GM — ৳200
+<option value="Premium Black Tea" data-price="400">
+Premium Black Tea — 1 KG — ৳400
 </option>
 
 <option value="Premium Green Tea" data-price="400" disabled>
-Premium Green Tea — 500 GM — Out of Stock
+Premium Green Tea — 1 KG — Out of Stock
 </option>
 
 <option value="Orthodox Tea" data-price="450" disabled>
-Orthodox Tea — 500 GM — Out of Stock
+Orthodox Tea — 1 KG — Out of Stock
 </option>
 
 <option value="Herbal Tea" data-price="380" disabled>
-Herbal Tea — 500 GM — Out of Stock
+Herbal Tea — 1 KG — Out of Stock
 </option>
 
 </select>
@@ -1576,18 +1576,6 @@ Nagad
 
 </div>
 
-<div class="order-total" style="margin-bottom:8px">
-
-<span>
-Delivery Charge
-</span>
-
-<strong id="deliveryCharge">
-৳0
-</strong>
-
-</div>
-
 <div class="order-total">
 
 <span>
@@ -1632,7 +1620,7 @@ let lastOrder = null;
 const PRODUCTS = {
 
 "Premium Black Tea": {
-price:200,
+price:400,
 available:true
 },
 
@@ -1809,12 +1797,6 @@ closeStockModal();
 }
 );
 
-function getDeliveryCharge(city){
-
-return city === "Dhaka" ? 80 : 130;
-
-}
-
 function updateOrderTotal(){
 
 const productSelect =
@@ -1826,50 +1808,56 @@ document.getElementById("orderQuantity");
 const totalElement =
 document.getElementById("orderTotal");
 
-const deliveryElement =
-document.getElementById("deliveryCharge");
-
-const city =
-document.getElementById("orderCity").value;
-
 const selectedOption =
 productSelect.options[
 productSelect.selectedIndex
 ];
 
-if(!selectedOption || !selectedOption.value){
+if(
+!selectedOption ||
+!selectedOption.value
+){
 
-totalElement.textContent = "৳0";
-deliveryElement.textContent = city ? "৳" + getDeliveryCharge(city).toLocaleString("en-BD") : "৳0";
+totalElement.textContent =
+"৳0";
+
 return;
 
 }
 
-const productName = selectedOption.value;
+const productName =
+selectedOption.value;
 
-if(!PRODUCTS[productName] || !PRODUCTS[productName].available){
+if(
+!PRODUCTS[productName] ||
+!PRODUCTS[productName].available
+){
 
-totalElement.textContent = "৳0";
-deliveryElement.textContent = "৳0";
+totalElement.textContent =
+"৳0";
+
 return;
 
 }
 
 const price =
-Number(selectedOption.getAttribute("data-price")) || 0;
+Number(
+selectedOption.getAttribute(
+"data-price"
+)
+) || 0;
 
 const quantity =
-Number(quantityInput.value) || 1;
+Number(
+quantityInput.value
+) || 1;
 
-const subtotal = price * quantity;
-const deliveryCharge = city ? getDeliveryCharge(city) : 0;
-const total = subtotal + deliveryCharge;
-
-deliveryElement.textContent =
-"৳" + deliveryCharge.toLocaleString("en-BD");
+const total =
+price * quantity;
 
 totalElement.textContent =
-"৳" + total.toLocaleString("en-BD");
+"৳" +
+total.toLocaleString("en-BD");
 
 }
 
@@ -1912,13 +1900,6 @@ document
 .getElementById("orderQuantity")
 .addEventListener(
 "input",
-updateOrderTotal
-);
-
-document
-.getElementById("orderCity")
-.addEventListener(
-"change",
 updateOrderTotal
 );
 
@@ -2116,16 +2097,6 @@ return;
 
 }
 
-const selectedOption =
-document.getElementById("orderProduct").options[
-  document.getElementById("orderProduct").selectedIndex
-];
-
-const productPrice =
-Number(
-selectedOption.getAttribute("data-price")
-) || 0;
-
 const orderData = {
 
 name:name,
@@ -2141,10 +2112,6 @@ payment:payment,
 productName:productName,
 
 quantity:quantity,
-
-subtotal: Number(productPrice) * quantity,
-deliveryCharge: getDeliveryCharge(city),
-total: (Number(productPrice) * quantity) + getDeliveryCharge(city),
 
 turnstileToken:turnstileToken
 
@@ -2225,13 +2192,6 @@ form.reset();
 document
 .getElementById(
 "orderTotal"
-)
-.textContent =
-"৳0";
-
-document
-.getElementById(
-"deliveryCharge"
 )
 .textContent =
 "৳0";
@@ -2916,18 +2876,6 @@ lastOrder.subtotal ||
 price * quantity
 );
 
-const deliveryCharge =
-Number(
-lastOrder.deliveryCharge ??
-(lastOrder.city === "Dhaka" ? 80 : 130)
-);
-
-const finalTotal =
-Number(
-lastOrder.total ??
-(subtotal + deliveryCharge)
-);
-
 doc.setFillColor(
 250,
 250,
@@ -2985,20 +2933,12 @@ doc.setFont(
 
 doc.text(
 "BDT " +
-finalTotal.toLocaleString(
+subtotal.toLocaleString(
 "en-BD"
 ),
 163,
 tableY + 23
 );
-
-doc.setFont("helvetica","normal");
-doc.setFontSize(9);
-doc.setTextColor(gray[0],gray[1],gray[2]);
-doc.text("Delivery Charge",25,174);
-doc.setFont("helvetica","bold");
-doc.setTextColor(green[0],green[1],green[2]);
-doc.text("BDT " + deliveryCharge.toLocaleString("en-BD"),110,174);
 
 /* PAYMENT */
 
@@ -3010,9 +2950,9 @@ doc.setDrawColor(
 
 doc.line(
 18,
-183,
+181,
 192,
-183
+181
 );
 
 doc.setFont(
@@ -3033,7 +2973,7 @@ gray[2]
 doc.text(
 "Payment Method",
 25,
-195
+193
 );
 
 doc.setFont(
@@ -3053,7 +2993,7 @@ lastOrder.payment ||
 "-"
 ),
 25,
-202
+200
 );
 
 /* TOTAL */
@@ -3066,7 +3006,7 @@ green[2]
 
 doc.roundedRect(
 125,
-190,
+188,
 67,
 25,
 4,
@@ -3092,7 +3032,7 @@ doc.setFontSize(
 doc.text(
 "TOTAL",
 132,
-199
+197
 );
 
 doc.setFont(
@@ -3110,7 +3050,7 @@ subtotal.toLocaleString(
 "en-BD"
 ),
 132,
-209
+207
 );
 
 /* THANK YOU */
