@@ -966,6 +966,8 @@ From traditional black tea to refreshing green tea, discover our selection.
 
 <div class="cards">
 
+<!-- PREMIUM BLACK TEA -->
+
 <div class="card">
 
 <div
@@ -1014,6 +1016,8 @@ Order Now <span aria-hidden="true">→</span>
 
 </div>
 
+<!-- PREMIUM GREEN TEA -->
+
 <div class="card">
 
 <div
@@ -1042,7 +1046,7 @@ itemtype="https://schema.org/Offer">
 <meta itemprop="priceCurrency" content="BDT">
 <meta itemprop="price" content="200">
 
-৳ 400
+৳ 200
 
 </div>
 
@@ -1061,6 +1065,8 @@ Out of Stock <span aria-hidden="true">×</span>
 </div>
 
 </div>
+
+<!-- ORTHODOX TEA -->
 
 <div class="card">
 
@@ -1090,7 +1096,7 @@ itemtype="https://schema.org/Offer">
 <meta itemprop="priceCurrency" content="BDT">
 <meta itemprop="price" content="225">
 
-৳ 450
+৳ 225
 
 </div>
 
@@ -1109,6 +1115,8 @@ Out of Stock <span aria-hidden="true">×</span>
 </div>
 
 </div>
+
+<!-- HERBAL TEA -->
 
 <div class="card">
 
@@ -1138,7 +1146,7 @@ itemtype="https://schema.org/Offer">
 <meta itemprop="priceCurrency" content="BDT">
 <meta itemprop="price" content="190">
 
-৳ 380
+৳ 190
 
 </div>
 
@@ -1462,7 +1470,8 @@ required>
 Select a tea
 </option>
 
-<option value="Premium Black Tea" data-price="400">
+<!-- PRICE FIXED: 200 -->
+<option value="Premium Black Tea" data-price="200">
 Premium Black Tea — 500 gm — ৳200
 </option>
 
@@ -2473,11 +2482,6 @@ doc.rect(
 
 /* HEADER */
 
-/*
- * Keep the invoice header white so the green logo remains visible.
- * The existing invoice layout/design is otherwise unchanged.
- */
-
 doc.setFillColor(
 255,
 255,
@@ -2519,12 +2523,6 @@ logoError
 );
 
 }
-
-/*
- * Brand name and "ORDER INVOICE" text intentionally removed.
- */
-
-/* INVOICE TITLE */
 
 doc.setTextColor(
 green[0],
