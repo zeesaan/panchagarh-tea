@@ -1570,15 +1570,22 @@ Nagad
 
 </div>
 
-<div class="order-total">
+<div class="order-total" style="display:block">
 
-<span>
-Total
-</span>
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;font-weight:700">
+<span>Product Total</span>
+<strong id="orderSubtotal" style="font-size:16px">৳0</strong>
+</div>
 
-<strong id="orderTotal">
-৳0
-</strong>
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;font-weight:700">
+<span>Delivery Charge</span>
+<strong id="orderDeliveryCharge" style="font-size:16px">Select city</strong>
+</div>
+
+<div style="border-top:1px solid #d8d7cc;padding-top:8px;display:flex;justify-content:space-between;align-items:center">
+<span>Total</span>
+<strong id="orderTotal">৳0</strong>
+</div>
 
 </div>
 
@@ -1791,6 +1798,16 @@ closeStockModal();
 }
 );
 
+function getDeliveryCharge(city){
+
+if(!city){
+return 0;
+}
+
+return city === "Dhaka" ? 80 : 130;
+
+}
+
 function updateOrderTotal(){
 
 const productSelect =
@@ -1799,59 +1816,46 @@ document.getElementById("orderProduct");
 const quantityInput =
 document.getElementById("orderQuantity");
 
+const citySelect =
+document.getElementById("orderCity");
+
+const subtotalElement =
+document.getElementById("orderSubtotal");
+
+const deliveryElement =
+document.getElementById("orderDeliveryCharge");
+
 const totalElement =
 document.getElementById("orderTotal");
 
 const selectedOption =
-productSelect.options[
-productSelect.selectedIndex
-];
+productSelect.options[productSelect.selectedIndex];
 
-if(
-!selectedOption ||
-!selectedOption.value
-){
-
-totalElement.textContent =
-"৳0";
-
+if(!selectedOption || !selectedOption.value){
+subtotalElement.textContent = "৳0";
+deliveryElement.textContent = citySelect.value ? "৳" + getDeliveryCharge(citySelect.value).toLocaleString("en-BD") : "Select city";
+totalElement.textContent = "৳0";
 return;
-
 }
 
-const productName =
-selectedOption.value;
+const productName = selectedOption.value;
 
-if(
-!PRODUCTS[productName] ||
-!PRODUCTS[productName].available
-){
-
-totalElement.textContent =
-"৳0";
-
+if(!PRODUCTS[productName] || !PRODUCTS[productName].available){
+subtotalElement.textContent = "৳0";
+deliveryElement.textContent = citySelect.value ? "৳" + getDeliveryCharge(citySelect.value).toLocaleString("en-BD") : "Select city";
+totalElement.textContent = "৳0";
 return;
-
 }
 
-const price =
-Number(
-selectedOption.getAttribute(
-"data-price"
-)
-) || 0;
+const price = Number(selectedOption.getAttribute("data-price")) || 0;
+const quantity = Number(quantityInput.value) || 1;
+const subtotal = price * quantity;
+const deliveryCharge = getDeliveryCharge(citySelect.value);
+const total = subtotal + deliveryCharge;
 
-const quantity =
-Number(
-quantityInput.value
-) || 1;
-
-const total =
-price * quantity;
-
-totalElement.textContent =
-"৳" +
-total.toLocaleString("en-BD");
+subtotalElement.textContent = "৳" + subtotal.toLocaleString("en-BD");
+deliveryElement.textContent = citySelect.value ? "৳" + deliveryCharge.toLocaleString("en-BD") : "Select city";
+totalElement.textContent = "৳" + total.toLocaleString("en-BD");
 
 }
 
@@ -1894,6 +1898,13 @@ document
 .getElementById("orderQuantity")
 .addEventListener(
 "input",
+updateOrderTotal
+);
+
+document
+.getElementById("orderCity")
+.addEventListener(
+"change",
 updateOrderTotal
 );
 
@@ -2101,6 +2112,10 @@ address:address,
 
 city:city,
 
+deliveryCharge:getDeliveryCharge(city),
+
+total:(Number(PRODUCTS[productName].price) * quantity) + getDeliveryCharge(city),
+
 payment:payment,
 
 productName:productName,
@@ -2183,12 +2198,9 @@ invoiceButton.style.display =
 
 form.reset();
 
-document
-.getElementById(
-"orderTotal"
-)
-.textContent =
-"৳0";
+document.getElementById("orderSubtotal").textContent = "৳0";
+document.getElementById("orderDeliveryCharge").textContent = "Select city";
+document.getElementById("orderTotal").textContent = "৳0";
 
 if(
 typeof turnstile !== "undefined"
@@ -2833,6 +2845,15 @@ lastOrder.subtotal ||
 price * quantity
 );
 
+const invoiceDeliveryCharge =
+Number(
+lastOrder.deliveryCharge ??
+getDeliveryCharge(lastOrder.customer?.city || "")
+);
+
+const invoiceGrandTotal =
+subtotal + invoiceDeliveryCharge;
+
 doc.setFillColor(
 250,
 250,
@@ -2897,6 +2918,29 @@ subtotal.toLocaleString(
 tableY + 23
 );
 
+/* DELIVERY CHARGE */
+
+doc.setDrawColor(
+220,
+220,
+210
+);
+
+doc.line(
+18,
+181,
+192,
+181
+);
+
+doc.setFont("helvetica","normal");
+doc.setFontSize(9);
+doc.setTextColor(gray[0],gray[1],gray[2]);
+doc.text("Delivery Charge",25,188);
+doc.setFont("helvetica","bold");
+doc.setTextColor(green[0],green[1],green[2]);
+doc.text("BDT " + invoiceDeliveryCharge.toLocaleString("en-BD"),70,188);
+
 /* PAYMENT */
 
 doc.setDrawColor(
@@ -2930,7 +2974,7 @@ gray[2]
 doc.text(
 "Payment Method",
 25,
-193
+199
 );
 
 doc.setFont(
@@ -2950,7 +2994,7 @@ lastOrder.payment ||
 "-"
 ),
 25,
-200
+206
 );
 
 /* TOTAL */
@@ -2965,7 +3009,7 @@ doc.roundedRect(
 125,
 188,
 67,
-25,
+29,
 4,
 4,
 "F"
@@ -3003,11 +3047,11 @@ doc.setFontSize(
 
 doc.text(
 "BDT " +
-subtotal.toLocaleString(
+invoiceGrandTotal.toLocaleString(
 "en-BD"
 ),
 132,
-207
+208
 );
 
 /* THANK YOU */
