@@ -599,12 +599,6 @@ margin-bottom:6px;
 color:var(--text)
 }
 
-.required-star{
-color:#b42318;
-font-weight:800;
-margin-left:2px
-}
-
 .order-input{
 width:100%;
 padding:12px;
@@ -689,6 +683,60 @@ font-size:13px
 
 .order-success.show{
 display:block
+}
+
+.mobile-order-toast{
+display:none;
+position:fixed;
+left:12px;
+right:12px;
+bottom:14px;
+z-index:99999;
+background:#fff;
+color:#173d25;
+border:1px solid #b9dfbf;
+border-radius:10px;
+padding:12px;
+box-shadow:0 6px 24px rgba(0,0,0,.16);
+}
+
+.mobile-order-toast.show{
+display:block;
+}
+
+.mobile-order-toast-title{
+font-weight:800;
+font-size:14px;
+}
+
+.mobile-order-toast-text{
+font-size:12px;
+margin-top:3px;
+}
+
+.mobile-invoice-btn{
+width:100%;
+padding:11px 12px;
+border:0;
+border-radius:7px;
+background:var(--green);
+color:#fff;
+font-weight:800;
+cursor:pointer;
+margin-top:9px;
+font-family:"DM Sans",sans-serif;
+}
+
+.mobile-invoice-btn i{
+margin-right:6px;
+}
+
+@media (min-width:768px){
+.mobile-order-toast{
+left:auto;
+right:24px;
+width:320px;
+}
 }
 
 .invoice-download-btn{
@@ -946,7 +994,7 @@ itemtype="https://schema.org/Offer">
 <meta itemprop="priceCurrency" content="BDT">
 <meta itemprop="price" content="400">
 
-500 GM — ৳ 200 | 1 KG — ৳ 400
+৳ 400
 
 </div>
 
@@ -994,7 +1042,7 @@ itemtype="https://schema.org/Offer">
 <meta itemprop="priceCurrency" content="BDT">
 <meta itemprop="price" content="400">
 
-500 GM — ৳ 200 | 1 KG — ৳ 400
+৳ 400
 
 </div>
 
@@ -1042,7 +1090,7 @@ itemtype="https://schema.org/Offer">
 <meta itemprop="priceCurrency" content="BDT">
 <meta itemprop="price" content="450">
 
-1 KG — ৳ 450
+৳ 450
 
 </div>
 
@@ -1090,7 +1138,7 @@ itemtype="https://schema.org/Offer">
 <meta itemprop="priceCurrency" content="BDT">
 <meta itemprop="price" content="380">
 
-1 KG — ৳ 380
+৳ 380
 
 </div>
 
@@ -1324,6 +1372,17 @@ Place Your Order
 Fill in your details and submit your order.
 </p>
 
+<div id="mobileOrderToast" class="mobile-order-toast" role="status" aria-live="polite">
+
+<div class="mobile-order-toast-title">Order submitted successfully!</div>
+<div class="mobile-order-toast-text">Your order has been received.</div>
+
+<button type="button" class="mobile-invoice-btn" id="mobileDownloadInvoiceButton" onclick="downloadInvoice()">
+<i class="fa-solid fa-file-pdf"></i> Download Invoice
+</button>
+
+</div>
+
 <div
 id="orderSuccess"
 class="order-success">
@@ -1361,7 +1420,7 @@ novalidate>
 <div class="order-form-group">
 
 <label for="orderName">
-Full Name <span class="required-star" aria-hidden="true">*</span>
+Full Name
 </label>
 
 <input
@@ -1376,7 +1435,7 @@ required>
 <div class="order-form-group">
 
 <label for="orderPhone">
-Phone Number <span class="required-star" aria-hidden="true">*</span>
+Phone Number
 </label>
 
 <input
@@ -1391,7 +1450,7 @@ required>
 <div class="order-form-group">
 
 <label for="orderProduct">
-Product <span class="required-star" aria-hidden="true">*</span>
+Product
 </label>
 
 <select
@@ -1403,24 +1462,20 @@ required>
 Select a tea
 </option>
 
-<option value="Premium Black Tea 500 GM" data-price="200">
-Premium Black Tea — 500 GM — ৳200
-</option>
-
 <option value="Premium Black Tea" data-price="400">
-Premium Black Tea — 1 KG — ৳400
+Premium Black Tea — ৳400
 </option>
 
 <option value="Premium Green Tea" data-price="400" disabled>
-Premium Green Tea — 1 KG — Out of Stock
+Premium Green Tea — Out of Stock
 </option>
 
 <option value="Orthodox Tea" data-price="450" disabled>
-Orthodox Tea — 1 KG — Out of Stock
+Orthodox Tea — Out of Stock
 </option>
 
 <option value="Herbal Tea" data-price="380" disabled>
-Herbal Tea — 1 KG — Out of Stock
+Herbal Tea — Out of Stock
 </option>
 
 </select>
@@ -1430,7 +1485,7 @@ Herbal Tea — 1 KG — Out of Stock
 <div class="order-form-group">
 
 <label for="orderQuantity">
-Quantity <span class="required-star" aria-hidden="true">*</span>
+Quantity
 </label>
 
 <input
@@ -1446,7 +1501,7 @@ required>
 <div class="order-form-group">
 
 <label for="orderAddress">
-Delivery Address <span class="required-star" aria-hidden="true">*</span>
+Delivery Address
 </label>
 
 <textarea
@@ -1461,7 +1516,7 @@ required></textarea>
 <div class="order-form-group">
 
 <label for="orderCity">
-City <span class="required-star" aria-hidden="true">*</span>
+City
 </label>
 
 <select
@@ -1552,7 +1607,7 @@ Select your city
 <div class="order-form-group">
 
 <label for="orderPayment">
-Payment Method <span class="required-star" aria-hidden="true">*</span>
+Payment Method
 </label>
 
 <select
@@ -1580,15 +1635,22 @@ Nagad
 
 </div>
 
-<div class="order-total">
+<div class="order-total" style="display:block">
 
-<span>
-Total
-</span>
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;font-weight:700">
+<span>Product Total</span>
+<strong id="orderSubtotal" style="font-size:16px">৳0</strong>
+</div>
 
-<strong id="orderTotal">
-৳0
-</strong>
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;font-weight:700">
+<span>Delivery Charge</span>
+<strong id="orderDeliveryCharge" style="font-size:16px">Select city</strong>
+</div>
+
+<div style="border-top:1px solid #d8d7cc;padding-top:8px;display:flex;justify-content:space-between;align-items:center">
+<span>Total</span>
+<strong id="orderTotal">৳0</strong>
+</div>
 
 </div>
 
@@ -1622,11 +1684,6 @@ const API_URL =
 let lastOrder = null;
 
 const PRODUCTS = {
-
-"Premium Black Tea 500 GM": {
-price:200,
-available:true
-},
 
 "Premium Black Tea": {
 price:400,
@@ -1722,7 +1779,12 @@ document.getElementById(
 "downloadInvoiceButton"
 );
 
+const mobileOrderToast =
+document.getElementById("mobileOrderToast");
+
 success.classList.remove("show");
+
+mobileOrderToast.classList.remove("show");
 
 error.classList.remove("show");
 
@@ -1806,6 +1868,16 @@ closeStockModal();
 }
 );
 
+function getDeliveryCharge(city){
+
+if(!city){
+return 0;
+}
+
+return city === "Dhaka" ? 80 : 130;
+
+}
+
 function updateOrderTotal(){
 
 const productSelect =
@@ -1814,59 +1886,46 @@ document.getElementById("orderProduct");
 const quantityInput =
 document.getElementById("orderQuantity");
 
+const citySelect =
+document.getElementById("orderCity");
+
+const subtotalElement =
+document.getElementById("orderSubtotal");
+
+const deliveryElement =
+document.getElementById("orderDeliveryCharge");
+
 const totalElement =
 document.getElementById("orderTotal");
 
 const selectedOption =
-productSelect.options[
-productSelect.selectedIndex
-];
+productSelect.options[productSelect.selectedIndex];
 
-if(
-!selectedOption ||
-!selectedOption.value
-){
-
-totalElement.textContent =
-"৳0";
-
+if(!selectedOption || !selectedOption.value){
+subtotalElement.textContent = "৳0";
+deliveryElement.textContent = citySelect.value ? "৳" + getDeliveryCharge(citySelect.value).toLocaleString("en-BD") : "Select city";
+totalElement.textContent = "৳0";
 return;
-
 }
 
-const productName =
-selectedOption.value;
+const productName = selectedOption.value;
 
-if(
-!PRODUCTS[productName] ||
-!PRODUCTS[productName].available
-){
-
-totalElement.textContent =
-"৳0";
-
+if(!PRODUCTS[productName] || !PRODUCTS[productName].available){
+subtotalElement.textContent = "৳0";
+deliveryElement.textContent = citySelect.value ? "৳" + getDeliveryCharge(citySelect.value).toLocaleString("en-BD") : "Select city";
+totalElement.textContent = "৳0";
 return;
-
 }
 
-const price =
-Number(
-selectedOption.getAttribute(
-"data-price"
-)
-) || 0;
+const price = Number(selectedOption.getAttribute("data-price")) || 0;
+const quantity = Number(quantityInput.value) || 1;
+const subtotal = price * quantity;
+const deliveryCharge = getDeliveryCharge(citySelect.value);
+const total = subtotal + deliveryCharge;
 
-const quantity =
-Number(
-quantityInput.value
-) || 1;
-
-const total =
-price * quantity;
-
-totalElement.textContent =
-"৳" +
-total.toLocaleString("en-BD");
+subtotalElement.textContent = "৳" + subtotal.toLocaleString("en-BD");
+deliveryElement.textContent = citySelect.value ? "৳" + deliveryCharge.toLocaleString("en-BD") : "Select city";
+totalElement.textContent = "৳" + total.toLocaleString("en-BD");
 
 }
 
@@ -1912,6 +1971,13 @@ document
 updateOrderTotal
 );
 
+document
+.getElementById("orderCity")
+.addEventListener(
+"change",
+updateOrderTotal
+);
+
 function showOrderError(message){
 
 const error =
@@ -1951,7 +2017,12 @@ document.getElementById(
 "downloadInvoiceButton"
 );
 
+const mobileOrderToast =
+document.getElementById("mobileOrderToast");
+
 success.classList.remove("show");
+
+mobileOrderToast.classList.remove("show");
 
 error.classList.remove("show");
 
@@ -2116,6 +2187,10 @@ address:address,
 
 city:city,
 
+deliveryCharge:getDeliveryCharge(city),
+
+total:(Number(PRODUCTS[productName].price) * quantity) + getDeliveryCharge(city),
+
 payment:payment,
 
 productName:productName,
@@ -2194,16 +2269,15 @@ result.order
 invoiceButton.style.display =
 "block";
 
+mobileOrderToast.classList.add("show");
+
 }
 
 form.reset();
 
-document
-.getElementById(
-"orderTotal"
-)
-.textContent =
-"৳0";
+document.getElementById("orderSubtotal").textContent = "৳0";
+document.getElementById("orderDeliveryCharge").textContent = "Select city";
+document.getElementById("orderTotal").textContent = "৳0";
 
 if(
 typeof turnstile !== "undefined"
@@ -2399,10 +2473,15 @@ doc.rect(
 
 /* HEADER */
 
+/*
+ * Keep the invoice header white so the green logo remains visible.
+ * The existing invoice layout/design is otherwise unchanged.
+ */
+
 doc.setFillColor(
-green[0],
-green[1],
-green[2]
+255,
+255,
+255
 );
 
 doc.rect(
@@ -2441,51 +2520,9 @@ logoError
 
 }
 
-/* BRAND NAME */
-
-doc.setTextColor(
-255,
-255,
-255
-);
-
-doc.setFont(
-"helvetica",
-"bold"
-);
-
-doc.setFontSize(
-18
-);
-
-doc.text(
-"PANCHAGARH TEA",
-72,
-17
-);
-
-/* ORDER INVOICE */
-
-doc.setTextColor(
-gold[0],
-gold[1],
-gold[2]
-);
-
-doc.setFont(
-"helvetica",
-"bold"
-);
-
-doc.setFontSize(
-8
-);
-
-doc.text(
-"ORDER INVOICE",
-72,
-27
-);
+/*
+ * Brand name and "ORDER INVOICE" text intentionally removed.
+ */
 
 /* INVOICE TITLE */
 
@@ -2885,6 +2922,15 @@ lastOrder.subtotal ||
 price * quantity
 );
 
+const invoiceDeliveryCharge =
+Number(
+lastOrder.deliveryCharge ??
+getDeliveryCharge(lastOrder.customer?.city || "")
+);
+
+const invoiceGrandTotal =
+subtotal + invoiceDeliveryCharge;
+
 doc.setFillColor(
 250,
 250,
@@ -2949,6 +2995,29 @@ subtotal.toLocaleString(
 tableY + 23
 );
 
+/* DELIVERY CHARGE */
+
+doc.setDrawColor(
+220,
+220,
+210
+);
+
+doc.line(
+18,
+181,
+192,
+181
+);
+
+doc.setFont("helvetica","normal");
+doc.setFontSize(9);
+doc.setTextColor(gray[0],gray[1],gray[2]);
+doc.text("Delivery Charge",25,188);
+doc.setFont("helvetica","bold");
+doc.setTextColor(green[0],green[1],green[2]);
+doc.text("BDT " + invoiceDeliveryCharge.toLocaleString("en-BD"),70,188);
+
 /* PAYMENT */
 
 doc.setDrawColor(
@@ -2982,7 +3051,7 @@ gray[2]
 doc.text(
 "Payment Method",
 25,
-193
+199
 );
 
 doc.setFont(
@@ -3002,7 +3071,7 @@ lastOrder.payment ||
 "-"
 ),
 25,
-200
+206
 );
 
 /* TOTAL */
@@ -3017,7 +3086,7 @@ doc.roundedRect(
 125,
 188,
 67,
-25,
+29,
 4,
 4,
 "F"
@@ -3055,11 +3124,11 @@ doc.setFontSize(
 
 doc.text(
 "BDT " +
-subtotal.toLocaleString(
+invoiceGrandTotal.toLocaleString(
 "en-BD"
 ),
 132,
-207
+208
 );
 
 /* THANK YOU */
