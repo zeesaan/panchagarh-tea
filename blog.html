@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<link rel="icon" type="image/png" href="/favicon-512.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<title>Panchagarh Tea Blog | Tea Stories, Guides & Panchagarh Tea</title>
+
+<meta name="description" content="Explore Panchagarh Tea stories, tea guides, brewing tips, the history of tea in Bangladesh and the tea gardens of Panchagarh.">
+
+<meta name="keywords" content="Panchagarh Tea blog, Panchagarh tea gardens, Bangladesh tea, black tea guide, green tea, tea history Bangladesh, tea brewing">
+
+<meta name="author" content="Panchagarh Tea">
+<meta name="robots" content="index, follow, max-image-preview:large">
+
+<link rel="canonical" href="https://panchagarhtea.com/blog.html">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://panchagarhtea.com/blog.html">
+<meta property="og:title" content="Panchagarh Tea Blog">
+<meta property="og:description" content="Stories, guides and insights about tea from Panchagarh, Bangladesh.">
+<meta property="og:image" content="https://panchagarhtea.com/panchagarh-tea-green-logo.png">
+<meta property="og:site_name" content="Panchagarh Tea">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Panchagarh Tea Blog">
+<meta name="twitter:description" content="Stories, guides and insights about tea from Panchagarh, Bangladesh.">
+<meta name="twitter:image" content="https://panchagarhtea.com/panchagarh-tea-green-logo.png">
+
+<meta name="theme-color" content="#123d20">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+rel="stylesheet">
+
+<style>
+
+:root{
+--green:#123d20;
+--deep:#07190d;
+--cream:#fbfaf3;
+--gold:#c9a646;
+--text:#17301d;
+--muted:#68756b;
+}
+
+*{
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+margin:0;
+font-family:"DM Sans",sans-serif;
+color:var(--text);
+background:var(--cream);
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.header{
+height:88px;
+background:#fffdf7;
+border-bottom:1px solid #e7e0ce;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 6%;
+position:sticky;
+top:0;
+z-index:10;
+}
+
+.logo img{
+width:175px;
+display:block;
+}
+
+.nav{
+display:flex;
+gap:28px;
+font-size:12px;
+font-weight:700;
+text-transform:uppercase;
+}
+
+.nav a:hover{
+color:var(--gold);
+}
+
+.order{
+background:var(--green);
+color:#fff;
+padding:13px 20px;
+font-size:11px;
+font-weight:700;
+text-transform:uppercase;
+}
+
+.hero{
+min-height:430px;
+display:flex;
+align-items:center;
+background:
+linear-gradient(
+90deg,
+rgba(7,25,13,.78),
+rgba(7,25,13,.42),
+rgba(7,25,13,.12)
+),
+url('panchagarh-tea-garden-kanchenjunga.webp')
+center/cover;
+}
+
+.hero-content{
+margin-left:9%;
+max-width:720px;
+color:white;
+}
+
+.eyebrow{
+color:var(--gold);
+font-size:11px;
+font-weight:800;
+letter-spacing:2px;
+text-transform:uppercase;
+}
+
+.hero h1{
+font:600 clamp(48px,6vw,72px)/1.05 "Playfair Display",serif;
+margin:18px 0;
+}
+
+.hero h1 span{
+color:#e0cb78;
+}
+
+.hero p{
+font-size:17px;
+color:#e1e9e2;
+max-width:600px;
+line-height:1.7;
+}
+
+.content{
+padding:90px 7%;
+}
+
+.heading{
+text-align:center;
+max-width:700px;
+margin:auto;
+}
+
+.heading h2{
+font:600 46px/1.15 "Playfair Display",serif;
+margin:10px 0;
+}
+
+.heading p{
+color:var(--muted);
+line-height:1.7;
+}
+
+.blog-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+margin-top:50px;
+}
+
+.blog-card{
+background:#fff;
+border:1px solid #e5dfcf;
+transition:.25s;
+}
+
+.blog-card:hover{
+transform:translateY(-5px);
+box-shadow:0 12px 30px rgba(18,61,32,.10);
+}
+
+.blog-image{
+height:230px;
+background:center/cover;
+}
+
+.blog-body{
+padding:24px;
+}
+
+.blog-category{
+font-size:10px;
+font-weight:800;
+letter-spacing:1.5px;
+text-transform:uppercase;
+color:var(--gold);
+}
+
+.blog-body h3{
+font:600 25px/1.25 "Playfair Display",serif;
+margin:10px 0;
+color:var(--green);
+}
+
+.blog-body p{
+font-size:13px;
+line-height:1.7;
+color:var(--muted);
+}
+
+.read-more{
+display:inline-block;
+margin-top:10px;
+font-size:12px;
+font-weight:800;
+color:var(--green);
+}
+
+.read-more:hover{
+color:var(--gold);
+}
+
+.featured{
+display:grid;
+grid-template-columns:1.15fr 1fr;
+gap:0;
+background:#fff;
+border:1px solid #e5dfcf;
+margin-top:55px;
+}
+
+.featured-image{
+min-height:400px;
+background:
+url('https://images.unsplash.com/photo-1471943311424-646960669fbc?auto=format&fit=crop&w=1400&q=90')
+center/cover;
+}
+
+.featured-content{
+padding:50px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.featured-content h2{
+font:600 38px/1.2 "Playfair Display",serif;
+color:var(--green);
+margin:12px 0;
+}
+
+.featured-content p{
+color:var(--muted);
+line-height:1.8;
+font-size:14px;
+}
+
+.featured-btn{
+display:inline-block;
+background:var(--green);
+color:#fff;
+padding:14px 22px;
+font-size:11px;
+font-weight:800;
+text-transform:uppercase;
+margin-top:15px;
+width:max-content;
+}
+
+.newsletter{
+background:var(--green);
+color:#fff;
+padding:70px 8%;
+text-align:center;
+}
+
+.newsletter h2{
+font:600 40px "Playfair Display",serif;
+margin:0 0 12px;
+}
+
+.newsletter p{
+color:#d6e0d5;
+max-width:600px;
+margin:0 auto 25px;
+line-height:1.7;
+}
+
+.newsletter-box{
+display:flex;
+max-width:520px;
+margin:auto;
+}
+
+.newsletter-box input{
+flex:1;
+padding:15px;
+border:0;
+outline:0;
+font-family:"DM Sans",sans-serif;
+}
+
+.newsletter-box button{
+padding:15px 22px;
+border:0;
+background:var(--gold);
+color:var(--deep);
+font-weight:800;
+cursor:pointer;
+}
+
+footer{
+background:#041109;
+color:#fff;
+padding:50px 8% 18px;
+}
+
+.foot{
+display:grid;
+grid-template-columns:2fr 1fr 1fr;
+gap:50px;
+}
+
+.foot img{
+width:165px;
+}
+
+.foot p,
+.foot a{
+color:#aebaae;
+font-size:13px;
+}
+
+.foot a:hover{
+color:#fff;
+}
+
+.copyright{
+border-top:1px solid #233628;
+margin-top:40px;
+padding-top:17px;
+color:#89998c;
+font-size:11px;
+display:flex;
+justify-content:space-between;
+}
+
+@media(max-width:900px){
+
+.nav,
+.order{
+display:none;
+}
+
+.blog-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.featured{
+grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:600px){
+
+.blog-grid{
+grid-template-columns:1fr;
+}
+
+.header{
+padding:0 5%;
+}
+
+.hero-content{
+margin:0 7%;
+}
+
+.hero h1{
+font-size:46px;
+}
+
+.content{
+padding:65px 7%;
+}
+
+.heading h2{
+font-size:38px;
+}
+
+.featured-content{
+padding:30px;
+}
+
+.featured-content h2{
+font-size:32px;
+}
+
+.newsletter-box{
+display:block;
+}
+
+.newsletter-box input,
+.newsletter-box button{
+width:100%;
+}
+
+.foot{
+grid-template-columns:1fr;
+gap:30px;
+}
+
+.copyright{
+display:block;
+}
+
+.copyright span{
+display:block;
+margin-bottom:8px;
+}
+
+}
+
+</style>
+
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"Blog",
+"name":"Panchagarh Tea Blog",
+"url":"https://panchagarhtea.com/blog.html",
+"description":"Stories, guides and insights about tea from Panchagarh, Bangladesh.",
+"publisher":{
+"@type":"Organization",
+"name":"Panchagarh Tea",
+"url":"https://panchagarhtea.com/",
+"logo":{
+"@type":"ImageObject",
+"url":"https://panchagarhtea.com/panchagarh-tea-green-logo.png"
+}
+}
+}
+</script>
+
+</head>
+
+<body>
+
+<header class="header">
+
+<a class="logo" href="index.html">
+<img
+src="panchagarh-tea-green-logo.png"
+alt="Panchagarh Tea logo">
+</a>
+
+<nav class="nav" aria-label="Main navigation">
+
+<a href="index.html">Home</a>
+<a href="index.html#about">About</a>
+<a href="index.html#tea">Our Tea</a>
+<a href="index.html#garden">Tea Garden</a>
+<a href="blog.html">Blog</a>
+<a href="index.html#contact">Contact</a>
+
+</nav>
+
+<a class="order" href="index.html#tea">
+Order Now
+</a>
+
+</header>
+
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="eyebrow">
+✦ Panchagarh Tea Journal
+</div>
+
+<h1>
+Stories From<br>
+<span>the World of Tea</span>
+</h1>
+
+<p>
+Discover the story behind Panchagarh Tea, learn how to enjoy better tea,
+and explore the gardens, traditions and people behind every cup.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="content">
+
+<div class="heading">
+
+<div class="eyebrow">
+✦ Our Blog
+</div>
+
+<h2>
+Explore Our Latest Stories
+</h2>
+
+<p>
+Tea is more than a drink. Explore stories about Panchagarh,
+Bangladesh, tea culture, brewing and the journey from garden to cup.
+</p>
+
+</div>
+
+
+<!-- FEATURED ARTICLE -->
+
+<div class="featured">
+
+<div class="featured-image"></div>
+
+<div class="featured-content">
+
+<div class="eyebrow">
+✦ Featured Story
+</div>
+
+<h2>
+Discover the Tea Gardens of Panchagarh
+</h2>
+
+<p>
+Panchagarh has become an important tea-growing region in northern
+Bangladesh. Explore the landscape, climate and tea gardens that make
+this region special.
+</p>
+
+<a
+class="featured-btn"
+href="blog/tea-gardens-of-panchagarh.html">
+
+Read Story →
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- BLOG ARTICLES -->
+
+<div class="blog-grid">
+
+
+<article class="blog-card">
+
+<div
+class="blog-image"
+style="background-image:url('https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format&fit=crop&w=900&q=90')">
+</div>
+
+<div class="blog-body">
+
+<div class="blog-category">
+Tea Guide
+</div>
+
+<h3>
+How to Make the Perfect Cup of Black Tea
+</h3>
+
+<p>
+A simple guide to brewing black tea with better aroma,
+color and flavor.
+</p>
+
+<a
+class="read-more"
+href="blog/how-to-make-perfect-black-tea.html">
+
+Read Article →
+
+</a>
+
+</div>
+
+</article>
+
+
+<article class="blog-card">
+
+<div
+class="blog-image"
+style="background-image:url('https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=900&q=90')">
+</div>
+
+<div class="blog-body">
+
+<div class="blog-category">
+Tea Guide
+</div>
+
+<h3>
+Green Tea vs Black Tea
+</h3>
+
+<p>
+Learn the basic differences between green tea and black tea,
+from processing to taste.
+</p>
+
+<a
+class="read-more"
+href="blog/green-tea-vs-black-tea.html">
+
+Read Article →
+
+</a>
+
+</div>
+
+</article>
+
+
+<article class="blog-card">
+
+<div
+class="blog-image"
+style="background-image:url('https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=900&q=90')">
+</div>
+
+<div class="blog-body">
+
+<div class="blog-category">
+Tea History
+</div>
+
+<h3>
+The Story of Tea in Bangladesh
+</h3>
+
+<p>
+Explore the development of tea cultivation and tea culture
+across Bangladesh.
+</p>
+
+<a
+class="read-more"
+href="blog/history-of-tea-in-bangladesh.html">
+
+Read Article →
+
+</a>
+
+</div>
+
+</article>
+
+
+<article class="blog-card">
+
+<div
+class="blog-image"
+style="background-image:url('https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=900&q=90')">
+</div>
+
+<div class="blog-body">
+
+<div class="blog-category">
+Tea Lifestyle
+</div>
+
+<h3>
+Best Time to Enjoy Your Daily Tea
+</h3>
+
+<p>
+A simple look at how people enjoy tea throughout the day
+and how to make your tea routine more enjoyable.
+</p>
+
+<a
+class="read-more"
+href="blog/how-to-make-perfect-black-tea.html">
+
+Read Article →
+
+</a>
+
+</div>
+
+</article>
+
+
+<article class="blog-card">
+
+<div
+class="blog-image"
+style="background-image:url('https://images.unsplash.com/photo-1471943311424-646960669fbc?auto=format&fit=crop&w=900&q=90')">
+</div>
+
+<div class="blog-body">
+
+<div class="blog-category">
+From Garden
+</div>
+
+<h3>
+From Tea Garden to Your Cup
+</h3>
+
+<p>
+Follow the journey of tea leaves from cultivation and
+processing to the final cup.
+</p>
+
+<a
+class="read-more"
+href="blog/tea-gardens-of-panchagarh.html">
+
+Read Article →
+
+</a>
+
+</div>
+
+</article>
+
+
+<article class="blog-card">
+
+<div
+class="blog-image"
+style="background-image:url('https://images.unsplash.com/photo-1597318181409-cf64d0b5d8a2?auto=format&fit=crop&w=900&q=90')">
+</div>
+
+<div class="blog-body">
+
+<div class="blog-category">
+Panchagarh
+</div>
+
+<h3>
+Why Panchagarh Is Special for Tea
+</h3>
+
+<p>
+Discover the northern landscape and growing tea culture
+that makes Panchagarh an interesting tea region.
+</p>
+
+<a
+class="read-more"
+href="blog/why-panchagarh-is-famous-for-tea.html">
+
+Read Article →
+
+</a>
+
+</div>
+
+</article>
+
+
+</div>
+
+</section>
+
+
+<section class="newsletter">
+
+<h2>
+Stay Connected With Panchagarh Tea
+</h2>
+
+<p>
+Get new tea stories, brewing guides and updates from Panchagarh Tea.
+</p>
+
+<form
+class="newsletter-box"
+onsubmit="subscribeNewsletter(event)">
+
+<input
+id="newsletterEmail"
+type="email"
+placeholder="Enter your email address"
+required>
+
+<button type="submit">
+Subscribe
+</button>
+
+</form>
+
+</section>
+
+
+<footer>
+
+<div class="foot">
+
+<div>
+
+<img
+src="panchagarh-tea-green-logo.png"
+alt="Panchagarh Tea logo">
+
+<p>
+Authentic tea from Panchagarh, Bangladesh.
+</p>
+
+<a
+href="https://www.facebook.com/panchagarhteas"
+target="_blank"
+rel="noopener"
+aria-label="Panchagarh Tea on Facebook"
+style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;margin-top:10px;background:#1f4d2b;color:#fff;border-radius:6px;font-size:18px;">
+
+<i class="fa-brands fa-facebook-f"></i>
+
+</a>
+
+</div>
+
+
+<div>
+
+<h4>
+Quick Links
+</h4>
+
+<a href="index.html">
+Home
+</a>
+<br>
+
+<a href="index.html#about">
+About
+</a>
+<br>
+
+<a href="index.html#tea">
+Our Tea
+</a>
+<br>
+
+<a href="index.html#garden">
+Tea Garden
+</a>
+<br>
+
+<a href="blog.html">
+Blog
+</a>
+
+</div>
+
+
+<div>
+
+<h4>
+Customer Service
+</h4>
+
+<a href="index.html#contact">
+Contact Us
+</a>
+<br>
+
+<a href="index.html#tea">
+Order Tea
+</a>
+<br>
+
+<a href="mailto:hello@panchagarhtea.com">
+Email Us
+</a>
+
+</div>
+
+</div>
+
+
+<div class="copyright">
+
+<span>
+© 2026 Panchagarh Tea. All Rights Reserved.
+</span>
+
+<span>
+Made with ♥ in Bangladesh
+</span>
+
+</div>
+
+</footer>
+
+
+<script>
+
+function subscribeNewsletter(event){
+
+event.preventDefault();
+
+const email =
+document.getElementById("newsletterEmail").value.trim();
+
+if(!email){
+return;
+}
+
+alert(
+"Thank you for subscribing to Panchagarh Tea!"
+);
+
+document
+.getElementById("newsletterEmail")
+.value="";
+
+}
+
+</script>
+
+</body>
+</html>
