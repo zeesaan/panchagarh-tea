@@ -1,1 +1,86 @@
-https://panchagarhtea.com/sitemap.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Main Website -->
+  <url>
+    <loc>https://panchagarhtea.com/</loc>
+  </url>
+
+  <url>
+    <loc>https://panchagarhtea.com/blog.html</loc>
+  </url>
+
+  <!-- Panchagarh Tea Blog -->
+  <url>
+    <loc>https://panchagarhtea.com/blog/tea-gardens-of-panchagarh.html</loc>
+  </url>
+
+  <url>
+    <loc>https://panchagarhtea.com/blog/kanchenjunga-view-from-panchagarh.html</loc>
+  </url>
+
+  <url>
+    <loc>https://panchagarhtea.com/blog/banglabandha-zero-point-panchagarh.html</loc>
+  </url>
+
+  <url>
+    <loc>https://panchagarhtea.com/blog/tetulia-dak-bungalow.html</loc>
+  </url>
+
+  <url>
+    <loc>https://panchagarhtea.com/blog/mahananda-river-panchagarh.html</loc>
+  </url>
+
+  <url>
+    <loc>https://panchagarhtea.com/blog/rocks-museum-panchagarh.html</loc>
+  </url>
+
+  <url>
+    <loc>https://panchagarhtea.com/blog/golokdham-temple-panchagarh.html</loc>
+  </url>
+
+  <url>
+    <loc>https://panchagarhtea.com/blog/best-places-to-visit-panchagarh.html</loc>
+  </url>
+
+  <url>
+    <loc>https://panchagarhtea.com/blog/best-time-to-visit-panchagarh.html</loc>
+  </url>
+
+  <url>
+    <loc>https://panchagarhtea.com/blog/panchagarh-tea-garden-tour-guide.html</loc>
+  </url>
+
+  <url>
+    <loc>https://panchagarhtea.com/blog/dhaka-to-panchagarh-travel-guide.html</loc>
+  </url>
+
+  <url>
+    <loc>https://panchagarhtea.com/blog/bhitargarh-ancient-fort-city-panchagarh.html</loc>
+  </url>
+
+  <url>
+    <loc>https://panchagarhtea.com/blog/history-of-tea-in-bangladesh.html</loc>
+  </url>
+
+  <url>
+    <loc>https://panchagarhtea.com/blog/why-panchagarh-is-famous-for-tea.html</loc>
+  </url>
+
+  <url>
+    <loc>https://panchagarhtea.com/blog/how-to-make-perfect-black-tea.html</loc>
+  </url>
+
+  <url>
+    <loc>https://panchagarhtea.com/blog/green-tea-vs-black-tea.html</loc>
+  </url>
+
+  <url>
+    <loc>https://panchagarhtea.com/blog/from-tea-garden-to-your-cup.html</loc>
+  </url>
+
+  <url>
+    <loc>https://panchagarhtea.com/blog/best-time-to-enjoy-your-daily-tea.html</loc>
+  </url>
+
+</urlset>
