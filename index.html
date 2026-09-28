@@ -1,54 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-BD">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<link rel="icon" type="image/png" href="/favicon-512.png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Panchagarh Tea | Authentic Bangladeshi Tea from Panchagarh</title>
-
 <meta name="description" content="Buy authentic Panchagarh Tea from Bangladesh. Explore premium black tea, green tea, orthodox tea and herbal tea, sourced from the tea gardens of Panchagarh.">
-
-<meta name="keywords" content="Panchagarh Tea, Panchagarh tea Bangladesh, Bangladeshi tea, buy Panchagarh tea, premium black tea, green tea, orthodox tea, herbal tea, tea garden Bangladesh">
-
 <meta name="author" content="Panchagarh Tea">
-<meta name="robots" content="index, follow, max-image-preview:large">
-<meta name="googlebot" content="index, follow">
+<meta name="application-name" content="Panchagarh Tea">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#123d20">
+<meta name="format-detection" content="telephone=yes">
 
 <link rel="canonical" href="https://panchagarhtea.com/">
 
+<!-- Favicons -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+<!-- Social sharing -->
 <meta property="og:type" content="website">
+<meta property="og:locale" content="en_BD">
+<meta property="og:site_name" content="Panchagarh Tea">
 <meta property="og:url" content="https://panchagarhtea.com/">
 <meta property="og:title" content="Panchagarh Tea | Authentic Bangladeshi Tea">
 <meta property="og:description" content="Discover authentic tea from the gardens of Panchagarh, Bangladesh. Premium black, green, orthodox and herbal teas.">
 <meta property="og:image" content="https://panchagarhtea.com/panchagarh-tea-green-logo.png">
-<meta property="og:image:alt" content="Panchagarh Tea logo">
-<meta property="og:site_name" content="Panchagarh Tea">
+<meta property="og:image:alt" content="Panchagarh Tea - authentic tea from Bangladesh">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Panchagarh Tea | Authentic Bangladeshi Tea">
 <meta name="twitter:description" content="Authentic tea from Panchagarh, Bangladesh. Explore our premium tea collection.">
 <meta name="twitter:image" content="https://panchagarhtea.com/panchagarh-tea-green-logo.png">
+<meta name="twitter:image:alt" content="Panchagarh Tea - authentic tea from Bangladesh">
 
-<meta name="theme-color" content="#123d20">
-<meta name="format-detection" content="telephone=yes">
-
+<!-- Performance hints: no visual design changes -->
+<link rel="preload" as="image" href="/panchagarh-tea-garden-kanchenjunga.webp" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
 <!-- CLOUDFLARE TURNSTILE CAPTCHA -->
-<script
-src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-async
-defer>
-</script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
-<!-- PDF INVOICE -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<!-- PDF INVOICE: deferred so it doesn't block initial parsing -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
 
 <style>
 
@@ -241,7 +242,14 @@ border:1px solid #e5dfcf
 
 .card-img{
 height:220px;
-background:center/cover
+overflow:hidden
+}
+
+.card-img img{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block
 }
 
 .card-body{
@@ -409,9 +417,11 @@ grid-template-columns:repeat(3,1fr);
 gap:12px
 }
 
-.gallery div{
+.gallery img{
+width:100%;
 height:280px;
-background:center/cover
+object-fit:cover;
+display:block
 }
 
 .garden{
@@ -423,8 +433,10 @@ padding:95px 8%
 }
 
 .garden-img{
+width:100%;
 height:420px;
-background:url('https://images.unsplash.com/photo-1471943311424-646960669fbc?auto=format&fit=crop&w=1400&q=90') center/cover
+object-fit:cover;
+display:block
 }
 
 .garden p{
@@ -499,9 +511,13 @@ gap:50px
 width:165px
 }
 
-.foot p,.foot a{
+.foot p,.foot a,.foot span{
 color:#aebaae;
 font-size:13px
+}
+
+.foot span{
+display:inline-block
 }
 
 .copyright{
@@ -836,45 +852,207 @@ height:54px
 
 </style>
 
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 
 <script type="application/ld+json">
 {
-"@context":"https://schema.org",
-"@type":"Organization",
-"name":"Panchagarh Tea",
-"url":"https://panchagarhtea.com/",
-"logo":"https://panchagarhtea.com/panchagarh-tea-green-logo.png",
-"sameAs":["https://www.facebook.com/panchagarhteas"],
-"contactPoint":{
-"@type":"ContactPoint",
-"telephone":"+8801601006767",
-"contactType":"customer service",
-"areaServed":"BD",
-"availableLanguage":["English","Bengali"]
-}
-}
-</script>
-
-<script type="application/ld+json">
-{
-"@context":"https://schema.org",
-"@type":"WebSite",
-"name":"Panchagarh Tea",
-"url":"https://panchagarhtea.com/"
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://panchagarhtea.com/#organization",
+      "name": "Panchagarh Tea",
+      "url": "https://panchagarhtea.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://panchagarhtea.com/panchagarh-tea-green-logo.png"
+      },
+      "sameAs": [
+        "https://www.facebook.com/panchagarhteas"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+8801601006767",
+        "contactType": "customer service",
+        "areaServed": "BD",
+        "availableLanguage": [
+          "English",
+          "Bengali"
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://panchagarhtea.com/#website",
+      "url": "https://panchagarhtea.com/",
+      "name": "Panchagarh Tea",
+      "publisher": {
+        "@id": "https://panchagarhtea.com/#organization"
+      },
+      "inLanguage": "en-BD"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://panchagarhtea.com/#primaryimage",
+      "url": "https://panchagarhtea.com/panchagarh-tea-garden-kanchenjunga.webp",
+      "contentUrl": "https://panchagarhtea.com/panchagarh-tea-garden-kanchenjunga.webp",
+      "caption": "Tea garden in Panchagarh, Bangladesh"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://panchagarhtea.com/#webpage",
+      "url": "https://panchagarhtea.com/",
+      "name": "Panchagarh Tea | Authentic Bangladeshi Tea from Panchagarh",
+      "description": "Buy authentic Panchagarh Tea from Bangladesh. Explore premium black tea, green tea, orthodox tea and herbal tea, sourced from the tea gardens of Panchagarh.",
+      "isPartOf": {
+        "@id": "https://panchagarhtea.com/#website"
+      },
+      "about": {
+        "@id": "https://panchagarhtea.com/#organization"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://panchagarhtea.com/#primaryimage"
+      },
+      "inLanguage": "en-BD"
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://panchagarhtea.com/#tea-collection",
+      "name": "Panchagarh Tea Collection",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@id": "https://panchagarhtea.com/#premium-black-tea"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@id": "https://panchagarhtea.com/#premium-green-tea"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@id": "https://panchagarhtea.com/#orthodox-tea"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@id": "https://panchagarhtea.com/#herbal-tea"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Product",
+      "@id": "https://panchagarhtea.com/#premium-black-tea",
+      "name": "Premium Black Tea — 500 gm",
+      "description": "Rich aroma, deep color and a refreshing traditional taste.",
+      "image": "https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format&fit=crop&w=900&q=90",
+      "category": "Tea",
+      "brand": {
+        "@type": "Brand",
+        "name": "Panchagarh Tea"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://panchagarhtea.com/#premium-black-tea",
+        "priceCurrency": "BDT",
+        "price": "200",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://panchagarhtea.com/#organization"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://panchagarhtea.com/#premium-green-tea",
+      "name": "Premium Green Tea — 500 gm",
+      "description": "Light, smooth and refreshing with a naturally clean finish.",
+      "image": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=900&q=90",
+      "category": "Tea",
+      "brand": {
+        "@type": "Brand",
+        "name": "Panchagarh Tea"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://panchagarhtea.com/#premium-green-tea",
+        "priceCurrency": "BDT",
+        "price": "200",
+        "availability": "https://schema.org/OutOfStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://panchagarhtea.com/#organization"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://panchagarhtea.com/#orthodox-tea",
+      "name": "Orthodox Tea — 500 gm",
+      "description": "Traditional whole-leaf tea for tea lovers.",
+      "image": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=900&q=90",
+      "category": "Tea",
+      "brand": {
+        "@type": "Brand",
+        "name": "Panchagarh Tea"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://panchagarhtea.com/#orthodox-tea",
+        "priceCurrency": "BDT",
+        "price": "225",
+        "availability": "https://schema.org/OutOfStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://panchagarhtea.com/#organization"
+        }
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://panchagarhtea.com/#herbal-tea",
+      "name": "Herbal Tea — 500 gm",
+      "description": "A gentle herbal blend for a relaxing moment.",
+      "image": "https://images.unsplash.com/photo-1597318181409-cf64d0b5d8a2?auto=format&fit=crop&w=900&q=90",
+      "category": "Tea",
+      "brand": {
+        "@type": "Brand",
+        "name": "Panchagarh Tea"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://panchagarhtea.com/#herbal-tea",
+        "priceCurrency": "BDT",
+        "price": "190",
+        "availability": "https://schema.org/OutOfStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@id": "https://panchagarhtea.com/#organization"
+        }
+      }
+    }
+  ]
 }
 </script>
 
 </head>
 
-<body itemscope itemtype="https://schema.org/WebSite">
+<body>
 
 <header class="header" role="banner">
 
 <a class="logo" href="#home">
-<img src="panchagarh-tea-green-logo.png" alt="Panchagarh Tea logo - authentic tea from Bangladesh">
+<img src="panchagarh-tea-green-logo.png" alt="Panchagarh Tea - authentic tea from Bangladesh" decoding="async">
 </a>
 
 <nav class="nav" aria-label="Main navigation">
@@ -893,18 +1071,20 @@ Order Now
 
 </header>
 
+<main id="main-content">
+
 <section id="home" class="hero">
 
 <div class="hero-content">
 
 <div class="eyebrow">✦ From Panchagarh, Bangladesh</div>
 
-<h1 itemprop="name">
+<h1>
 Authentic Tea<br>
 <span>from Panchagarh</span>
 </h1>
 
-<p itemprop="description">
+<p>
 Discover the authentic taste of tea from the northern gardens of Bangladesh — carefully selected, naturally grown and packed with care.
 </p>
 
@@ -970,33 +1150,25 @@ From traditional black tea to refreshing green tea, discover our selection.
 
 <!-- PREMIUM BLACK TEA -->
 
-<div class="card">
+<article class="card" id="premium-black-tea">
 
-<div
-class="card-img"
-style="background-image:url('https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format&fit=crop&w=900&q=90')">
+<div class="card-img">
+<img src="https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format&fit=crop&w=900&q=90" alt="Panchagarh Tea Premium Black Tea 500 gm" width="900" height="600" loading="lazy" decoding="async">
 </div>
 
 <div class="card-body">
 
-<div itemscope itemtype="https://schema.org/Product">
+<div>
 
-<h3 itemprop="name">
+<h3>
 Premium Black Tea — 500 gm
 </h3>
 
-<p itemprop="description">
+<p>
 Rich aroma, deep color and a refreshing traditional taste.
 </p>
 
-<div
-class="price"
-itemprop="offers"
-itemscope
-itemtype="https://schema.org/Offer">
-
-<meta itemprop="priceCurrency" content="BDT">
-<meta itemprop="price" content="200">
+<div class="price">
 
 ৳ 200
 
@@ -1016,37 +1188,29 @@ Order Now <span aria-hidden="true">→</span>
 
 </div>
 
-</div>
+</article>
 
 <!-- PREMIUM GREEN TEA -->
 
-<div class="card">
+<article class="card" id="premium-green-tea">
 
-<div
-class="card-img"
-style="background-image:url('https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=900&q=90')">
+<div class="card-img">
+<img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=900&q=90" alt="Panchagarh Tea Premium Green Tea 500 gm" width="900" height="600" loading="lazy" decoding="async">
 </div>
 
 <div class="card-body">
 
-<div itemscope itemtype="https://schema.org/Product">
+<div>
 
-<h3 itemprop="name">
+<h3>
 Premium Green Tea — 500 gm
 </h3>
 
-<p itemprop="description">
+<p>
 Light, smooth and refreshing with a naturally clean finish.
 </p>
 
-<div
-class="price"
-itemprop="offers"
-itemscope
-itemtype="https://schema.org/Offer">
-
-<meta itemprop="priceCurrency" content="BDT">
-<meta itemprop="price" content="200">
+<div class="price">
 
 ৳ 200
 
@@ -1066,37 +1230,29 @@ Out of Stock <span aria-hidden="true">×</span>
 
 </div>
 
-</div>
+</article>
 
 <!-- ORTHODOX TEA -->
 
-<div class="card">
+<article class="card" id="orthodox-tea">
 
-<div
-class="card-img"
-style="background-image:url('https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=900&q=90')">
+<div class="card-img">
+<img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=900&q=90" alt="Panchagarh Tea Orthodox Tea 500 gm" width="900" height="600" loading="lazy" decoding="async">
 </div>
 
 <div class="card-body">
 
-<div itemscope itemtype="https://schema.org/Product">
+<div>
 
-<h3 itemprop="name">
+<h3>
 Orthodox Tea — 500 gm
 </h3>
 
-<p itemprop="description">
+<p>
 Traditional whole-leaf tea for tea lovers.
 </p>
 
-<div
-class="price"
-itemprop="offers"
-itemscope
-itemtype="https://schema.org/Offer">
-
-<meta itemprop="priceCurrency" content="BDT">
-<meta itemprop="price" content="225">
+<div class="price">
 
 ৳ 225
 
@@ -1116,37 +1272,29 @@ Out of Stock <span aria-hidden="true">×</span>
 
 </div>
 
-</div>
+</article>
 
 <!-- HERBAL TEA -->
 
-<div class="card">
+<article class="card" id="herbal-tea">
 
-<div
-class="card-img"
-style="background-image:url('https://images.unsplash.com/photo-1597318181409-cf64d0b5d8a2?auto=format&fit=crop&w=900&q=90')">
+<div class="card-img">
+<img src="https://images.unsplash.com/photo-1597318181409-cf64d0b5d8a2?auto=format&fit=crop&w=900&q=90" alt="Panchagarh Tea Herbal Tea 500 gm" width="900" height="600" loading="lazy" decoding="async">
 </div>
 
 <div class="card-body">
 
-<div itemscope itemtype="https://schema.org/Product">
+<div>
 
-<h3 itemprop="name">
+<h3>
 Herbal Tea — 500 gm
 </h3>
 
-<p itemprop="description">
+<p>
 A gentle herbal blend for a relaxing moment.
 </p>
 
-<div
-class="price"
-itemprop="offers"
-itemscope
-itemtype="https://schema.org/Offer">
-
-<meta itemprop="priceCurrency" content="BDT">
-<meta itemprop="price" content="190">
+<div class="price">
 
 ৳ 190
 
@@ -1166,7 +1314,7 @@ Out of Stock <span aria-hidden="true">×</span>
 
 </div>
 
-</div>
+</article>
 
 </div>
 
@@ -1197,11 +1345,11 @@ Panchagarh Tea is dedicated to bringing the authentic taste of this region to te
 
 <div class="gallery">
 
-<div style="background-image:url('https://images.unsplash.com/photo-1471943311424-646960669fbc?auto=format&fit=crop&w=800&q=85')"></div>
+<img src="https://images.unsplash.com/photo-1471943311424-646960669fbc?auto=format&fit=crop&w=800&q=85" alt="Green tea garden landscape" width="800" height="600" loading="lazy" decoding="async">
 
-<div style="background-image:url('https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=800&q=85')"></div>
+<img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=800&q=85" alt="Freshly brewed green tea" width="800" height="600" loading="lazy" decoding="async">
 
-<div style="background-image:url('https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=85')"></div>
+<img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=85" alt="Tea leaves and a cup of tea" width="800" height="600" loading="lazy" decoding="async">
 
 </div>
 
@@ -1209,7 +1357,7 @@ Panchagarh Tea is dedicated to bringing the authentic taste of this region to te
 
 <section id="garden" class="garden">
 
-<div class="garden-img"></div>
+<img class="garden-img" src="https://images.unsplash.com/photo-1471943311424-646960669fbc?auto=format&fit=crop&w=1400&q=90" alt="Green tea garden landscape representing tea grown in Panchagarh" width="1400" height="900" loading="lazy" decoding="async">
 
 <div>
 
@@ -1282,7 +1430,7 @@ Have a question, want to order tea, or interested in wholesale? We'd love to hea
 </a>
 
 <a href="tel:+8801601006767">
-☎ +880 01601006767
+☎ +880 1601-006767
 </a>
 
 <a href="https://wa.me/8801601006767" target="_blank" rel="noopener">
@@ -1686,6 +1834,8 @@ Submit Order
 </div>
 
 </div>
+
+</main>
 
 <script>
 
@@ -3279,7 +3429,9 @@ updateOrderTotal();
 
 <img
 src="panchagarh-tea-green-logo.png"
-alt="Panchagarh Tea logo - authentic tea from Bangladesh">
+alt="Panchagarh Tea - authentic tea from Bangladesh"
+loading="lazy"
+decoding="async">
 
 <p>
 Authentic tea from Panchagarh, Bangladesh.
@@ -3332,14 +3484,14 @@ Contact Us
 </a>
 <br>
 
-<a href="#">
+<span aria-label="Shipping Policy page coming soon">
 Shipping Policy
-</a>
+</span>
 <br>
 
-<a href="#">
+<span aria-label="Privacy Policy page coming soon">
 Privacy Policy
-</a>
+</span>
 
 </div>
 
