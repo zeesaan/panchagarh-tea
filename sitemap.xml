@@ -6,11 +6,13 @@
     <loc>https://panchagarhtea.com/</loc>
   </url>
 
+  <!-- Blog Index -->
   <url>
     <loc>https://panchagarhtea.com/blog.html</loc>
   </url>
 
-  <!-- Panchagarh Tea Blog -->
+  <!-- Panchagarh Travel & Tea Articles -->
+
   <url>
     <loc>https://panchagarhtea.com/blog/tea-gardens-of-panchagarh.html</loc>
   </url>
@@ -58,6 +60,8 @@
   <url>
     <loc>https://panchagarhtea.com/blog/bhitargarh-ancient-fort-city-panchagarh.html</loc>
   </url>
+
+  <!-- Tea Education Articles -->
 
   <url>
     <loc>https://panchagarhtea.com/blog/history-of-tea-in-bangladesh.html</loc>
